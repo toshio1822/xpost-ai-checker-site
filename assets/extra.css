@@ -1,54 +1,67 @@
-/* ===== HERO（ヘッダー帯） ===== */
-.hero {
-  display: flex;
-  gap: 24px;
-  align-items: center;
-  padding: 24px;
-  border-radius: 14px;
-  /* 背景を復活させてコントラスト確保 */
-  background: linear-gradient(90deg, #0b2144, #123c6b);
-  color: #ffffff;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-  margin-bottom: 16px;
-}
+.hero {display:flex;gap:24px;align-items:center;padding:24px;border-radius:14px;background:linear-gradient(90deg,#0b2144,#123c6b);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.15);margin-bottom:16px}
+.hero img.hero__logo{width:96px;height:96px;object-fit:cover;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.2);background:#0b2144}
+.hero .hero__text h1{margin:0 0 6px 0;font-size:2rem}
+.hero .hero__text p.lead{margin:0;font-weight:700}
+.md-button--primary{background-color:#1565c0!important;color:#fff!important;border:none!important}
+.md-button{margin-right:8px;margin-top:8px}
+.badges{display:flex;gap:12px;flex-wrap:wrap;margin:8px 0 16px}
+.badge{padding:6px 10px;border-radius:999px;font-size:.85rem;background:#e6f2ff;color:#0b3d91;border:1px solid #c9defa}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.card{border:1px solid #e5e7eb;border-radius:12px;padding:16px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.04)}
+.card h3{margin-top:0}
+@media (max-width:720px){.hero{flex-direction:column;align-items:flex-start}.hero img.hero__logo{width:84px;height:84px}}
 
-.hero img.hero__logo {
-  width: 96px;
-  height: 96px;
-  object-fit: cover;
+/* teasers grid */
+.teasers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 14px;
+  margin: 8px 0 18px;
+}
+.teaser {
+  background: #fff;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  background: #0b2144;
+  padding: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.04);
+  text-align: center;
+}
+.teaser img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto 8px;
+}
+.teaser .caption {
+  font-size: .9rem;
+  color: #334155;
+  margin-bottom: 6px;
+}
+.teaser .mini {
+  display: inline-block;
+  margin-top: 2px;
+  font-size: .85rem;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #eef2ff;
+  color: #1e3a8a;
+  border: 1px solid #c7d2fe;
 }
 
-/* ← 重複を1本に統一。色は強制で白、影も追加して可読性UP */
-.hero .hero__text h1 {
-  margin: 0 0 6px 0;
-  font-size: 2rem;
+
+/* --- Hero text color hardening --- */
+.md-typeset .hero .hero__text h1 {
   color: #ffffff !important;
   font-weight: 800;
   text-shadow: 0 2px 4px rgba(0,0,0,0.35);
 }
-
-.hero .hero__text p.lead {
-  margin: 0;
+.md-typeset .hero .hero__text p.lead {
+  color: #e6f2ff !important;
   font-weight: 700;
-  color: #e6f2ff !important;  /* 淡い水色で読みやすく */
 }
-
-/* ボタン/バッジなど */
-.md-button--primary { background-color: #1565c0 !important; color: #fff !important; border: none !important; }
-.md-button { margin-right: 8px; margin-top: 8px; }
-
-.badges { display: flex; gap: 12px; flex-wrap: wrap; margin: 8px 0 16px; }
-.badge  { padding: 6px 10px; border-radius: 999px; font-size: .85rem; background: #e6f2ff; color: #0b3d91; border: 1px solid #c9defa; }
-
-.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 12px; }
-.card  { border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.04); }
-.card h3 { margin-top: 0; }
-
-@media (max-width: 720px) {
-  .hero { flex-direction: column; align-items: flex-start; }
-  .hero img.hero__logo { width: 84px; height: 84px; }
+.md-typeset .hero {
+  background: linear-gradient(90deg, #0b2144, #123c6b) !important;
+  color: #ffffff !important;
+  border-radius: 14px;
 }
-
