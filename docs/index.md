@@ -29,6 +29,34 @@ XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（
   </div>
 </div>
 
+## レポート サンプル
+<div class="teasers">
+  <div class="teaser">
+    <div class="caption">サマリーレポート（1ページ目）</div>
+    <a href="samples/teaser-summary.png" target="_blank">
+      <img src="samples/teaser-summary.png" alt="サマリーレポート プレビュー">
+    </a>
+    <a href="samples/summary_report.pdf" class="mini" target="_blank">サマリーPDFを開く</a>
+  </div>
+
+  <div class="teaser">
+    <div class="caption">個別エビデンス（1ページ目）</div>
+    <a href="samples/teaser-kobetsu-1.png" target="_blank">
+      <img src="samples/teaser-kobetsu-1.png" alt="個別レポート1ページ目 プレビュー">
+    </a>
+    <a href="samples/kobetsu.pdf" class="mini" target="_blank">個別PDFを開く</a>
+  </div>
+
+  <div class="teaser">
+    <div class="caption">個別エビデンス（2ページ目）</div>
+    <a href="samples/teaser-kobetsu-2.png" target="_blank">
+      <img src="samples/teaser-kobetsu-2.png" alt="個別レポート2ページ目 プレビュー">
+    </a>
+    <a href="samples/kobetsu.pdf" class="mini" target="_blank">個別PDFを開く</a>
+  </div>
+</div>
+
+
 ## プランと料金
 | プラン | 件数 | 価格（税込） | 納期目安 |
 |--------|------:|--------------:|----------:|
@@ -61,7 +89,6 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
 
 > すべてを1つのZIPにまとめ、メールまたはダウンロードリンクでお渡しします。
 
-
 ## 納品サンプルのダウンロード
 
 実際の納品物一式（サンプル）をこちらから取得できます。
@@ -74,7 +101,6 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
 - 鍵付きアカウントは対象外です（公開投稿のみ）。  
 - 画像・動画は対象外（テキスト本文のみ）。  
 - 削除済み投稿は取得不可。  
-- PDFは法的証拠として利用可能（PDF/A準拠）。  
 
 詳細は[FAQ](faq.md)をご覧ください。
 
