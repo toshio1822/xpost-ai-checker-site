@@ -21,6 +21,22 @@ description: X投稿をAIでチェック。証拠PDFを最短3日で。名誉毀
 </div>
 
 ## サービス概要（X 証拠作成 AI）
+
+<div class="cards service-icons">
+  <div class="card">
+    <h3>✅ 自動分類</h3>
+    <p>投稿をカテゴリに自動分類し、懸念度を★1〜5で採点。</p>
+  </div>
+  <div class="card">
+    <h3>🔍 根拠の明記</h3>
+    <p>該当箇所をハイライトし、根拠語句・理由を併記。判断の透明性を担保。</p>
+  </div>
+  <div class="card">
+    <h3>🛡️ 証拠PDF</h3>
+    <p>PDF/A相当（長期保存可能）＋ハッシュで改ざん防止。ZIPで一括納品。</p>
+  </div>
+</div>
+
 X（Twitter）での中傷に毎日悩んでいませんか？XPost AI Checkerは、AIが問題投稿を自動分析。証拠PDFを最短3日で納品し、弁護士相談や削除依頼をサポートします。
 
 ### 自動分類の仕組み
@@ -125,4 +141,15 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
 
 ---
 📩 お問い合わせ： info@xpostchecker.jp
-<div class="floating-cta"><a href="plans.md">今すぐ申し込む</a></div>
+<div class="floating-cta"><a href="plans.md" class="btn-cta-primary">今すぐ申し込む</a></div>
+
+
+<!-- 統一CTAブロック（ページ末尾） -->
+<div class="cta-block">
+  <h3>迷ったらまずは「お試し」から</h3>
+  <p>AIが自動で仕分け、<strong>PDF/A準拠の証拠PDF</strong>を最短3日でお届けします。</p>
+  <div class="cta">
+    <a href="plans.md" class="btn-cta-primary">今すぐ申し込む</a>
+    <a href="contact.md" class="btn-cta-secondary">お問い合わせ</a>
+  </div>
+</div>

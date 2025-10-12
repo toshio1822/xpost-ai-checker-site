@@ -89,52 +89,49 @@
 .badge { display: inline-flex; align-items: center; gap: 6px; }
 .badge::before { display:none; } /* ensure theme doesn't inject extra icons */
 
-/* === CTA Buttons in Hero === */
-.hero .cta {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-  margin-top: 14px;
-  margin-bottom: 16px;
-  justify-content: flex-start;
-}
 
-/* Primary CTA (今すぐ申し込む) */
-.hero .cta .btn-cta-primary {
+
+/* CTA block at page bottom */
+.cta-block {
+  background: linear-gradient(180deg, #0b2144 0%, #123c6b 100%);
+  color: #ffffff;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 24px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.18);
+}
+.cta-block h3 { margin: 0 0 6px; }
+.cta-block p { margin: 0 0 10px; color: #e6f2ff; }
+
+/* Unify CTA button visuals site-wide */
+a.btn-cta-primary, .btn-cta-primary {
   display: inline-block;
   background: linear-gradient(180deg, #ffc107 0%, #ffb300 100%);
-  color: #0b2144;
+  color: #0b2144 !important;
   padding: 10px 24px;
   border-radius: 8px;
   font-weight: 800;
   font-size: 1rem;
-  text-decoration: none;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  text-decoration: none !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   transition: all 0.2s ease-in-out;
 }
+a.btn-cta-primary:hover, .btn-cta-primary:hover { background: linear-gradient(180deg, #ffcd38 0%, #ffc107 100%); transform: translateY(-2px); }
 
-.hero .cta .btn-cta-primary:hover {
-  background: linear-gradient(180deg, #ffcd38 0%, #ffc107 100%);
-  transform: translateY(-2px);
-}
-
-/* Secondary CTA (お問い合わせ) */
-.hero .cta .btn-cta-secondary {
+a.btn-cta-secondary, .btn-cta-secondary {
   display: inline-block;
   background: transparent;
-  color: #ffffff;
+  color: #ffffff !important;
   padding: 10px 24px;
   border: 2px solid #ffffff;
   border-radius: 8px;
   font-weight: 700;
   font-size: 1rem;
-  text-decoration: none;
+  text-decoration: none !important;
   transition: all 0.2s ease-in-out;
 }
+a.btn-cta-secondary:hover, .btn-cta-secondary:hover { background: rgba(255,255,255,0.1); transform: translateY(-2px); }
 
-.hero .cta .btn-cta-secondary:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-}
-
+/* index pricing CTA under plans teaser */
+.all-plans-btn { margin-top: 8px; }
 

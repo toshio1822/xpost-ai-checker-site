@@ -20,7 +20,7 @@ jobs:
           python-version: '3.x'
       - name: Install MkDocs + Material
         run: |
-          pip install mkdocs mkdocs-material
+          pip install mkdocs mkdocs-material mkdocs-sitemap-plugin
       - name: Build site
         run: mkdocs build --strict
       - name: Deploy to gh-pages
