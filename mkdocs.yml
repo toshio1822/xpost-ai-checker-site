@@ -32,5 +32,4 @@ markdown_extensions:
   - footnotes
 plugins:
   - search
-
 site_url: https://toshio1822.github.io/xpost-ai-checker-site/

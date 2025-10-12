@@ -73,3 +73,68 @@
   box-shadow: 0 6px 18px rgba(0,0,0,.25); z-index: 9999; display: none; }
 .floating-cta a { color: #0b2144; font-weight: 900; text-decoration: none; }
 @media (max-width: 820px) { .floating-cta { display: block; } }
+
+
+/* CTA spacing at top hero (ensure it's visible immediately) */
+.cta { margin-top: 10px; }
+
+/* Pricing captions and trial highlight */
+.pricing-card .pc-caption { font-size: .9rem; color: #475569; margin-top: 6px; }
+.pricing-card .pc-badge { position:absolute; top:-10px; left:50%; transform:translateX(-50%);
+  background:#ffd166; color:#2d2a22; font-weight:900; padding:4px 10px; border-radius:999px; box-shadow: 0 4px 10px rgba(0,0,0,.12); font-size:.85rem; }
+.pricing-card .pc-badge-trial { background:#c7f9cc; color:#14532d; }
+.pricing-card:first-child { border-color:#c7f9cc; box-shadow: 0 8px 18px rgba(199,249,204,.25); }
+
+/* Badge icons nice spacing */
+.badge { display: inline-flex; align-items: center; gap: 6px; }
+.badge::before { display:none; } /* ensure theme doesn't inject extra icons */
+
+/* === CTA Buttons in Hero === */
+.hero .cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+  margin-bottom: 16px;
+  justify-content: flex-start;
+}
+
+/* Primary CTA (今すぐ申し込む) */
+.hero .cta .btn-cta-primary {
+  display: inline-block;
+  background: linear-gradient(180deg, #ffc107 0%, #ffb300 100%);
+  color: #0b2144;
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transition: all 0.2s ease-in-out;
+}
+
+.hero .cta .btn-cta-primary:hover {
+  background: linear-gradient(180deg, #ffcd38 0%, #ffc107 100%);
+  transform: translateY(-2px);
+}
+
+/* Secondary CTA (お問い合わせ) */
+.hero .cta .btn-cta-secondary {
+  display: inline-block;
+  background: transparent;
+  color: #ffffff;
+  padding: 10px 24px;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.hero .cta .btn-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+
