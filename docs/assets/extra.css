@@ -135,3 +135,34 @@ a.btn-cta-secondary:hover, .btn-cta-secondary:hover { background: rgba(255,255,2
 /* index pricing CTA under plans teaser */
 .all-plans-btn { margin-top: 8px; }
 
+
+/* Responsive tables and images */
+.md-typeset table { display:block; overflow-x:auto; -webkit-overflow-scrolling: touch; }
+.md-typeset img { max-width:100%; height:auto; }
+
+/* Pricing cards */
+.pricing-wrapper { margin: 6px 0 16px; }
+.grid-3 { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap:14px; }
+.pricing-card { background:#fff; border:1px solid #e5e7eb; border-radius:14px; padding:16px; text-align:center; box-shadow:0 4px 16px rgba(0,0,0,.06); position:relative; }
+.pricing-card .pc-head { font-weight:800; margin-bottom:6px; font-size:1.1rem; }
+.pricing-card .pc-price { font-size:1.4rem; margin:6px 0; }
+.pricing-card .pc-price span { font-size:.9rem; color:#475569; margin-left:6px; }
+.pricing-card .pc-desc { margin-bottom:10px; color:#475569; }
+.pricing-card.is-reco { border-color:#ffd166; box-shadow:0 8px 20px rgba(255,209,102,.35); }
+.pricing-card .pc-badge { position:absolute; top:-10px; left:50%; transform:translateX(-50%); background:#ffd166; color:#2d2a22; font-weight:900; padding:4px 10px; border-radius:999px; box-shadow:0 4px 10px rgba(0,0,0,.12); font-size:.85rem; }
+
+/* 料金カード上のボタンは濃色アウトラインで見えるように */
+.pricing-card .btn-cta-secondary{
+  background: transparent;
+  color: #0b2144 !important;
+  border: 2px solid #0b2144;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-weight: 800;
+  text-decoration: none !important;
+  transition: all .2s ease-in-out;
+}
+.pricing-card .btn-cta-secondary:hover{
+  background: rgba(11,33,68,.06);
+  transform: translateY(-2px);
+}

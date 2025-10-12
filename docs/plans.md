@@ -1,18 +1,26 @@
-# 料金プラン
+<!-- 料金カード -->
+<div class="pricing-wrapper">
+  <div class="pricing grid-3">
+    <div class="pricing-card">
+      <div class="pc-head">お試し</div>
+      <div class="pc-price"><strong>¥3,000</strong><span>/ 約3日</span></div>
+      <div class="pc-desc">50件まで</div>
+      <a href="https://buy.stripe.com/XXXXXXXX" class="btn-cta-secondary">購入する</a>
+    </div>
 
-| プラン名 | 対応件数 | 価格（税込） | 納期目安 |
-|-----------|-----------:|-------------:|-----------:|
-| お試しプラン | 50件まで | ¥3,000 | 約3日 |
-| ベーシックプラン | 100件まで | ¥5,500 | 約5日 |
-| スタンダードプラン | 300件まで | ¥15,000 | 約7日 |
+    <div class="pricing-card is-reco">
+      <div class="pc-badge">おすすめ</div>
+      <div class="pc-head">ベーシック</div>
+      <div class="pc-price"><strong>¥5,500</strong><span>/ 約5日</span></div>
+      <div class="pc-desc">100件まで</div>
+      <a href="https://buy.stripe.com/YYYYYYYY" class="btn-cta-primary">購入する</a>
+    </div>
 
----
-
-## 🔸 お支払い方法
-Stripe（クレジットカード・ApplePay・GooglePay対応）
-
-- [お試しプランを購入](https://buy.stripe.com/XXXXXXXX){ .md-button }
-- [ベーシックプランを購入](https://buy.stripe.com/YYYYYYYY){ .md-button }
-- [スタンダードプランを購入](https://buy.stripe.com/ZZZZZZZZ){ .md-button }
-
-> 決済後、表示される注文番号を[お問い合わせフォーム](contact.md)にご記入ください。
+    <div class="pricing-card">
+      <div class="pc-head">スタンダード</div>
+      <div class="pc-price"><strong>¥15,000</strong><span>/ 約7日</span></div>
+      <div class="pc-desc">300件まで</div>
+      <a href="https://buy.stripe.com/ZZZZZZZZ" class="btn-cta-secondary">購入する</a>
+    </div>
+  </div>
+</div>
