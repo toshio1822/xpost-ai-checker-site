@@ -135,8 +135,17 @@ a.btn-cta-secondary:hover, .btn-cta-secondary:hover { background: rgba(255,255,2
 /* index pricing CTA under plans teaser */
 .all-plans-btn { margin-top: 8px; }
 
-/* --- CTA常時表示ボタンを全デバイスで非表示に --- */
-.md-footer__button--cta {
+/* --- すべてのフローティングCTAを完全に非表示にする --- */
+.md-footer__button--cta,
+.md-button--primary[style*="position:fixed"],
+.md-button[style*="bottom"],
+button[style*="position:fixed"],
+div[class*="cta"],
+div[style*="position:fixed"],
+a[href*="plans/"][style*="position:fixed"] {
   display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
 }
+
 
