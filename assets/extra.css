@@ -149,3 +149,7 @@ a[href*="plans/"][style*="position:fixed"] {
 }
 
 
+
+/* Tables and images responsive */
+.md-typeset table { display:block; overflow-x:auto; -webkit-overflow-scrolling: touch; }
+.md-typeset img { max-width:100%; height:auto; }
