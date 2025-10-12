@@ -9,8 +9,8 @@ description: X投稿をAIでチェック。証拠PDFを最短3日で。名誉毀
     <h1>AIでX投稿をチェック！</h1>
     <p class="lead"><strong>誹謗中傷・脅迫・名誉毀損の投稿をAIが自動分析。証拠PDFを最短3日で納品します。</strong></p>
 <div class="cta">
-  <a href="plans.md" class="btn-cta-primary">今すぐ申し込む</a>
-  <a href="contact.md" class="btn-cta-secondary">お問い合わせ</a>
+  <a href="plans/" class="btn-cta-primary">今すぐ申し込む</a>
+  <a href="contact/" class="btn-cta-secondary">お問い合わせ</a>
 </div>
     <div class="badges">
       <div class="badge">🛡️ 🛡️ PDF/A相当（長期保存可能なPDF）・改ざん防止ハッシュ</div>
@@ -141,7 +141,7 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
 
 ---
 📩 お問い合わせ： info@xpostchecker.jp
-<div class="floating-cta"><a href="plans.md" class="btn-cta-primary">今すぐ申し込む</a></div>
+<div class="floating-cta"><a href="plans/" class="btn-cta-primary">今すぐ申し込む</a></div>
 
 
 <!-- 統一CTAブロック（ページ末尾） -->
@@ -149,7 +149,7 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
   <h3>迷ったらまずは「お試し」から</h3>
   <p>AIが自動で仕分け、<strong>PDF/A準拠の証拠PDF</strong>を最短3日でお届けします。</p>
   <div class="cta">
-    <a href="plans.md" class="btn-cta-primary">今すぐ申し込む</a>
-    <a href="contact.md" class="btn-cta-secondary">お問い合わせ</a>
+    <a href="plans/" class="btn-cta-primary">今すぐ申し込む</a>
+    <a href="contact/" class="btn-cta-secondary">お問い合わせ</a>
   </div>
 </div>
