@@ -13,9 +13,9 @@ description: X投稿をAIでチェック。証拠PDFを最短3日で。名誉毀
   <a href="contact.md" class="btn-cta-secondary">お問い合わせ</a>
 </div>
     <div class="badges">
-      <div class="badge">🛡️ PDF/A相当（長期保存可能なPDF）・改ざん防止ハッシュ</div>
-      <div class="badge">✅ 根拠語句の強調表示</div>
-      <div class="badge">📦 ZIP一括納品</div>
+      <div class="badge">🛡️ 🛡️ PDF/A相当（長期保存可能なPDF）・改ざん防止ハッシュ</div>
+      <div class="badge">✅ ✅ 根拠語句の強調表示</div>
+      <div class="badge">📦 📦 ZIP一括納品</div>
     </div>
   </div>
 </div>
