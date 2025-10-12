@@ -77,11 +77,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          コンテンツにスキップ
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -252,21 +247,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    料金プラン
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -279,34 +259,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    <span class="md-ellipsis">
-      🔸 お支払い方法
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -394,48 +346,34 @@
 
 
 
-<h1 id="_1">料金プラン<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<table>
-<thead>
-<tr>
-<th>プラン名</th>
-<th style="text-align: right;">対応件数</th>
-<th style="text-align: right;">価格（税込）</th>
-<th style="text-align: right;">納期目安</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>お試しプラン</td>
-<td style="text-align: right;">50件まで</td>
-<td style="text-align: right;">¥3,000</td>
-<td style="text-align: right;">約3日</td>
-</tr>
-<tr>
-<td>ベーシックプラン</td>
-<td style="text-align: right;">100件まで</td>
-<td style="text-align: right;">¥5,500</td>
-<td style="text-align: right;">約5日</td>
-</tr>
-<tr>
-<td>スタンダードプラン</td>
-<td style="text-align: right;">300件まで</td>
-<td style="text-align: right;">¥15,000</td>
-<td style="text-align: right;">約7日</td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="_2">🔸 お支払い方法<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>Stripe（クレジットカード・ApplePay・GooglePay対応）</p>
-<ul>
-<li><a class="md-button" href="https://buy.stripe.com/XXXXXXXX">お試しプランを購入</a></li>
-<li><a class="md-button" href="https://buy.stripe.com/YYYYYYYY">ベーシックプランを購入</a></li>
-<li><a class="md-button" href="https://buy.stripe.com/ZZZZZZZZ">スタンダードプランを購入</a></li>
-</ul>
-<blockquote>
-<p>決済後、表示される注文番号を<a href="../contact/">お問い合わせフォーム</a>にご記入ください。</p>
-</blockquote>
+  <h1>料金プラン</h1>
+
+<!-- 料金カード -->
+<div class="pricing-wrapper">
+  <div class="pricing grid-3">
+    <div class="pricing-card">
+      <div class="pc-head">お試し</div>
+      <div class="pc-price"><strong>¥3,000</strong><span>/ 約3日</span></div>
+      <div class="pc-desc">50件まで</div>
+      <a href="https://buy.stripe.com/XXXXXXXX" class="btn-cta-secondary">購入する</a>
+    </div>
+
+    <div class="pricing-card is-reco">
+      <div class="pc-badge">おすすめ</div>
+      <div class="pc-head">ベーシック</div>
+      <div class="pc-price"><strong>¥5,500</strong><span>/ 約5日</span></div>
+      <div class="pc-desc">100件まで</div>
+      <a href="https://buy.stripe.com/YYYYYYYY" class="btn-cta-primary">購入する</a>
+    </div>
+
+    <div class="pricing-card">
+      <div class="pc-head">スタンダード</div>
+      <div class="pc-price"><strong>¥15,000</strong><span>/ 約7日</span></div>
+      <div class="pc-desc">300件まで</div>
+      <a href="https://buy.stripe.com/ZZZZZZZZ" class="btn-cta-secondary">購入する</a>
+    </div>
+  </div>
+</div>
 
 
 
