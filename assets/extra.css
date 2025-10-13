@@ -155,9 +155,177 @@ button[style*="position:fixed"] {
   pointer-events: auto !important;
 }
 
-
-
-
 /* Tables and images responsive */
 .md-typeset table { display:block; overflow-x:auto; -webkit-overflow-scrolling: touch; }
 .md-typeset img { max-width:100%; height:auto; }
+
+/* === Plans: 3列レイアウト & ボタン見切れ対策 === */
+.pricing {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
+  gap: 16px;
+  align-items: stretch;
+}
+
+@media (max-width: 1024px) {
+  .pricing { grid-template-columns: repeat(2, minmax(240px, 1fr)); }
+}
+@media (max-width: 640px) {
+  .pricing { grid-template-columns: 1fr; }
+}
+
+.pricing-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  height: 100%;
+  /* 既存の枠・影の指定はそのまま有効 */
+  /* overflow: visible を明示して、下のボタンが切れないように */
+  overflow: visible;
+}
+
+/* コンテンツを上寄せ・ボタンを下に固定できるように */
+.pricing-card .pc-head,
+.pricing-card .pc-price,
+.pricing-card .pc-desc,
+.pricing-card .pc-caption {
+  margin: 0;
+}
+
+/* 購入ボタンを下端に寄せる（見切れ防止） */
+.pricing-card a.btn-cta-primary,
+.pricing-card a.btn-cta-secondary {
+  margin-top: auto;          /* これでボタンがカード下に配置される */
+  display: inline-flex !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  width: 100%;
+  justify-content: center;
+}
+
+/* おすすめカードの見栄え（既存がある場合はそのままでOK） */
+.pricing-card.is-reco {
+  border: 2px solid #facc15;
+  background: #fffbe6;
+}
+
+/* === pricing: おすすめカードのオーバーラップ解消 & ボタン可視化 === */
+
+/* 隣に重ならないように、安全側に広めの隙間＋独立スタック */
+.pricing { gap: 24px; }
+.pricing-card { isolation: isolate; z-index: 0; }
+
+/* おすすめカードの持ち上げ・横はみ出しを無効化 */
+.pricing-card.is-reco {
+  transform: none !important;
+  margin: 0 !important;
+  z-index: 0 !important;
+}
+
+/* 擬似要素で縁取りやグローを重ねていた場合に備えて無効化 */
+.pricing-card.is-reco::before,
+.pricing-card.is-reco::after {
+  content: none !important;
+}
+
+/* ボタンは常にカード最下部に配置して見切れ防止 */
+.pricing-card a.btn-cta-primary,
+.pricing-card a.btn-cta-secondary {
+  margin-top: auto;
+  position: relative;
+  z-index: 1;        /* 影やバッジの下敷きにならないように */
+  display: inline-flex !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  width: 100%;
+  justify-content: center;
+}
+
+/* 料金カード内のセカンダリCTAは白背景では見えないため色を上書き */
+/* =============================
+   CTAボタンの統一スタイル
+   ============================= */
+
+/* 「購入する」ボタンをすべて黄色に統一 */
+.pricing-card a.btn-cta-primary,
+.pricing-card a.btn-cta-secondary[href*="buy"],  /* 念のため購入リンクがsecondaryでも対応 */
+.pricing-card a[href*="purchase"],
+.pricing-card a[href*="buy-now"] {
+  background: #facc15 !important;   /* 明るい黄色 */
+  color: #0b2144 !important;         /* 文字は濃紺 */
+  font-weight: 700;
+  border: none !important;
+  width: 100%;
+  justify-content: center;
+  display: inline-flex !important;
+  align-items: center;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  margin-top: auto;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.pricing-card a.btn-cta-primary:hover,
+.pricing-card a.btn-cta-secondary[href*="buy"]:hover {
+  background: #fbbf24 !important;   /* ホバーで少し濃い黄色 */
+}
+
+/* 「先に相談したい」ボタンを薄い青に */
+.pricing-card a.btn-cta-secondary {
+  background: #e0f2fe !important;   /* 淡い青 */
+  color: #0b2144 !important;
+  border: 1px solid #0b2144 !important;
+  width: 100%;
+  display: inline-flex !important;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+  transition: all 0.2s ease;
+}
+
+.pricing-card a.btn-cta-secondary:hover {
+  background: #bae6fd !important;   /* ホバーでやや濃い青 */
+}
+
+/* =============================
+   料金プランカードの枠線統一
+   ============================= */
+
+.pricing-card {
+  border: 1.5px solid #facc15; /* 黄色の枠線を全カードに */
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* hover時に少し持ち上がる */
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ベーシックは背景色を淡く残す */
+.pricing-card.is-reco {
+  background-color: #fffbe6 !important;
+}
+
+/* 他のプラン（お試し・スタンダード）は白背景 */
+.pricing-card:not(.is-reco) {
+  background-color: #fff !important;
+}
+
+/* 「お試し」カード（左端）の枠線を黄色に */
+.pricing-card:first-child {
+  border-color: #facc15 !important;
+}

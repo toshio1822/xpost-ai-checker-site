@@ -10,13 +10,9 @@
       
       
       
-        <link rel="canonical" href="https://toshio1822.github.io/xpost-ai-checker-site/plans/">
+        <link rel="canonical" href="https://toshio1822.github.io/xpost-ai-checker-site/thanks/">
       
       
-        <link rel="prev" href="..">
-      
-      
-        <link rel="next" href="../faq/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +20,7 @@
     
     
       
-        <title>料金プラン - XPost AI Checker</title>
+        <title>ご注文ありがとうございました | XPost AI Checker - XPost AI Checker</title>
       
     
     
@@ -77,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              料金プラン
+              ご注文ありがとうございました | XPost AI Checker
             
           </span>
         </div>
@@ -238,17 +239,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../plans/" class="md-nav__link">
         
   
   
@@ -259,7 +253,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -346,43 +339,62 @@
 
 
 
-  <h1>料金プラン</h1>
-
-<!-- 料金カード -->
-<div class="pricing-wrapper">
-  <div class="pricing grid-3">
-    <div class="pricing-card">
-      <div class="pc-head">お試し</div>
-      <div class="pc-price"><strong>¥3,000</strong><span>/ 約3日</span></div>
-      <div class="pc-desc">50件まで</div>
-      <a href="https://buy.stripe.com/test_9B6bJ06jrgQ50oae4P3ZK00" class="btn-cta-secondary">購入する</a>
-      <div style="margin-top:8px"><a href="../contact/" class="btn-cta-secondary">先に相談したい</a></div>
-    </div>
-
-    <div class="pricing-card is-reco">
-      <div class="pc-badge">おすすめ</div>
-      <div class="pc-head">ベーシック</div>
-      <div class="pc-price"><strong>¥5,500</strong><span>/ 約5日</span></div>
-      <div class="pc-desc">100件まで</div>
-      <a href="https://buy.stripe.com/test_00w7sKdLT43j0oa4uf3ZK01" class="btn-cta-primary">購入する</a>
-      <div style="margin-top:8px"><a href="../contact/" class="btn-cta-secondary">先に相談したい</a></div>
-    </div>
-
-    <div class="pricing-card">
-      <div class="pc-head">スタンダード</div>
-      <div class="pc-price"><strong>¥15,000</strong><span>/ 約7日</span></div>
-      <div class="pc-desc">300件まで</div>
-      <a href="https://buy.stripe.com/test_4gM4gyfU19nD5IuaSD3ZK02" class="btn-cta-secondary">購入する</a>
-      <div style="margin-top:8px"><a href="../contact/" class="btn-cta-secondary">先に相談したい</a></div>
-    </div>
-  </div>
+<h1 id="_1">🎉 ご注文ありがとうございます<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>お支払いが正常に完了しました。<br />
+以下の注文番号を控えて、<strong>発注フォーム</strong> に入力してください。</p>
+<hr />
+<div id="session-id" style="background:#f6f8fa; padding:0.8rem; border-radius:8px; font-family:monospace; margin:1rem 0; color:#555;">
+読み込み中...
 </div>
 
+<p><a class="md-button md-button--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSecT4r8PGt0WKRco_66TC_FJdVEA0oxUVrHg1shlzb9yuYL-g/viewform?usp=header" target="_blank">📝 発注フォームへ進む</a></p>
+<blockquote>
+<p>※ ご入力内容を確認後、1〜2営業日以内に担当よりご連絡いたします。</p>
+</blockquote>
+<hr />
+<p>© 2025 XPost AI Checker</p>
+<script>
+  // URLパラメータから session_id を取得して表示
+  const params = new URLSearchParams(window.location.search);
+  const sessionId = params.get('session_id');
+  const box = document.getElementById('session-id');
+  if (box) box.textContent = sessionId || '注文番号が取得できませんでした。';
+</script>
+
+<style>
+  body {
+    font-family: "Noto Sans JP", "Segoe UI", sans-serif;
+    background: #fafafa;
+    color: #333;
+  }
+  h1 {
+    text-align: center;
+    color: #222;
+  }
+  .btn {
+    display: inline-block;
+    background: #ffcf33;
+    color: #000 !important;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    margin: 1.5rem auto;
+    transition: 0.2s;
+  }
+  .btn:hover {
+    background: #ffd84d;
+  }
+</style>
 
 
 
 
 
+
+
+  
+  
 
 
 
