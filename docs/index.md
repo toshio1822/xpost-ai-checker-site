@@ -1,13 +1,13 @@
 ---
 title: X(Twitter) 誹謗中傷分析 AI | XPost AI Checker
-description: X投稿をAIでチェック。証拠PDFを最短3日で。名誉毀損対策に最適。
+description: X投稿をAIでチェック。証拠PDFを納品。名誉毀損対策に最適。
 ---
 
 <div class="hero">
   <img src="logo.png" alt="XPost AI Checker" class="hero__logo" />
   <div class="hero__text">
     <h1>AIでX投稿をチェック！</h1>
-    <p class="lead"><strong>誹謗中傷・脅迫・名誉毀損の投稿をAIが自動分析。証拠PDFを最短3日で納品します。</strong></p>
+    <p class="lead"><strong>誹謗中傷・脅迫・名誉毀損の投稿をAIが自動分析。証拠PDFを納品します。</strong></p>
 <div class="cta">
   <a href="plans/" class="btn-cta-primary">今すぐ申し込む</a>
   <a href="contact/" class="btn-cta-secondary">お問い合わせ</a>
@@ -29,7 +29,7 @@ description: X投稿をAIでチェック。証拠PDFを最短3日で。名誉毀
   </div>
   <div class="card">
     <h3>🔍 根拠の明記</h3>
-    <p>該当箇所をハイライトし、根拠語句・理由を併記。判断の透明性を担保。</p>
+    <p>該当箇所を強調表示し、根拠語句・理由を併記。判断の透明性を担保。</p>
   </div>
   <div class="card">
     <h3>🛡️ 証拠PDF</h3>
@@ -37,10 +37,10 @@ description: X投稿をAIでチェック。証拠PDFを最短3日で。名誉毀
   </div>
 </div>
 
-X（Twitter）での中傷に毎日悩んでいませんか？XPost AI Checkerは、AIが問題投稿を自動分析。証拠PDFを最短3日で納品し、弁護士相談や削除依頼をサポートします。
+X（Twitter）での中傷に毎日悩んでいませんか？XPost AI Checkerは、AIが問題投稿を自動分析。証拠PDFを作成、弁護士相談や削除依頼をサポートします。
 
 ### 自動分類の仕組み
-AIが投稿を★1（低懸念）〜★5（高懸念）で評価。名誉毀損や脅迫の語句をハイライトし、理由を説明します。
+AIが投稿を★1（低懸念）〜★5（高懸念）で評価。名誉毀損や脅迫の語句を強調表示し、理由を説明します。
 
 
 XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（名誉毀損/侮辱/脅迫など）を抽出**、**根拠とともにPDFに整理**するサービスです。弁護士相談・削除依頼・訴訟準備に活用できます。
@@ -52,7 +52,7 @@ XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（
   </div>
   <div class="card">
     <h3>根拠の明記</h3>
-    <p>該当箇所をハイライトし、根拠語句・理由を併記。判断の透明性を担保。</p>
+    <p>該当箇所を強調表示し、根拠語句・理由を併記。判断の透明性を担保。</p>
   </div>
   <div class="card">
     <h3>証拠PDF</h3>
@@ -65,7 +65,7 @@ XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（
   <div class="teaser">
     <div class="caption">サマリーレポート（1ページ目）</div>
     <a href="samples/teaser-summary.png" target="_blank">
-      <img src="samples/teaser-summary.png" alt="X投稿のAI分析サマリーレポート（PDF/A、ハイライト例）">
+      <img src="samples/teaser-summary.png" alt="X投稿のAI分析サマリーレポート（PDF/A、強調表示例）">
     </a>
     <a href="samples/summary_report.pdf" class="mini" target="_blank">サマリーPDFを開く</a>
   </div>
@@ -73,7 +73,7 @@ XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（
   <div class="teaser">
     <div class="caption">個別エビデンス（1ページ目）</div>
     <a href="samples/teaser-kobetsu-1.png" target="_blank">
-      <img src="samples/teaser-kobetsu-1.png" alt="個別エビデンスPDF 1ページ目（根拠語句のハイライト）">
+      <img src="samples/teaser-kobetsu-1.png" alt="個別エビデンスPDF 1ページ目（根拠語句の強調表示）">
     </a>
     <a href="samples/kobetsu.pdf" class="mini" target="_blank">個別PDFを開く</a>
   </div>
@@ -158,7 +158,7 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
 <!-- 統一CTAブロック（ページ末尾） -->
 <div class="cta-block">
   <h3>迷ったらまずは「お試し」から</h3>
-  <p>AIが自動で仕分け、<strong>PDF/A準拠の証拠PDF</strong>を最短3日でお届けします。</p>
+  <p>AIが自動で仕分け、<strong>PDF/A準拠の証拠PDF</strong>をお届けします。</p>
   <div class="cta">
     <a href="plans/" class="btn-cta-primary">今すぐ申し込む</a>
     <a href="contact/" class="btn-cta-secondary">お問い合わせ</a>

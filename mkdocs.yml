@@ -24,10 +24,10 @@ extra:
 extra_css:
   - assets/extra.css
 markdown_extensions:
+  - attr_list
   - toc:
       permalink: true
   - admonition
-  - attr_list
   - tables
   - footnotes
 plugins:
