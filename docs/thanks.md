@@ -1,7 +1,3 @@
----
-title: ご注文ありがとうございました | XPost AI Checker
----
-
 # 🎉 ご注文ありがとうございます
 
 お支払いが正常に完了しました。  
@@ -9,48 +5,17 @@ title: ご注文ありがとうございました | XPost AI Checker
 
 ---
 
-<div id="session-id" style="background:#f6f8fa; padding:0.8rem; border-radius:8px; font-family:monospace; margin:1rem 0; color:#555;">
-読み込み中...
+<div class="order-id">
+  <div class="order-id__head">
+    <span class="order-id__badge">注文番号</span>
+    <button id="copy-session" class="order-id__copy" type="button" aria-label="注文番号をコピー">コピー</button>
+  </div>
+
+  <div class="order-id__body">
+    <input id="session-id" class="order-id__code" type="text" value="読み込み中…" readonly />
+  </div>
+
+  <div class="order-id__hint">※ 発注フォームに貼り付けてください。控えとしてメモ等にも保存をおすすめします。</div>
 </div>
 
 <a class="md-button md-button--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSecT4r8PGt0WKRco_66TC_FJdVEA0oxUVrHg1shlzb9yuYL-g/viewform?usp=header" target="_blank">📝 発注フォームへ進む</a>
-> ※ ご入力内容を確認後、1〜2営業日以内に担当よりご連絡いたします。
-
----
-
-© 2025 XPost AI Checker
-
-<script>
-  // URLパラメータから session_id を取得して表示
-  const params = new URLSearchParams(window.location.search);
-  const sessionId = params.get('session_id');
-  const box = document.getElementById('session-id');
-  if (box) box.textContent = sessionId || '注文番号が取得できませんでした。';
-</script>
-
-<style>
-  body {
-    font-family: "Noto Sans JP", "Segoe UI", sans-serif;
-    background: #fafafa;
-    color: #333;
-  }
-  h1 {
-    text-align: center;
-    color: #222;
-  }
-  .btn {
-    display: inline-block;
-    background: #ffcf33;
-    color: #000 !important;
-    font-weight: bold;
-    text-decoration: none;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    margin: 1.5rem auto;
-    transition: 0.2s;
-  }
-  .btn:hover {
-    background: #ffd84d;
-  }
-</style>
-

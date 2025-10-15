@@ -23,6 +23,8 @@ extra:
   generator: false
 extra_css:
   - assets/extra.css
+extra_javascript:
+  - assets/thanks.js
 markdown_extensions:
   - attr_list
   - toc:
@@ -30,6 +32,7 @@ markdown_extensions:
   - admonition
   - tables
   - footnotes
+  - md_in_html
 plugins:
   - search
 site_url: https://toshio1822.github.io/xpost-ai-checker-site/
