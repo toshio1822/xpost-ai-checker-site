@@ -329,3 +329,83 @@ button[style*="position:fixed"] {
 .pricing-card:first-child {
   border-color: #facc15 !important;
 }
+
+/* ===== Order ID (thanks page) ===== */
+.md-typeset .order-id {
+  border: 3px solid #facc15;
+  background: #fffbe6;
+  border-radius: 14px;
+  padding: 18px;
+  margin: 16px 0 20px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.08);
+}
+
+.md-typeset .order-id__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.md-typeset .order-id__badge {
+  display: inline-block;
+  font-weight: 900;
+  color: #7a5b00;
+  background: #ffea94;
+  border: 2px solid #facc15;
+  border-radius: 999px;
+  padding: 6px 12px;
+  letter-spacing: .04em;
+}
+
+.md-typeset .order-id__copy {
+  appearance: none;
+  border: 0;
+  background: #0b2144;
+  color: #fff;
+  font-weight: 800;
+  padding: 10px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform .15s ease, opacity .15s ease, background .2s ease;
+}
+.md-typeset .order-id__copy:hover { transform: translateY(-1px); opacity: .96; }
+.md-typeset .order-id__copy.is-done { background: #1e7e34; }
+
+.md-typeset .order-id__body { margin: 6px 0 10px; }
+
+.md-typeset .order-id__code {
+  width: 100%;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 1.25rem;              /* ←大きく */
+  letter-spacing: .02em;
+  padding: 14px 16px;
+  border: 2px dashed #f59e0b;      /* 破線で“コード感”を演出 */
+  border-radius: 12px;
+  background: #fffdf3;
+  color: #111827;
+  outline: none;
+  text-align: left;                 /* 右端で切れても読みやすく */
+}
+.md-typeset .order-id__code:focus { box-shadow: 0 0 0 4px rgba(250,204,21,.35); }
+.md-typeset .order-id__code.is-error {
+  border-color: #ef4444;
+  background: #fff1f2;
+  color: #991b1b;
+}
+
+.md-typeset .order-id__hint {
+  font-size: .92rem;
+  color: #374151;
+  margin-top: 6px;
+}
+
+/* 見出しとの距離を詰めてファーストビューに入れやすく */
+.md-typeset h1 + p + hr + .order-id { margin-top: 8px; }
+
+/* モバイル最適化 */
+@media (max-width: 560px) {
+  .md-typeset .order-id { padding: 14px; }
+  .md-typeset .order-id__code { font-size: 1.1rem; }
+  .md-typeset .order-id__copy { padding: 8px 10px; }
+}
