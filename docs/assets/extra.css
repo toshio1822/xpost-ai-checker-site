@@ -409,3 +409,6 @@ button[style*="position:fixed"] {
   .md-typeset .order-id__code { font-size: 1.1rem; }
   .md-typeset .order-id__copy { padding: 8px 10px; }
 }
+
+.step-images { display:flex; gap:12px; flex-wrap:wrap; align-items:flex-start; }
+.step-images img { width:300px; height:auto; margin:0; }

@@ -1,0 +1,30 @@
+# === Aggressive no-cache for HTML + CSS + JS (generated 20251017141120) ===
+<IfModule mod_headers.c>
+  # Disable ETag globally
+  Header unset ETag
+  FileETag None
+
+  # Always send no-store for HTML/CSS/JS
+  <FilesMatch "\.(html?|xhtml|css|js)$">
+    Header always set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header always set Pragma "no-cache"
+    Header always set Expires "0"
+  </FilesMatch>
+
+  # Allow long cache for other static assets (images/fonts) if desired
+  <FilesMatch "\.(png|jpg|jpeg|gif|svg|webp|ico|woff2?)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+
+  # Security headers
+  Header set X-Content-Type-Options "nosniff"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# Gzip compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css application/javascript application/json image/svg+xml
+</IfModule>
+
+ErrorDocument 404 /404.html

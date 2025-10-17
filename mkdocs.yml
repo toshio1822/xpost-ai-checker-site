@@ -5,34 +5,34 @@ theme:
   custom_dir: overrides
   language: ja
   features:
-    - navigation.sections
-    - navigation.top
-    - content.code.copy
-    - toc.integrate
+  - navigation.sections
+  - navigation.top
+  - content.code.copy
+  - toc.integrate
   palette:
-    - scheme: default
-      primary: blue
-      accent: green
+  - scheme: default
+    primary: blue
+    accent: green
 nav:
-  - ホーム: index.md
-  - 料金プラン: plans.md
-  - よくある質問: faq.md
-  - お問い合わせ: contact.md
-  - 法的表記: legal.md
+- ホーム: index.md
+- 料金プラン: plans.md
+- よくある質問: faq.md
+- お問い合わせ: contact.md
+- 法的表記: legal.md
 extra:
   generator: false
 extra_css:
-  - assets/extra.css
+- assets/extra.css?v=202510172322
 extra_javascript:
-  - assets/thanks.js
+- assets/thanks.js?v=202510172322
 markdown_extensions:
-  - attr_list
-  - toc:
-      permalink: true
-  - admonition
-  - tables
-  - footnotes
-  - md_in_html
+- attr_list
+- toc:
+    permalink: true
+- admonition
+- tables
+- footnotes
+- md_in_html
 plugins:
-  - search
-site_url: https://toshio1822.github.io/xpost-ai-checker-site/
+- search
+site_url: https://xpostaichecker.jp/

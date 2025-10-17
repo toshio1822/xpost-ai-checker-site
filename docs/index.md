@@ -20,7 +20,9 @@ description: X投稿をAIでチェック。証拠PDFを納品。名誉毀損対�
   </div>
 </div>
 
-## サービス概要（X 証拠作成 AI）
+## サービス概要
+
+XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（名誉毀損/侮辱/脅迫など）を抽出**、**根拠とともにPDFに整理**するサービスです。弁護士相談・削除依頼・訴訟準備に活用できます。
 
 <div class="cards service-icons">
   <div class="card">
@@ -37,33 +39,10 @@ description: X投稿をAIでチェック。証拠PDFを納品。名誉毀損対�
   </div>
 </div>
 
-X（Twitter）での中傷に毎日悩んでいませんか？XPost AI Checkerは、AIが問題投稿を自動分析。証拠PDFを作成、弁護士相談や削除依頼をサポートします。
-
-### 自動分類の仕組み
-AIが投稿を★1（低懸念）〜★5（高懸念）で評価。名誉毀損や脅迫の語句を強調表示し、理由を説明します。
-
-
-XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（名誉毀損/侮辱/脅迫など）を抽出**、**根拠とともにPDFに整理**するサービスです。弁護士相談・削除依頼・訴訟準備に活用できます。
-
-<div class="cards">
-  <div class="card">
-    <h3>自動分類</h3>
-    <p>投稿をカテゴリに自動分類し、懸念度を★1〜5で採点。</p>
-  </div>
-  <div class="card">
-    <h3>根拠の明記</h3>
-    <p>該当箇所を強調表示し、根拠語句・理由を併記。判断の透明性を担保。</p>
-  </div>
-  <div class="card">
-    <h3>証拠PDF</h3>
-    <p>PDF/A相当、改ざん防止ハッシュ付き。ZIPで一括納品。</p>
-  </div>
-</div>
-
 ## レポート サンプル
 <div class="teasers">
   <div class="teaser">
-    <div class="caption">サマリーレポート（1ページ目）</div>
+    <div class="caption">サマリーレポート</div>
     <a href="samples/teaser-summary.png" target="_blank">
       <img src="samples/teaser-summary.png" alt="X投稿のAI分析サマリーレポート（PDF/A、強調表示例）">
     </a>
@@ -71,15 +50,7 @@ XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（
   </div>
 
   <div class="teaser">
-    <div class="caption">個別エビデンス（1ページ目）</div>
-    <a href="samples/teaser-kobetsu-1.png" target="_blank">
-      <img src="samples/teaser-kobetsu-1.png" alt="個別エビデンスPDF 1ページ目（根拠語句の強調表示）">
-    </a>
-    <a href="samples/kobetsu.pdf" class="mini" target="_blank">個別PDFを開く</a>
-  </div>
-
-  <div class="teaser">
-    <div class="caption">個別エビデンス（2ページ目）</div>
+    <div class="caption">個別エビデンス</div>
     <a href="samples/teaser-kobetsu-2.png" target="_blank">
       <img src="samples/teaser-kobetsu-2.png" alt="個別エビデンスPDF 2ページ目（詳細情報）">
     </a>
@@ -100,18 +71,44 @@ XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（
 
 ## ご利用の流れ
 
-1. **Stripeでお支払い**（カード・ApplePay対応）  
-   ご希望のプランの「購入する」ボタンからお支払いください。
+1. **URLリストの作成**  
+   [テンプレート](samples/input_urls.csv)をダウンロードして、チェックを行いたいX(Twitter)の投稿URLを入力してください。  
+    <div class="step-images">
+      <a href="images/url_list.png" target="_blank">
+        <img src="images/url_list.png" alt="URLリスト">
+      </a>
+    </div>
 
-2. **自動メールでCSV提出フォームをご案内**  
-   決済完了後、自動メールにて **CSV提出フォーム（ダミー）** のURLをお送りします。  
-   （例：<https://forms.gle/sample>）
+2. **Stripeでお支払い（カード・GooglePay対応）**  
+   ご希望のプランの「購入する」ボタンからお支払いください。  
+    <div class="step-images">
+      <a href="images/purchase1.png" target="_blank">
+        <img src="images/purchase1.png" alt="購入する1">
+      </a>
+      <a href="images/purchase2.png" target="_blank">
+        <img src="images/purchase2.png" alt="購入する2">
+      </a>
+    </div>
 
-3. **AIが自動分析・PDF生成**  
-   AIが投稿を自動で分類し、懸念度（★1〜★5）・根拠語句を抽出します。進捗に応じてメールでご連絡します。
+3. **発注フォームの入力**  
+  - 決済完了後、注文番号と発注フォームのボタンが表示されます。
+  - 提出フォームで注文番号が必要になるので、コピーしてください。
+  - 「発注フォームへ進む」をクリックして、URLリストを提出してください。  
+   ※ファイルの提出には、Googleアカウントが必要です。  
+    <div class="step-images">
+      <a href="images/submit_url_list1.png" target="_blank">
+        <img src="images/submit_url_list1.png" alt="URLリストの提出1">
+      </a>
+      <a href="images/submit_url_list2.png" target="_blank">
+        <img src="images/submit_url_list2.png" alt="URLリストの提出2">
+      </a>
+    </div>
 
-4. **ZIP一括で納品**  
-   証拠PDF・まとめレポート・ハッシュ一覧をZIPで納品します。ダウンロードURLをメールでお送りします。
+4. **AIが自動分析・PDF生成**  
+   AIが投稿を自動で分類し、懸念度（★1〜★5）・根拠語句を抽出します。
+
+5. **ZIP一括で納品**  
+   AI分析結果をZIPで納品します。ダウンロードURLをメールでお送りします。
 
 > **対象外が多数と判定された場合は返金します。** 鍵アカウント・削除済み投稿・取得不能URLが多い場合は、**全額または一部返金**いたします。
 
@@ -128,8 +125,6 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
 | `screenshots/` | 各投稿のスクリーンショット画像 | PNG |
 | `manifest.json` | 納品ファイルのハッシュ値一覧（改ざん検知用） | JSON |
 | その他 | 納品説明書.pdf | PDF |
-
-> すべてを1つのZIPにまとめ、メールまたはダウンロードリンクでお渡しします。
 
 ## 納品サンプルのダウンロード
 
@@ -151,7 +146,7 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
 - 詳細は[特定商取引法に基づく表記](legal.md)をご確認ください。
 
 ---
-📩 お問い合わせ： info@xpostchecker.jp
+📩 お問い合わせ： support@xpostaichecker.jp
 <div class="floating-cta"><a href="plans/" class="btn-cta-primary">今すぐ申し込む</a></div>
 
 
