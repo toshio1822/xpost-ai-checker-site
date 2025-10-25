@@ -1,3 +1,11 @@
+---
+title: ご注文ありがとうございます｜XPost AI Checker
+description: 決済完了後のご案内ページです。注文番号（Checkout Session ID）をコピーし、発注フォームへお進みください。
+---
+
+<meta name="robots" content="noindex,follow">
+<link rel="canonical" href="https://xpostaichecker.jp/thanks">
+
 # 🎉 ご注文ありがとうございます
 
 お支払いが正常に完了しました。  

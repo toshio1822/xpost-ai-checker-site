@@ -1,4 +1,5 @@
 site_name: XPost AI Checker
+site_url: https://xpostaichecker.jp/
 site_description: X投稿をAIでチェック。証拠PDFを最短3日で。名誉毀損対策に最適。
 theme:
   name: material
@@ -21,10 +22,17 @@ nav:
 - 法的表記: legal.md
 extra:
   generator: false
+  analytics:
+    provider: google
+    property: G-BDWT0LDTZT
+  social:
+  - icon: fontawesome/brands/x-twitter
+    link: https://x.com/TOSHIO_1983
+  social_image: assets/og.png
 extra_css:
-- assets/extra.css?v=202510172322
+- assets/extra.css?v=202510251432
 extra_javascript:
-- assets/thanks.js?v=202510172322
+- assets/thanks.js?v=202510251432
 markdown_extensions:
 - attr_list
 - toc:
@@ -35,4 +43,6 @@ markdown_extensions:
 - md_in_html
 plugins:
 - search
-site_url: https://xpostaichecker.jp/
+- meta-descriptions:
+    min_length: 50
+    max_length: 160
