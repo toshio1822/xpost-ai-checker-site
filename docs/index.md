@@ -162,28 +162,31 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
     <p>XPost AI Checker の背景や仕組み、使い方を詳しく紹介しています。</p>
   </div>
 
-  <div class="blog-cards">
-    <div class="blog-card">
-      <img src="logo-256x256.png" alt="開発ストーリー"  loading="lazy">
-      <h3>誹謗中傷の証拠を集めるのは大変——だからこのツールを作りました</h3>
-      <p>開発のきっかけと、ツールに込めた思いを紹介しています。</p>
-      <a href="/blog/001_xpost-ai-checker-release/index.html" target="_blank" class="blog-link">▶ 記事を読む</a>
-    </div>
+<div class="blog-cards">
 
-    <div class="blog-card">
-      <img src="logo-256x256.png" alt="仕組み紹介"  loading="lazy">
-      <h3>AIがXの投稿を分析し、証拠PDFを作成するまでの流れ</h3>
-      <p>AIがどのように投稿を分析し、PDFを生成しているのかを解説。</p>
-      <a href="/blog/002_xpost-ai-checker-how-it-works/index.html"  target="_blank" class="blog-link">▶ 記事を読む</a>
-    </div>
+  <article class="blog-card">
+    <h3>AIがSNS誹謗中傷を自動判定する時代へ</h3>
+    <p>SNS誹謗中傷の証拠をAIが自動分析しPDF化。投稿の問題レベルを5段階で判定し、弁護士相談にも使えるレポートを作成する新サービス「XPost AI Checker」をリリースしました。</p>
+    <a class="blog-link" href="blog/001_xpost-ai-checker-release.md">記事を読む</a>
+  </article>
 
-    <div class="blog-card">
-      <img src="logo-256x256.png" alt="使い方ガイド"  loading="lazy">
-      <h3>【使い方ガイド】XPost AI Checkerの操作手順と証拠PDFの見方</h3>
-      <p>誰でも使えるシンプルな操作方法を、画像付きでわかりやすく説明しています。</p>
-      <a href="/blog/003_xpost-ai-checker-how-to-use/index.html" target="_blank" class="blog-link">▶ 記事を読む</a>
-    </div>
-  </div>
+  <article class="blog-card">
+    <h3>AIはどのように“問題投稿”を見抜くのか</h3>
+    <p>X（Twitter）の投稿をAIがどのように分類し、誹謗中傷の可能性を検出しているのか。その自然言語処理技術と判定基準の仕組みをわかりやすく解説します。</p>
+    <a class="blog-link" href="blog/002_xpost-ai-checker-how-it-works.md">記事を読む</a>
+  </article>
+
+  <article class="blog-card">
+    <h3>SNS投稿を“証拠”にする方法｜AIが作るPDFは法的に使えるのか？</h3>
+    <p>SNS投稿を法的な証拠として残すための手順を解説。AIが作成するPDF/A形式レポートの信頼性、保存形式、弁護士相談での活用方法を紹介します。</p>
+    <a class="blog-link" href="blog/003_xpost-ai-checker-how-to-use.md">記事を読む</a>
+  </article>
+
+</div>
+
+
+<div style="text-align:right;">
+  <a class="md-button" href="blog/">すべての記事を見る →</a>
 </div>
 
 <!-- 統一CTAブロック（ページ末尾） -->

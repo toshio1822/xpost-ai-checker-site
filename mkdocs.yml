@@ -19,6 +19,7 @@ nav:
 - 料金プラン: plans.md
 - よくある質問: faq.md
 - お問い合わせ: contact.md
+- ブログ: blog/index.md
 - 法的表記: legal.md
 extra:
   generator: false
@@ -30,17 +31,17 @@ extra:
     link: https://x.com/TOSHIO_1983
   social_image: assets/og.png
 extra_css:
-- assets/extra.css?v=202510251432
+- assets/extra.css?v=202510272258
 extra_javascript:
-- assets/thanks.js?v=202510251432
+- assets/thanks.js?v=202510272258
 markdown_extensions:
 - attr_list
-- toc:
-    permalink: true
+- md_in_html
 - admonition
 - tables
 - footnotes
-- md_in_html
+- toc:
+    permalink: true
 plugins:
 - search
 - meta-descriptions:
