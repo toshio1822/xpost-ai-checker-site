@@ -9,6 +9,12 @@ XPost AI Checker の背景や仕組み、使い方を詳しく紹介していま
 
 <div class="blog-cards">
   <article class="blog-card">
+    <h3>Wayback MachineでX投稿を保存できない理由と対処法【実証付き】</h3>
+    <p>Wayback MachineでX（旧Twitter）の投稿を保存しようとするとエラーになる理由を実際に検証。保存できない技術的な背景と、確実に投稿を残す方法を紹介します。</p>
+    <a class="blog-link" href="008_wayback-machine-x-fail/">記事を読む</a>
+  </article>
+
+  <article class="blog-card">
     <h3>ウェブ魚拓でSNS投稿を保存する方法と注意点【2025年版】</h3>
     <p>SNS投稿やWebページを保存できる定番ツール「ウェブ魚拓」の使い方を解説。証拠として使う際の注意点や、AIによる補完方法も紹介します。</p>
     <a class="blog-link" href="007_web-gyotaku-how-to-and-tips/">記事を読む</a>

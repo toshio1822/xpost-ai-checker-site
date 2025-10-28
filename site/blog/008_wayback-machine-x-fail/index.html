@@ -6,11 +6,11 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="SNS誹謗中傷の証拠をAIが自動分析しPDF化。投稿の問題レベルを5段階で判定し、弁護士相談にも使えるレポートを作成する新サービス「XPost AI Checker」をリリースしました。">
+        <meta name="description" content="Wayback MachineでX（旧Twitter）の投稿を保存しようとするとエラーになる理由を実際に検証。保存できない技術的な背景と、確実に投稿を残す方法を紹介します。">
       
       
       
-        <link rel="canonical" href="https://xpostaichecker.jp/blog/001_xpost-ai-checker-release/">
+        <link rel="canonical" href="https://xpostaichecker.jp/blog/008_wayback-machine-x-fail/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>AIがSNS誹謗中傷を自動判定する時代へ｜XPost AI Checkerリリース - XPost AI Checker</title>
+        <title>Wayback MachineでX投稿を保存できない理由と対処法【実証付き】 - XPost AI Checker</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sns" class="md-skip">
+        <a href="#wayback-machineweb" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AIがSNS誹謗中傷を自動判定する時代へ｜XPost AI Checkerリリース
+              Wayback MachineでX投稿を保存できない理由と対処法【実証付き】
             
           </span>
         </div>
@@ -395,76 +395,188 @@
 
 <div class="hero">
   <div class="hero__text">
-    <h1>AIがSNS誹謗中傷を自動判定する時代へ</h1>
-    <p class="lead">SNSでの誹謗中傷に悩む方のために、AIで証拠を自動整理するツールを開発しました。</p>
-    <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
+    <h1>Wayback MachineでX投稿を保存できない理由と対処法【実証付き】</h1>
+    <p class="lead">「Wayback MachineでXの投稿を保存しようとしたけど、できなかった」──その原因を実際に検証しました。保存できない理由と、確実に投稿を残す方法を紹介します。</p>
+    <a href="https://xpostaichecker.jp/" class="md-button--primary">AIで投稿をまとめて証拠化</a>
   </div>
 </div>
 
-<h2 id="sns">SNSの誹謗中傷──“証拠集め”の現実<a class="headerlink" href="#sns" title="Permanent link">&para;</a></h2>
-<div class="badge">課題</div>
+<h2 id="wayback-machineweb">Wayback Machineとは？──Webページを“過去”に戻すサービス<a class="headerlink" href="#wayback-machineweb" title="Permanent link">&para;</a></h2>
+<p><a href="https://web.archive.org/">Wayback Machine</a>（ウェイバックマシン）は、アメリカの非営利団体 <strong>Internet Archive</strong> が運営する<br />
+世界最大のWebアーカイブです。</p>
+<p>URLを入力すると、そのページの「過去の状態」を保存・閲覧できます。<br />
+ニュースサイト、企業ページ、ブログなど、静的なHTMLサイトの保存に強く、<br />
+“インターネットのタイムマシン”とも呼ばれています。</p>
+<hr />
+<h2 id="xtwitter">実際に試してみた：X（旧Twitter）の投稿を保存できるか？<a class="headerlink" href="#xtwitter" title="Permanent link">&para;</a></h2>
+<p>今回は、実際にWayback MachineでX投稿のURLを入力してみました。</p>
+<p>入力したURLはこちらです：</p>
+<pre><code>https://x.com/xpostaichecker1/status/1974673598930731272
+</code></pre>
+<h3 id="1-url">1. URLを入力して検索<a class="headerlink" href="#1-url" title="Permanent link">&para;</a></h3>
+<p>まずはトップページの検索ボックスにURLを入力します。</p>
+<div class="teaser">
+  <a href="/samples/wayback-machine01.png" target="_blank" rel="noopener">
+    <img src="/samples/wayback-machine01.png" alt="Wayback Machine トップページ" loading="lazy">
+  </a>
+</div>
 
-<p>「心ないX（Twitter）の攻撃に、時間と労力を奪われていませんか？」<br />
-「感情的な負担に加え、<strong>法的な準備の手間</strong>が、被害者をさらに苦しめています。」</p>
-<p>SNSでの<strong>誹謗中傷</strong>や<strong>嫌がらせ</strong>に悩む人の話を、これまで何度も目にしてきました。私もX(Twitter)を利用して情報発信をしていますが、以下のような課題に直面します。</p>
-<p>X(Twitter)には通報機能がありますが、<strong>よほど明確な誹謗中傷や個人情報の投稿</strong>など、誰が見ても悪質と判断できるもの以外は対応してもらえません。X(Twitter)は短文のSNSなので、1つの投稿だけでは複数の解釈が可能で、明確に悪質と判断しにくいケースも多いです。</p>
-<p>そのため、通報だけでは解決せず、<strong>「証拠を継続して集める」</strong>必要がある場合が少なくありません。しかし、証拠集めは非常に大変です：</p>
+<hr />
+<h3 id="2">2. 「アーカイブされていません」と表示される<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<p>検索すると以下のように表示されました。</p>
+<div class="teaser">
+  <a href="/samples/wayback-machine02.png" target="_blank" rel="noopener">
+    <img src="/samples/wayback-machine02.png" alt="Wayback Machine 未保存" loading="lazy">
+  </a>
+</div>
+
+<blockquote>
+<p><strong>Hrm. Wayback Machine has not archived that URL.</strong></p>
+</blockquote>
+<p>つまり、「このURLは保存されていない」という意味です。<br />
+「Save this URL in the Wayback Machine」ボタンで手動保存を試みます。</p>
+<hr />
+<h3 id="3-save-page-now">3. 「Save Page Now」を実行しても保存できない<a class="headerlink" href="#3-save-page-now" title="Permanent link">&para;</a></h3>
+<p>保存ページにURLを入力して「SAVE PAGE」を押しても、次の画面に進みます。</p>
+<div class="teaser">
+  <a href="/samples/wayback-machine03.png" target="_blank" rel="noopener">
+    <img src="/samples/wayback-machine03.png" alt="wayback machine Save Page Now" loading="lazy">
+  </a>
+</div>
+
+<p>ここで保存リクエストを送信しても……</p>
+<hr />
+<h3 id="4-sorry">4. 結果：「Sorry, 保存に制限があります」<a class="headerlink" href="#4-sorry" title="Permanent link">&para;</a></h3>
+<p>最終的に、以下のエラーメッセージが表示されました。</p>
+<div class="teaser">
+  <a href="/samples/wayback-machine04.png" target="_blank" rel="noopener">
+    <img src="/samples/wayback-machine04.png" alt="wayback machine 保存エラー" loading="lazy">
+  </a>
+</div>
+
+<blockquote>
+<p><strong>Sorry. We’re currently facing some limitations when it comes to archiving this site.</strong></p>
+</blockquote>
+<p>これは「このサイト（X）は保存制限の対象である」という意味です。<br />
+つまり、<strong>Wayback MachineではXの投稿を保存できない</strong>のです。</p>
+<hr />
+<h2 id="wayback-machinex">なぜWayback MachineではX投稿を保存できないのか？<a class="headerlink" href="#wayback-machinex" title="Permanent link">&para;</a></h2>
+<h3 id="1robotstxt">理由①：robots.txtによるクロール制限<a class="headerlink" href="#1robotstxt" title="Permanent link">&para;</a></h3>
+<p>Xはサイトの設定ファイル（robots.txt）で、<br />
+<strong>Wayback Machineなどのアーカイブ用クローラをブロック</strong>しています。<br />
+そのため、アーカイブ側がアクセスしても投稿データを取得できません。</p>
+<hr />
+<h3 id="2javascript">理由②：JavaScriptで動的に生成される投稿<a class="headerlink" href="#2javascript" title="Permanent link">&para;</a></h3>
+<p>Xの投稿はHTML内に直接埋め込まれておらず、JavaScriptで動的に生成されます。<br />
+Wayback Machineは静的HTMLを保存する仕組みのため、<br />
+<strong>ページを開いても本文が空白</strong>になってしまいます。</p>
+<hr />
+<h3 id="3x">理由③：X側のアクセス制限によるもの<a class="headerlink" href="#3x" title="Permanent link">&para;</a></h3>
+<p>X（旧Twitter）は、外部サービスが投稿ページに自動アクセスすることを制限しています。<br />
+これはセキュリティやプライバシーを守るための仕組みで、<br />
+Wayback Machineのようなアーカイブツールもアクセスをブロックされてしまいます。  </p>
+<p>そのため、Xの投稿URLを入力しても保存が完了せず、エラーが表示されます。</p>
+<hr />
+<h2 id="wayback-machinex_1">結論：Wayback MachineではX投稿は保存できない<a class="headerlink" href="#wayback-machinex_1" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>対象</th>
+<th>保存可否</th>
+<th>備考</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>一般的なWebサイト（HTML）</td>
+<td>⭕</td>
+<td>保存・履歴閲覧が可能</td>
+</tr>
+<tr>
+<td>ニュースサイト</td>
+<td>⭕</td>
+<td>記事アーカイブに最適</td>
+</tr>
+<tr>
+<td>X(Twitter)</td>
+<td>❌</td>
+<td>保存制限・動的生成・ログイン制御により不可</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="sns">SNS投稿を“確実に残す”にはどうすればいい？<a class="headerlink" href="#sns" title="Permanent link">&para;</a></h2>
+<p>Wayback MachineのようなWebアーカイブでは、<br />
+<strong>SNS投稿（動的ページ）の保存や証拠化はできません。</strong><br />
+そこで有効なのが、投稿URLを直接解析して保存できる専用サービスです。</p>
+<hr />
+<h2 id="xpost-ai-checkerurl">XPost AI Checkerなら、投稿URLをそのまま保存・分析<a class="headerlink" href="#xpost-ai-checkerurl" title="Permanent link">&para;</a></h2>
+<p><strong>XPost AI Checker</strong> は、X（旧Twitter）の投稿URLを直接処理し、<br />
+AIが内容を自動分析して<strong>PDF形式で証拠化</strong>できるサービスです。</p>
+<h3 id="_1">主な特徴<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul>
-<li>投稿を一つひとつ保存し、日時を記録</li>
-<li>画像やスクリーンショットを整理</li>
-<li>問題のある部分を言語化して警察や弁護士に伝える</li>
+<li>投稿URLをまとめて入力するだけで自動収集  </li>
+<li>AIが投稿内容を分析（誹謗中傷・侮辱・脅迫などを分類）  </li>
+<li>改ざん防止付きPDF/A-2b形式で保存  </li>
+<li>ハッシュ値・投稿日時・スクリーンショットを自動付与  </li>
 </ul>
-<p>精神的につらい状況でこれを行うのは簡単ではなく、<strong>冷静な判断が難しい</strong>場合もあります。</p>
-<h2 id="_1">開発のきっかけ：自分にも何かできないか<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="badge">開発背景</div>
-
-<p>私は<strong>システムエンジニア</strong>として日々プログラムを作っています。そんな中で、「<strong>証拠を整理する作業を自動化できないか？</strong>」と考えました。これが <strong>XPost AI Checker</strong> 開発の始まりです。</p>
-<p>SNSの投稿をAIで分析し、内容を整理して、<strong>そのまま証拠として使える形</strong>に整える。技術的に難しい部分もありましたが、時間を見つけて少しずつ開発を進めてきました。</p>
-<h2 id="ai">サービスの概要：AIが投稿を自動で分析・整理<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
-<h3>XPost AI Checkerの特徴</h3>
-<p><strong>XPost AI Checker</strong> は、X（Twitter）の投稿をAIが分析し、<strong>誹謗中傷・脅迫・名誉毀損</strong>などの懸念投稿を抽出します。投稿ごとに以下の情報を整理し、<strong>弁護士相談などに使える証拠PDF</strong>を生成します：</p>
-<ul>
-    <li><strong>懸念度</strong>（★1〜★5）</li>
-    <li><strong>根拠語句</strong>（問題となる単語や表現）</li>
-    <li><strong>判定理由</strong>（なぜ問題と判断したか）</li>
-  </ul>
-
-<p class="caption"><strong>サマリーレポート</strong>：懸念度が高い順に投稿を並び替え。優先して対応が必要な投稿を簡単に特定できます。</p>
-
 <div class="teaser">
   <a href="/samples/teaser-summary.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-summary.png" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDF）" loading="lazy">
+    <img src="/samples/teaser-summary.png" alt="AI分析PDFサンプル" loading="lazy">
   </a>
-  <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">まとめPDFを開く</a>
+  <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">PDFサンプルを見る</a>
 </div>
 
-<p class="caption"><strong>個別PDF</strong>：投稿のスクリーンショットを含め、証拠としてそのまま利用可能。</p>
-<div class="teaser">
-  <a href="/samples/teaser-kobetsu.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-kobetsu.png" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス" loading="lazy">
-  </a>
-  <a href="/samples/kobetsu.pdf" class="mini" target="_blank" rel="noopener">個別PDFを開く</a>
-</div>
-
-<p><strong>信頼性確保</strong>: 通常のスクリーンショットやPDFは編集可能で、法廷での証拠能力が問われる場合があります。XPost AI Checkerでは、<strong>ファイル改ざんを検知できるハッシュ値</strong>を付与し、信頼性を確保。</p>
-<p><a href="https://xpostaichecker.jp/" class="md-button--primary">ツールの詳細を確認</a></p>
-<h2 id="_2">一人で抱え込まないためのツール<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p>このツールは、誹謗中傷をAIで解決するものではありません。しかし、<strong>「最初の一歩」を支えるツール</strong>として、以下を目指しています：</p>
-<ul>
-<li>「どんな投稿が問題か」を整理し、状況を可視化</li>
-<li>次の行動（相談・通報・削除依頼など）を<strong>取りやすく</strong>する</li>
-</ul>
-<p>一人で抱え込まず、まず<strong>“整理”</strong>から始めてほしい。そんな思いで作りました。</p>
-<h2 id="_3">おわりに<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>今後も、誹謗中傷やネットトラブルに悩む方が<strong>安心して使えるツール</strong>を目指し、改良を続けます。興味を持っていただけたら、ぜひ一度お試しください！</p>
 <hr />
-<p>→ <a href="../002_xpost-ai-checker-how-it-works/">仕組みを見る</a>｜<a href="../003_xpost-ai-checker-how-to-use/">使い方ガイド</a>｜<a href="../../plans/">料金プラン</a>｜<a href="../../contact/">お問い合わせ</a></p>
-<div class="cta-block">
-  <h3>特別オファー：2025年11月末まで30％OFF！</h3>
-  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
-  <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
-</div>
+<h2 id="wayback-machineai">Wayback MachineとAIチェックの違い<a class="headerlink" href="#wayback-machineai" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>比較項目</th>
+<th>Wayback Machine</th>
+<th>XPost AI Checker</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>保存対象</td>
+<td>Webページ全体</td>
+<td>Xの投稿URL</td>
+</tr>
+<tr>
+<td>保存形式</td>
+<td>HTMLスナップショット</td>
+<td>PDF/A形式（改ざん防止）</td>
+</tr>
+<tr>
+<td>AI分析</td>
+<td>なし</td>
+<td>あり（誹謗中傷・脅迫などを分類）</td>
+</tr>
+<tr>
+<td>保存結果</td>
+<td>履歴確認のみ</td>
+<td>法的証拠に使える形式</td>
+</tr>
+<tr>
+<td>対応サイト</td>
+<td>全般（静的HTML）</td>
+<td>X（旧Twitter）専用</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="wayback-machineai_1">まとめ｜Wayback Machineは「保存」まで。証拠化はAIの出番。<a class="headerlink" href="#wayback-machineai_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Wayback MachineではX投稿を保存できない（技術的・運用上の制限）  </li>
+<li>SNS投稿を確実に残したいなら、URLを直接処理できる仕組みが必要  </li>
+<li>XPost AI Checkerなら、投稿をAIが分析し“証拠PDF”として保存できる  </li>
+</ul>
+<p>保存が目的ならWayback Machine、<br />
+<strong>証拠として残したいならAI。</strong></p>
+<p>それぞれの役割を理解して使い分けることで、<br />
+“見えなくなる投稿”を確実に残すことができます。</p>
+<p><a href="https://xpostaichecker.jp/" class="md-button--primary">Xの投稿をAIで証拠化する</a></p>
 
 
 

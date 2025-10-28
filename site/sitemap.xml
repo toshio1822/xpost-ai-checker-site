@@ -2,58 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://xpostaichecker.jp/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
+    </url>
+    <url>
+         <loc>https://xpostaichecker.jp/about/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/contact/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/faq/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/legal/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/plans/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/thanks/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/blog/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/blog/001_xpost-ai-checker-release/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/blog/002_xpost-ai-checker-how-it-works/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/blog/003_xpost-ai-checker-how-to-use/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/blog/004_ai-slander-analysis-mechanism/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/blog/005_twitter-gyotaku-vs-ai-checker/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/blog/006_x-report-form-vs-ai-checker/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
     </url>
     <url>
          <loc>https://xpostaichecker.jp/blog/007_web-gyotaku-how-to-and-tips/</loc>
-         <lastmod>2025-10-27</lastmod>
+         <lastmod>2025-10-28</lastmod>
+    </url>
+    <url>
+         <loc>https://xpostaichecker.jp/blog/008_wayback-machine-x-fail/</loc>
+         <lastmod>2025-10-28</lastmod>
     </url>
 </urlset>

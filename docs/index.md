@@ -4,7 +4,7 @@ description: X(Twitter)の誹謗中傷・名誉毀損・脅迫投稿をAIが自�
 ---
 
 <div class="hero">
-  <img src="logo.png" alt="XPost AI Checker - X(Twitter)誹謗中傷分析ツールのロゴ" class="hero__logo" />
+  <img src="logo-256x256.png" alt="XPost AI Checker - X(Twitter)誹謗中傷分析ツールのロゴ" class="hero__logo" />
   <div class="hero__text">
     <h1>X(Twitter)の誹謗中傷をAIで証拠化｜PDF生成サービス｜XPost AI Checker</h1>
     <p class="lead"><strong>誹謗中傷・脅迫・名誉毀損の投稿をAIが自動分析。証拠PDFを納品します。</strong></p>

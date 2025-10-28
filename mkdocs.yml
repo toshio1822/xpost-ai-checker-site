@@ -18,8 +18,9 @@ nav:
 - ホーム: index.md
 - 料金プラン: plans.md
 - よくある質問: faq.md
-- お問い合わせ: contact.md
 - ブログ: blog/index.md
+- お問い合わせ: contact.md
+- 運営者情報: about.md
 - 法的表記: legal.md
 extra:
   generator: false
@@ -31,9 +32,9 @@ extra:
     link: https://x.com/TOSHIO_1983
   social_image: assets/og.png
 extra_css:
-- assets/extra.css?v=202510272258
+- assets/extra.css?v=202510282208
 extra_javascript:
-- assets/thanks.js?v=202510272258
+- assets/thanks.js?v=202510282208
 markdown_extensions:
 - attr_list
 - md_in_html
