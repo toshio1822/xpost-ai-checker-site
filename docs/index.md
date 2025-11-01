@@ -167,19 +167,25 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
   <article class="blog-card">
     <h3>AIがSNS誹謗中傷を自動判定する時代へ</h3>
     <p>SNS誹謗中傷の証拠をAIが自動分析しPDF化。投稿の問題レベルを5段階で判定し、弁護士相談にも使えるレポートを作成する新サービス「XPost AI Checker」をリリースしました。</p>
-    <a class="blog-link" href="blog/001_xpost-ai-checker-release.md">記事を読む</a>
+    <a class="blog-link" href="blog/001_xpost-ai-checker-release/">記事を読む</a>
   </article>
 
   <article class="blog-card">
     <h3>AIはどのように“問題投稿”を見抜くのか</h3>
     <p>X（Twitter）の投稿をAIがどのように分類し、誹謗中傷の可能性を検出しているのか。その自然言語処理技術と判定基準の仕組みをわかりやすく解説します。</p>
-    <a class="blog-link" href="blog/002_xpost-ai-checker-how-it-works.md">記事を読む</a>
+    <a class="blog-link" href="blog/002_xpost-ai-checker-how-it-works/">記事を読む</a>
   </article>
 
   <article class="blog-card">
     <h3>SNS投稿を“証拠”にする方法｜AIが作るPDFは法的に使えるのか？</h3>
     <p>SNS投稿を法的な証拠として残すための手順を解説。AIが作成するPDF/A形式レポートの信頼性、保存形式、弁護士相談での活用方法を紹介します。</p>
-    <a class="blog-link" href="blog/003_xpost-ai-checker-how-to-use.md">記事を読む</a>
+    <a class="blog-link" href="blog/003_xpost-ai-checker-how-to-use/">記事を読む</a>
+  </article>
+
+  <article class="blog-card">
+    <h3>【保存版】SNSトラブル対応ハンドブック2025</h3>
+    <p>誹謗中傷・脅迫・デマ拡散などのSNSトラブルに遭ったとき、どう動けばいいかをまとめた1ページ完結のガイドです。<strong>困ったときにまず読む「SNS防災ハンドブック」</strong>としてご活用ください。</p>
+    <a class="blog-link" href="blog/013_sns-trouble-handbook/">記事を読む</a>
   </article>
 
 </div>

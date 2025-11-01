@@ -32,9 +32,9 @@ extra:
     link: https://x.com/TOSHIO_1983
   social_image: assets/og.png
 extra_css:
-- assets/extra.css?v=202510282208
+- assets/extra.css?v=202510312258
 extra_javascript:
-- assets/thanks.js?v=202510282208
+- assets/thanks.js?v=202510312258
 markdown_extensions:
 - attr_list
 - md_in_html

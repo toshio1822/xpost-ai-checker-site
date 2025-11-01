@@ -85,7 +85,7 @@ description: XPost AI Checker の背景や仕組み、使い方、リリース�
 
 # 開発者ブログ
 
-XPost AI Checker の背景や仕組み、使い方を詳しく紹介しています。
+XPost AI Checker XPost AI Checker の背景や仕組み、使い方、リリース情報をまとめたブログ一覧です。
 
 <div class="blog-cards">
 {cards_html}

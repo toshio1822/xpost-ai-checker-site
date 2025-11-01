@@ -5,9 +5,39 @@ description: XPost AI Checker の背景や仕組み、使い方、リリース�
 
 # 開発者ブログ
 
-XPost AI Checker の背景や仕組み、使い方を詳しく紹介しています。
+XPost AI Checker XPost AI Checker の背景や仕組み、使い方、リリース情報をまとめたブログ一覧です。
 
 <div class="blog-cards">
+  <article class="blog-card">
+    <h3>【保存版】SNSトラブル対応ハンドブック2025｜誹謗中傷・通報・証拠保存の全知識</h3>
+    <p>SNSで誹謗中傷や脅迫を受けたとき、どう対応すればいい？本記事では、投稿の保存方法・通報の手順・相談先などを1ページでわかりやすくまとめました。困ったときに見返せる「SNS防災ハンドブック」です。</p>
+    <a class="blog-link" href="013_sns-trouble-handbook/">記事を読む</a>
+  </article>
+
+  <article class="blog-card">
+    <h3>SNS投稿を「証拠として残す」には？スクショだけでは足りない理由を技術的に解説</h3>
+    <p>SNSで誹謗中傷や脅迫を受けたとき、投稿を「証拠として残す」にはどんな方法が有効か？スクリーンショットだけでは不十分な理由と、技術的に信頼できるデジタル証拠の作り方をわかりやすく解説します。</p>
+    <a class="blog-link" href="012_sns-proof-technical/">記事を読む</a>
+  </article>
+
+  <article class="blog-card">
+    <h3>AIが“悪意のある言葉”をどう見抜くのか｜誹謗中傷検出の仕組みをわかりやすく解説</h3>
+    <p>SNS上の誹謗中傷や脅迫をAIがどう見抜いているのか？自然言語処理（NLP）と感情分析の仕組みをやさしく解説。AIが「悪意のある言葉」をどのように理解し、どこまで判定できるのかを紹介します。</p>
+    <a class="blog-link" href="011_ai-detects-hate-speech/">記事を読む</a>
+  </article>
+
+  <article class="blog-card">
+    <h3>SNSで炎上を防ぐために｜AIが教える“誤解されやすい言葉”の特徴</h3>
+    <p>SNS炎上の多くは「悪意」ではなく「誤解」から生まれます。AIがどんな言葉を“誤解されやすい”と判断するのかをわかりやすく解説。投稿前に気をつけたい表現の特徴と、AIを使ったセルフチェックの方法を紹介します。</p>
+    <a class="blog-link" href="010_sns-enjo-prevention/">記事を読む</a>
+  </article>
+
+  <article class="blog-card">
+    <h3>【保存版】削除されたX投稿は見れない？消える前に“証拠として残す”唯一の方法</h3>
+    <p>「削除されたXの投稿を見たい」「魚拓を取りたい」──そんなときどうすればいい？本記事では、Wayback Machineなどで見られない理由と、削除前に確実に投稿を証拠として残す方法を紹介します。</p>
+    <a class="blog-link" href="009_deleted-x-posts-check/">記事を読む</a>
+  </article>
+
   <article class="blog-card">
     <h3>Wayback MachineでX投稿を保存できない理由と対処法【実証付き】</h3>
     <p>Wayback MachineでX（旧Twitter）の投稿を保存しようとするとエラーになる理由を実際に検証。保存できない技術的な背景と、確実に投稿を残す方法を紹介します。</p>

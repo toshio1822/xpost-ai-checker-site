@@ -3,20 +3,29 @@ title: 運営者情報｜XPost AI Checker
 description: X（旧Twitter）の投稿をAIで分析・証拠化する「XPost AI Checker」の運営者情報。開発背景・実績・セキュリティ方針・連絡先。
 ---
 
-# 運営者情報
-
-<div align="left">
-  <img src="/images/profile_toshio.png" alt="運営者アイコン" width="180" style="border-radius: 50%; margin: 16px 0;">
+<div class="hero">
+  <div class="hero__text">
+    <h1>運営者情報</h1>
+    <p class="lead">XPost AI Checker は、SNSの投稿を確かな形で残すためのツールです。<br>
+    本ページでは、開発者の紹介とサービス開発の背景をご紹介します。</p>
+  </div>
 </div>
+
+<div align="center" style="margin: 24px 0;">
+  <img src="/images/profile_toshio.png" alt="運営者アイコン" width="240" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  <p style="font-weight: 600; margin-top: 8px;">TOSHIO（開発・運営）</p>
+</div>
+
+---
 
 ## ミッション
 SNSの投稿は消える。けれど、被害や事実は消えない。  
 **「必要な人が、必要なときに、確かな形で残せる」** を実現するために  
-X Post AI Checker を開発・運営しています。
+XPost AI Checker を開発・運営しています。
 
 ---
 
-## 運営者
+## 運営者プロフィール
 - **運営者名**：TOSHIO  
 - **肩書き**：ソフトウェアエンジニア／プロダクト開発  
 - **経歴**：日本のシステム開発会社に2006年より勤務。  
