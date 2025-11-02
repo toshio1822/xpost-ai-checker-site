@@ -2,6 +2,7 @@
 title: AIが“誹謗中傷”を見抜く時代へ。XPost AI Checkerが支える証拠づくりの新常識
 description: SNSの誹謗中傷をAIが自動で検出。投稿のトーンや文脈を理解し、懸念度を分類。XPost AI Checkerがどのように証拠PDFを生成し、法的な整理を支援するのかを解説します。
 ---
+
 <div class="hero">
   <div class="hero__text">
     <h1>AIが“誹謗中傷”を見抜く時代へ。XPost AI Checkerが支える証拠づくりの新常識</h1>
@@ -115,10 +116,10 @@ XPost AI Checkerは、感情的な反応の前に**まず状況を整理する**
 - [お問い合わせ](../contact.md)
 
 ---
-
 <div class="cta-block">
   <h3>特別オファー：2025年11月末まで30％OFF！</h3>
-  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう。</p>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
   <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
   <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
 </div>
+

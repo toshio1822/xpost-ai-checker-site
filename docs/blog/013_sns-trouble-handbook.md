@@ -10,11 +10,16 @@ tags:
 date: 2025-10-30
 ---
 
-# 【保存版】SNSトラブル対応ハンドブック2025  
-### ― 誹謗中傷・通報・証拠保存の全知識 ―
+<div class="hero">
+  <div class="hero__text">
+    <h1>【保存版】SNSトラブル対応ハンドブック2025  ― 誹謗中傷・通報・証拠保存の全知識 ―</h1>
+    <p class="lead">SNSで誹謗中傷、脅迫、あるいはデマ拡散などの被害に遭ったとき、冷静に行動するための情報をこの1ページにまとめました。</p>
+  </div>
+</div>
 
-SNSで誹謗中傷、脅迫、あるいはデマ拡散などの被害に遭ったとき、  
-冷静に行動するための情報をこの1ページにまとめました。
+# 
+
+
 
 > 💡 **このページをブックマークしておけば、困ったときに迷わず対応できます。**
 
@@ -184,9 +189,8 @@ AIはあくまで補助ツールですが、
 | カテゴリ | リンク |
 |-----------|--------|
 | SNS通報ガイド | [X（旧Twitter）ヘルプセンター](https://help.twitter.com/ja) / [Instagramヘルプ](https://help.instagram.com/) |
-| 公的相談窓口 | [総務省 消費者相談センター](https://www.soumu.go.jp/main_sosiki/joho_tsusin/d_syohi/) / [法務省 人権相談ダイヤル](https://www.moj.go.jp/JINKEN/jinken113.html) |
-| 情報リテラシー | [内閣府 青少年インターネット利用対策](https://www8.cao.go.jp/youth/youth-harm/) |
-| セキュリティ知識 | [IPA セキュリティセンター](https://www.ipa.go.jp/security/) / [Internet Archive](https://archive.org/) |
+| 公的相談窓口 |  [法務省 人権相談ダイヤル](https://www.moj.go.jp/JINKEN/jinken113.html) |
+| セキュリティ知識 | [IPA セキュリティセンター](https://www.ipa.go.jp/security/) |
 
 ---
 
@@ -206,3 +210,10 @@ SNSトラブルは誰にでも起こり得ます。
 ※本記事は一般的な情報提供を目的としたものであり、法的助言を行うものではありません。  
 実際のトラブル時には、弁護士などの専門家への相談をおすすめします。
 
+---
+<div class="cta-block">
+  <h3>特別オファー：2025年11月末まで30％OFF！</h3>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
+  <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
+  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
+</div>

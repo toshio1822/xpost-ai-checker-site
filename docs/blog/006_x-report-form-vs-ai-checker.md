@@ -7,7 +7,6 @@ description: X（旧Twitter）の通報で泣き寝入りしないために。�
   <div class="hero__text">
     <h1>「Xで通報しても意味がない？」に対する現実的な対処法</h1>
     <p class="lead">通報しても無視される？対応されない？──アプリ通報だけに頼らない、“運営に届く”通報と証拠化の方法を紹介します。</p>
-    <a href="https://xpostaichecker.jp/" class="md-button--primary">AIで投稿をまとめて証拠化</a>
   </div>
 </div>
 
@@ -122,4 +121,12 @@ Xの公式ヘルプセンターには、**問い合わせフォーム**が存在
 **届け方と証拠の作り方**を変えてみましょう。
 
 あなたの声が、運営に届く可能性はきっとあります。
+
+---
+<div class="cta-block">
+  <h3>特別オファー：2025年11月末まで30％OFF！</h3>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
+  <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
+  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
+</div>
 

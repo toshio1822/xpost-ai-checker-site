@@ -9,7 +9,6 @@ description: 「削除されたXの投稿を見たい」「魚拓を取りたい
     <p class="lead">「削除された投稿を見たい」「魚拓を取っておけばよかった」──そう思ったことはありませんか？<br>
     残念ながら削除されたX（旧Twitter）の投稿は見ることができません。<br>
     でも、“消える前に確実に残す”ことならできます。</p>
-    <a href="https://xpostaichecker.jp/" class="md-button--primary">削除前に投稿を証拠化する</a>
   </div>
 </div>
 
@@ -120,3 +119,10 @@ AIが分類・PDF化して**“証拠として使える形”**にまとめま�
 
 <a href="https://xpostaichecker.jp/" class="md-button--primary">削除前に投稿を証拠化する</a>
 
+---
+<div class="cta-block">
+  <h3>特別オファー：2025年11月末まで30％OFF！</h3>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
+  <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
+  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
+</div>

@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/extra.css?v=202510312258">
+      <link rel="stylesheet" href="../../assets/extra.css?v=202511021902">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sns" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -393,11 +393,13 @@
 
 
 
-<h1 id="sns">SNS投稿を「証拠として残す」には？スクショだけでは足りない理由を技術的に解説<a class="headerlink" href="#sns" title="Permanent link">&para;</a></h1>
-<p>SNSで誹謗中傷や脅迫を受けたとき、<br />
-「とりあえずスクリーンショットを撮っておこう」と思う方は多いでしょう。  </p>
-<p>しかし、<strong>スクリーンショットだけでは“証拠として不十分”になるケース</strong>があります。<br />
-本記事では、AIや技術の観点から「信頼できる証拠の残し方」をわかりやすく解説します。</p>
+<div class="hero">
+  <div class="hero__text">
+    <h1>SNS投稿を「証拠として残す」には？スクショだけでは足りない理由を技術的に解説</h1>
+    <p class="lead">SNSで誹謗中傷や脅迫を受けたとき、「とりあえずスクリーンショットを撮っておこう」と思う方は多いでしょう。しかし、**スクリーンショットだけでは“証拠として不十分”になるケース**があります。本記事では、AIや技術の観点から「信頼できる証拠の残し方」をわかりやすく解説します。</p>
+  </div>
+</div>
+
 <hr />
 <h2 id="_1">📱 スクリーンショットの限界<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>SNS投稿の証拠として最も一般的なのがスクショですが、<br />
@@ -475,31 +477,23 @@
 </tbody>
 </table>
 <blockquote>
-<p>💡 <strong>XPost AI Checker</strong> では、AIで分析したSNS投稿を <strong>PDF/A-2b形式</strong> で自動生成し、法的証拠として長期保管できるようにしています。</p>
+<p>💡 <strong><a href="https://xpostaichecker.jp/">XPost AI Checker</a></strong> では、AIで分析したSNS投稿を <strong>PDF/A-2b形式</strong> で自動生成し、法的証拠として長期保管できるようにしています。</p>
 </blockquote>
 <hr />
 <h2 id="_3">⚙️ ハッシュ値で「改ざんされていない」ことを証明する<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>ファイルの中身をもとに計算される識別コード、それが<strong>ハッシュ値</strong>です。<br />
 たとえばSHA-256というアルゴリズムを使えば、1文字でも変わるとまったく別の値になります。</p>
-<p>元のファイル → a5c3b4e8d9...
-改ざん後のファイル → 92f1b7d3c0...</p>
+<pre>
+元のファイル → a5c3b4e8d9...
+改ざん後のファイル → 92f1b7d3c0...
+</pre>
+
 <p>この仕組みを利用すれば、<br />
 「この証拠PDFは保存以来、一切変更されていない」<br />
 ということを技術的に証明できます。</p>
 <hr />
-<h2 id="_4">🧩 さらに確実にするための「メタデータ保存」<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
-<p>スクリーンショットやPDFの中に、次の情報を埋め込むと信頼性が高まります。</p>
-<ul>
-<li>取得日時（例：2025-10-30T14:21:03+09:00）  </li>
-<li>投稿URL・投稿ID  </li>
-<li>AI分析結果（誹謗中傷／脅迫／攻撃的など）  </li>
-</ul>
-<p>これらをまとめた <strong>manifest.json</strong> のようなファイルを同時に生成しておくと、<br />
-「どのツールで、どの時点の投稿を、どう処理したか」を説明できます。</p>
-<hr />
-<h2 id="_5">🚫 「アーカイブサイトで保存」は万能ではない<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<p>「Wayback Machine」や「Archive.today」などのアーカイブサービスは便利ですが、<br />
-SNS投稿の保存には制限があります。</p>
+<h2 id="_4">🚫 「アーカイブサイトで保存」は万能ではない<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>「Wayback Machine」や「Archive.today」などのアーカイブサービスは便利ですが、SNS投稿の保存には制限があります。</p>
 <table>
 <thead>
 <tr>
@@ -523,7 +517,7 @@ SNS投稿の保存には制限があります。</p>
 </table>
 <p>技術的制限により、<strong>SNS投稿は第三者サービスでは完全に保存できない</strong>のが現状です。</p>
 <hr />
-<h2 id="_6">🧰 現実的な保存方法のまとめ<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<h2 id="_5">🧰 現実的な保存方法のまとめ<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -551,12 +545,12 @@ SNS投稿の保存には制限があります。</p>
 </tbody>
 </table>
 <blockquote>
-<p>💡 XPost AI Checkerでは、これらをすべて自動化。<br />
-投稿URLを入力するだけで「PDF/A・CSV・JSON」をまとめて生成し、<br />
+<p>💡  <a href="https://xpostaichecker.jp/">XPost AI Checker</a> では、これらをすべて自動化。<br />
+投稿URLを入力するだけで証拠PDFを生成し、<br />
 改ざん防止・証拠保存に最適化された形式で納品します。</p>
 </blockquote>
 <hr />
-<h2 id="_7">🔐 まとめ：証拠は「保存の質」で差がつく<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<h2 id="_6">🔐 まとめ：証拠は「保存の質」で差がつく<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <p>SNSトラブルの証拠は、「どのように保存したか」で信頼性が大きく変わります。<br />
 スクリーンショットも悪くありませんが、<br />
 <strong>ハッシュ・メタデータ・PDF/A形式</strong>といった技術を組み合わせることで、<br />
@@ -566,7 +560,6 @@ SNS投稿の保存には制限があります。</p>
 <a href="https://xpostaichecker.jp/">XPost AI Checker</a> をご利用ください。</p>
 </blockquote>
 <hr />
-<h2 id="_8">🔗 関連記事<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
 <ul>
 <li><a href="../011_ai-detects-hate-speech/">AIが“悪意のある言葉”をどう見抜くのか｜誹謗中傷検出の仕組みを解説</a></li>
 <li><a href="../010_sns-enjo-prevention/">SNSで炎上を防ぐために｜AIが教える“誤解されやすい言葉”の特徴</a></li>
@@ -574,6 +567,13 @@ SNS投稿の保存には制限があります。</p>
 <hr />
 <p>※本記事は一般的な情報提供を目的としたものであり、法的助言を行うものではありません。<br />
 実際のトラブル時は、弁護士など専門家への相談をおすすめします。</p>
+<hr />
+<div class="cta-block">
+  <h3>特別オファー：2025年11月末まで30％OFF！</h3>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
+  <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
+  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
+</div>
 
 
 
@@ -649,7 +649,7 @@ SNS投稿の保存には制限があります。</p>
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="../../assets/thanks.js?v=202510312258"></script>
+        <script src="../../assets/thanks.js?v=202511021902"></script>
       
     
   </body>

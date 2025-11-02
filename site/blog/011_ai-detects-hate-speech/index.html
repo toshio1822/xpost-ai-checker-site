@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/extra.css?v=202510312258">
+      <link rel="stylesheet" href="../../assets/extra.css?v=202511021902">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ai" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -393,10 +393,13 @@
 
 
 
-<h1 id="ai">AIが“悪意のある言葉”をどう見抜くのか｜誹謗中傷検出の仕組みをわかりやすく解説<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h1>
-<p>SNS上には、日常的に多くの投稿が流れています。<br />
-その中から「誹謗中傷」「脅迫」「攻撃的表現」をAIが見抜くには、単なる単語検出ではなく<strong>文脈や感情を理解する力</strong>が求められます。</p>
-<p>本記事では、AIがどのように“悪意のある言葉”を判定しているのか、自然言語処理（NLP）の仕組みをわかりやすく紹介します。</p>
+<div class="hero">
+  <div class="hero__text">
+    <h1>AIが“悪意のある言葉”をどう見抜くのか｜誹謗中傷検出の仕組みをわかりやすく解説</h1>
+    <p class="lead">SNS上には、日常的に多くの投稿が流れています。その中から「誹謗中傷」「脅迫」「攻撃的表現」をAIが見抜くには、単なる単語検出ではなく**文脈や感情を理解する力**が求められます。本記事では、AIがどのように“悪意のある言葉”を判定しているのか、自然言語処理（NLP）の仕組みをわかりやすく紹介します。</p>
+  </div>
+</div>
+
 <hr />
 <h2 id="_1">💬 「悪意」を理解するのは難しい<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
 <p>人間でも、「皮肉」と「冗談」、「注意」と「脅迫」の違いを明確に判断するのは難しいものです。<br />
@@ -506,7 +509,7 @@ AIはこの「対象」と「攻撃性」の組み合わせを重視して分析
 <p>さらに、最近では「Transformer」や「LLM（大規模言語モデル）」が使われ、<br />
 人間のように「前後関係」「比喩」「皮肉」などもある程度理解できるようになっています。</p>
 <hr />
-<h2 id="ai_1">⚙️ AIが出す判定結果の種類<a class="headerlink" href="#ai_1" title="Permanent link">&para;</a></h2>
+<h2 id="ai">⚙️ AIが出す判定結果の種類<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
 <p>AIは投稿ごとに、次のような分類ラベルを付与します。</p>
 <table>
 <thead>
@@ -540,7 +543,7 @@ AIはこの「対象」と「攻撃性」の組み合わせを重視して分析
 </table>
 <p>AIはこれらの分類をもとに、<strong>投稿ごとの「危険度スコア」や「判定理由」</strong>を出力します。</p>
 <hr />
-<h2 id="ai_2">🔍 実例：AIが見抜いた“悪意の言葉”<a class="headerlink" href="#ai_2" title="Permanent link">&para;</a></h2>
+<h2 id="ai_1">🔍 実例：AIが見抜いた“悪意の言葉”<a class="headerlink" href="#ai_1" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>投稿例：「また◯◯がやらかした。ほんとに学習しない人間だな」<br />
 → 判定：誹謗中傷リスク（中）<br />
@@ -551,7 +554,7 @@ AIはこの「対象」と「攻撃性」の組み合わせを重視して分析
 </blockquote>
 <p>このように、<strong>対象・表現・トーン</strong>の3点をAIが組み合わせて判定しています。</p>
 <hr />
-<h2 id="ai_3">🚀 AIによる誹謗中傷検出の課題と展望<a class="headerlink" href="#ai_3" title="Permanent link">&para;</a></h2>
+<h2 id="ai_2">🚀 AIによる誹謗中傷検出の課題と展望<a class="headerlink" href="#ai_2" title="Permanent link">&para;</a></h2>
 <p>AIの判定は非常に高精度になっていますが、まだ完璧ではありません。</p>
 <ul>
 <li>冗談・皮肉を完全に理解するのは難しい  </li>
@@ -561,7 +564,7 @@ AIはこの「対象」と「攻撃性」の組み合わせを重視して分析
 <p>しかし近年は、<strong>日本語特化モデル</strong>や<strong>感情認識強化モデル</strong>が登場し、SNSのような短文にも強くなってきています。</p>
 <p>今後は、「AIが投稿の危険性を“予防的に”指摘する」仕組みが広がるでしょう。</p>
 <hr />
-<h2 id="ai_4">💡 投稿をAIでチェックする意義<a class="headerlink" href="#ai_4" title="Permanent link">&para;</a></h2>
+<h2 id="ai_3">💡 投稿をAIでチェックする意義<a class="headerlink" href="#ai_3" title="Permanent link">&para;</a></h2>
 <p>炎上を防ぐだけでなく、AIの判定結果を見ることで<strong>自分の文章の癖や感情パターン</strong>に気づけます。</p>
 <p>たとえば、XPost AI Checkerでは以下のような出力を提供しています。</p>
 <ul>
@@ -580,6 +583,13 @@ AIはこの「対象」と「攻撃性」の組み合わせを重視して分析
 <hr />
 <p>※本記事は一般的な情報提供を目的としたものであり、法的助言を行うものではありません。<br />
 SNSトラブルが発生した場合は、弁護士など専門家への相談をおすすめします。</p>
+<hr />
+<div class="cta-block">
+  <h3>特別オファー：2025年11月末まで30％OFF！</h3>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
+  <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
+  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
+</div>
 
 
 
@@ -655,7 +665,7 @@ SNSトラブルが発生した場合は、弁護士など専門家への相談�
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="../../assets/thanks.js?v=202510312258"></script>
+        <script src="../../assets/thanks.js?v=202511021902"></script>
       
     
   </body>

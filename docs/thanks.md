@@ -27,3 +27,14 @@ description: 決済完了後のご案内ページです。注文番号（Checkou
 </div>
 
 <a class="md-button md-button--primary" href="https://docs.google.com/forms/d/e/1FAIpQLSecT4r8PGt0WKRco_66TC_FJdVEA0oxUVrHg1shlzb9yuYL-g/viewform?usp=header" target="_blank">📝 発注フォームへ進む</a>
+
+---
+
+<div class="cta">
+  <p class="cta__lead">次の一歩</p>
+  <div class="cta__buttons">
+    <a class="btn btn-primary" href="/plans/">料金プランを見る</a>
+    <a class="btn btn-secondary" href="/blog/003_xpost-ai-checker-how-to-use/">使い方を確認</a>
+    <a class="btn btn-outline" href="/contact/">まずは相談したい</a>
+  </div>
+</div>

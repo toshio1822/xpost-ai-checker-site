@@ -2,6 +2,7 @@
 title: 「Twitter魚拓」と「XPost AI Checker」の違い｜AIでまとめて判定・証拠化する新しい選択肢
 description: Twitter魚拓は手軽な記録ツール。一方、XPost AI CheckerはAIが投稿をまとめて判定し、PDFで安全に保存。どちらもSNS投稿を守るための新しい選択肢です。
 ---
+
 <div class="hero">
   <div class="hero__text">
     <h1>「Twitter魚拓」と「XPost AI Checker」の違い｜AIでまとめて判定・証拠化できる新しい選択肢</h1>
@@ -125,10 +126,9 @@ XPost AI Checkerはそれを**AIで補完し、効率化する新しい選択肢
 - [AIが“誹謗中傷”を見抜く時代へ。XPost AI Checkerが支える証拠づくりの新常識](004_ai-slander-analysis-mechanism.md)
 
 ---
-
 <div class="cta-block">
   <h3>特別オファー：2025年11月末まで30％OFF！</h3>
-  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう。</p>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
   <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
   <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
 </div>

@@ -9,6 +9,12 @@ XPost AI Checker XPost AI Checker の背景や仕組み、使い方、リリー�
 
 <div class="blog-cards">
   <article class="blog-card">
+    <h3>自己愛性パーソナリティ障害シリーズまとめ｜理不尽な人に振り回されないために</h3>
+    <p>自己愛性パーソナリティ障害（NPD）に悩む人のための実践的ガイド。理解・距離・記録・相談・回復の5ステップで、SNSや人間関係での被害を防ぐ方法を体系的にまとめました。</p>
+    <a class="blog-link" href="014_npd-series/">記事を読む</a>
+  </article>
+
+  <article class="blog-card">
     <h3>【保存版】SNSトラブル対応ハンドブック2025｜誹謗中傷・通報・証拠保存の全知識</h3>
     <p>SNSで誹謗中傷や脅迫を受けたとき、どう対応すればいい？本記事では、投稿の保存方法・通報の手順・相談先などを1ページでわかりやすくまとめました。困ったときに見返せる「SNS防災ハンドブック」です。</p>
     <a class="blog-link" href="013_sns-trouble-handbook/">記事を読む</a>
@@ -69,19 +75,19 @@ XPost AI Checker XPost AI Checker の背景や仕組み、使い方、リリー�
   </article>
 
   <article class="blog-card">
-    <h3>SNS投稿を“証拠”にする方法｜AIが作るPDFは法的に使えるのか？</h3>
-    <p>SNS投稿を法的な証拠として残すための手順を解説。AIが作成するPDF/A形式レポートの信頼性、保存形式、弁護士相談での活用方法を紹介します。</p>
+    <h3>XPost AI Checker使い方ガイド｜AIがSNS投稿を自動で分析し証拠PDFを作るまでの流れ</h3>
+    <p>XPost AI Checkerの基本的な使い方をステップごとに解説。X（Twitter）の投稿URLをまとめて送信するだけで、AIが誹謗中傷や脅迫投稿を分析し、証拠PDFを自動生成します。購入から納品までの手順を詳しく紹介。</p>
     <a class="blog-link" href="003_xpost-ai-checker-how-to-use/">記事を読む</a>
   </article>
 
   <article class="blog-card">
-    <h3>AIはどのように“問題投稿”を見抜くのか｜XPost AI Checkerの仕組み</h3>
-    <p>X（Twitter）の投稿をAIがどのように分類し、誹謗中傷の可能性を検出しているのか。その自然言語処理技術と判定基準の仕組みをわかりやすく解説します。</p>
+    <h3>XPost AI Checkerの仕組み｜AIがSNS投稿を分析して証拠PDFを自動生成するまで</h3>
+    <p>XPost AI Checkerは、X（Twitter）の投稿を自動で取得し、AIが文脈を解析して懸念度を判定。結果をPDF/A形式で保存し、削除申請や警察相談に使える証拠を自動生成します。その仕組みをわかりやすく解説します。</p>
     <a class="blog-link" href="002_xpost-ai-checker-how-it-works/">記事を読む</a>
   </article>
 
   <article class="blog-card">
-    <h3>AIがSNS誹謗中傷を自動判定する時代へ｜XPost AI Checkerリリース</h3>
+    <h3>XPost AI Checkerリリース｜AIがSNS誹謗中傷を自動判定する時代へ</h3>
     <p>SNS誹謗中傷の証拠をAIが自動分析しPDF化。投稿の問題レベルを5段階で判定し、弁護士相談にも使えるレポートを作成する新サービス「XPost AI Checker」をリリースしました。</p>
     <a class="blog-link" href="001_xpost-ai-checker-release/">記事を読む</a>
   </article>

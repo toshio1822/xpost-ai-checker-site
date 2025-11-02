@@ -1,11 +1,12 @@
 ---
-title: SNS投稿を“証拠”にする方法｜AIが作るPDFは法的に使えるのか？
-description: SNS投稿を法的な証拠として残すための手順を解説。AIが作成するPDF/A形式レポートの信頼性、保存形式、弁護士相談での活用方法を紹介します。
+title: XPost AI Checker使い方ガイド｜AIがSNS投稿を自動で分析し証拠PDFを作るまでの流れ
+description: XPost AI Checkerの基本的な使い方をステップごとに解説。X（Twitter）の投稿URLをまとめて送信するだけで、AIが誹謗中傷や脅迫投稿を分析し、証拠PDFを自動生成します。購入から納品までの手順を詳しく紹介。
 ---
+
 <div class="hero">
   <div class="hero__text">
-    <h1>SNS投稿を“証拠”にする方法</h1>
-    <p class="lead">URLをまとめて送信するだけで、AIが自動で誹謗中傷投稿を分析し、証拠PDFを作成します。</p>
+    <h1>XPost AI Checker使い方ガイド｜AIがSNS投稿を自動で分析し証拠PDFを作るまでの流れ</h1>
+    <p class="lead">XPost AI Checkerの基本的な使い方をステップごとに解説。X（Twitter）の投稿URLをまとめて送信するだけで、AIが誹謗中傷や脅迫投稿を分析し、証拠PDFを自動生成します。購入から納品までの手順を詳しく紹介。</p>
     <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
   </div>
 </div>
@@ -179,11 +180,10 @@ AIは投稿全体のトーンや意図を読み取り、<strong>遠回しな侮�
 XPost AI Checker は、その一歩を支えるツールです。
 
 ---
-→ [リリース情報](001_xpost-ai-checker-release.md)｜[仕組みを見る](002_xpost-ai-checker-how-it-works.md)｜[料金プラン](../plans.md)｜[お問い合わせ](../contact.md)
-
 <div class="cta-block">
   <h3>特別オファー：2025年11月末まで30％OFF！</h3>
   <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
   <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
   <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
 </div>
+

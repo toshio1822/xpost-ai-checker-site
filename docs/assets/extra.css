@@ -519,7 +519,6 @@ a[href*="buy"] {
 /* セカンダリボタン（青）：視認性強化 */
 .md-button,
 .btn-cta-secondary,
-a[href*="faq"],
 a[href*="details"] {
   display: inline-flex !important;
   background: #1565c0 !important;
@@ -597,32 +596,6 @@ a[href*="details"] {
   color: #e6f2ff; /* 明るい色 */
   text-decoration: underline; /* リンク感 */
   transform: none;
-}
-
-/* 「よくある質問」リンクのボタン化を防ぐ（優先度を高く） */
-.md-sidebar a[href*="faq"] {
-  background: none !important;
-  color: #ffffff !important;
-  padding: 8px 16px !important;
-  border-radius: 0 !important;
-  font-weight: 400 !important;
-  text-shadow: none !important;
-  box-shadow: none !important;
-  transition: color 0.2s ease !important;
-  display: block !important;
-}
-
-/* 他のセレクタによる上書きを防ぐ */
-a[href*="faq"] {
-  background: none !important; /* ボタンスタイルを無効化 */
-  color: #ffffff !important;
-  padding: 0 !important; /* デフォルトに戻す */
-  border: none !important;
-  border-radius: 0 !important;
-  font-weight: 400 !important;
-  text-shadow: none !important;
-  box-shadow: none !important;
-  transition: none !important;
 }
 
 /* モバイル対応 */
@@ -731,7 +704,6 @@ a[href*="faq"] {
 }
 
 /* === サイドバーの「よくある質問」だけボタンスタイルを無効化 === */
-.md-sidebar a[href*="faq"],
 .md-sidebar a[href*="details"] {
   background: none !important;
   color: inherit !important;
@@ -763,5 +735,4 @@ a[href*="faq"] {
   display: block !important;
   margin: 8px 0 !important;      /* ← 左寄せ用に “auto” を削除 */
 }
-
 

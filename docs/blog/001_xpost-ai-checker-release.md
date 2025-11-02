@@ -1,12 +1,12 @@
 ---
-title: AIがSNS誹謗中傷を自動判定する時代へ｜XPost AI Checkerリリース
+title: XPost AI Checkerリリース｜AIがSNS誹謗中傷を自動判定する時代へ
 description: SNS誹謗中傷の証拠をAIが自動分析しPDF化。投稿の問題レベルを5段階で判定し、弁護士相談にも使えるレポートを作成する新サービス「XPost AI Checker」をリリースしました。
 ---
 
 <div class="hero">
   <div class="hero__text">
-    <h1>AIがSNS誹謗中傷を自動判定する時代へ</h1>
-    <p class="lead">SNSでの誹謗中傷に悩む方のために、AIで証拠を自動整理するツールを開発しました。</p>
+    <h1>XPost AI Checkerリリース｜AIがSNS誹謗中傷を自動判定する時代へ</h1>
+    <p class="lead">SNS誹謗中傷の証拠をAIが自動分析しPDF化。投稿の問題レベルを5段階で判定し、弁護士相談にも使えるレポートを作成する新サービス「XPost AI Checker」をリリースしました。</p>
     <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
   </div>
 </div>
@@ -84,9 +84,6 @@ SNSの投稿をAIで分析し、内容を整理して、<strong>そのまま証�
 今後も、誹謗中傷やネットトラブルに悩む方が<strong>安心して使えるツール</strong>を目指し、改良を続けます。興味を持っていただけたら、ぜひ一度お試しください！
 
 ---
-→ [仕組みを見る](002_xpost-ai-checker-how-it-works.md)｜[使い方ガイド](003_xpost-ai-checker-how-to-use.md)｜[料金プラン](../plans.md)｜[お問い合わせ](../contact.md)
-
-
 <div class="cta-block">
   <h3>特別オファー：2025年11月末まで30％OFF！</h3>
   <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>

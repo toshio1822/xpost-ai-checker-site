@@ -7,7 +7,6 @@ description: SNS投稿やWebページを保存できる定番ツール「ウェ�
   <div class="hero__text">
     <h1>ウェブ魚拓でSNS投稿を保存する方法と注意点【2025年版】</h1>
     <p class="lead">削除される前に投稿を残したい。──ウェブ魚拓の正しい使い方と注意点、そして“証拠力”を高めるAI併用のコツを解説します。</p>
-    <a href="https://xpostaichecker.jp/" class="md-button--primary">AIで投稿をまとめて証拠化</a>
   </div>
 </div>
 
@@ -129,3 +128,10 @@ SNSでのトラブルや誹謗中傷は、投稿が消えてからでは遅い�
 
 <a href="https://xpostaichecker.jp/" class="md-button--primary">AIで投稿をまとめて証拠化</a>
 
+---
+<div class="cta-block">
+  <h3>特別オファー：2025年11月末まで30％OFF！</h3>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
+  <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
+  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
+</div>

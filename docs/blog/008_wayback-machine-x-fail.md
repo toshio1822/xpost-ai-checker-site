@@ -7,7 +7,6 @@ description: Wayback MachineでX（旧Twitter）の投稿を保存しようと�
   <div class="hero__text">
     <h1>Wayback MachineでX投稿を保存できない理由と対処法【実証付き】</h1>
     <p class="lead">「Wayback MachineでXの投稿を保存しようとしたけど、できなかった」──その原因を実際に検証しました。保存できない理由と、確実に投稿を残す方法を紹介します。</p>
-    <a href="https://xpostaichecker.jp/" class="md-button--primary">AIで投稿をまとめて証拠化</a>
   </div>
 </div>
 
@@ -176,4 +175,12 @@ AIが内容を自動分析して**PDF形式で証拠化**できるサービス�
 “見えなくなる投稿”を確実に残すことができます。
 
 <a href="https://xpostaichecker.jp/" class="md-button--primary">Xの投稿をAIで証拠化する</a>
+
+---
+<div class="cta-block">
+  <h3>特別オファー：2025年11月末まで30％OFF！</h3>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
+  <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
+  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
+</div>
 

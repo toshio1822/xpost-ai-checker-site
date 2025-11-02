@@ -2,6 +2,7 @@
 title: お問い合わせ・依頼フォーム｜XPost AI Checker
 description: X（Twitter）誹謗中傷のAI分析・証拠PDF作成のご依頼・ご相談はこちら。Googleフォームまたはメールで受付。
 ---
+
 # お問い合わせ / 依頼フォーム
 
 ご依頼・ご相談は以下のフォームからどうぞ。
@@ -14,3 +15,5 @@ description: X（Twitter）誹謗中傷のAI分析・証拠PDF作成のご依頼
 ---
 
 📩 **メール**： support@xpostaichecker.jp
+
+

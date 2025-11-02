@@ -1,14 +1,13 @@
 ---
-title: AIはどのように“問題投稿”を見抜くのか｜XPost AI Checkerの仕組み
-description: X（Twitter）の投稿をAIがどのように分類し、誹謗中傷の可能性を検出しているのか。その自然言語処理技術と判定基準の仕組みをわかりやすく解説します。
+title: XPost AI Checkerの仕組み｜AIがSNS投稿を分析して証拠PDFを自動生成するまで
+description: XPost AI Checkerは、X（Twitter）の投稿を自動で取得し、AIが文脈を解析して懸念度を判定。結果をPDF/A形式で保存し、削除申請や警察相談に使える証拠を自動生成します。その仕組みをわかりやすく解説します。
 ---
-
 
 <div class="hero">
   <div class="hero__text">
-    <h1>AIはどのように“問題投稿”を見抜くのか</h1>
-    <p class="lead">AIがどのように投稿を分析し、PDFを自動生成しているか。仕組みを公開します。</p>
-    <a href="https://xpostaichecker.jp/" class="md-button--primary">ツールの詳細を見る</a>
+    <h1>XPost AI Checkerの仕組み｜AIがSNS投稿を分析して証拠PDFを自動生成するまで</h1>
+    <p class="lead">XPost AI Checkerは、X（Twitter）の投稿を自動で取得し、AIが文脈を解析して懸念度を判定。結果をPDF/A形式で保存し、削除申請や警察相談に使える証拠を自動生成します。その仕組みをわかりやすく解説します。</p>
+    <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
   </div>
 </div>
 
@@ -121,12 +120,10 @@ XPost AI Checker は「誰かを裁くためのAI」ではありません。
 状況を整理し、冷静に行動を取るための<strong>支援ツール</strong>です。
 
 ---
-→ [リリース情報](001_xpost-ai-checker-release.md)｜[使い方ガイド](003_xpost-ai-checker-how-to-use.md)｜[料金プラン](../plans.md)｜[お問い合わせ](../contact.md)
-
-
 <div class="cta-block">
   <h3>特別オファー：2025年11月末まで30％OFF！</h3>
   <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
   <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
   <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
 </div>
+

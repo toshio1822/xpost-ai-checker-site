@@ -1,75 +1,137 @@
 ---
-title: 【証拠PDFを自動生成】X(Twitter) 誹謗中傷・名誉毀損 分析AI | XPost AI Checker
-description: X(Twitter)の誹謗中傷・名誉毀損・脅迫投稿をAIが自動分析。証拠PDFを最短3日で納品。弁護士相談・削除依頼・訴訟準備に活用可能。
+title: 「誹謗中傷で眠れない夜」から抜け出す第一歩を｜XPost AI Checker
+description: X(Twitter)の誹謗中傷投稿をAIが自動分析。証拠PDFを生成し、冷静な対応を支える新しいツール。感情に流されず、客観的な“証拠”をあなたの手に。
 ---
 
-<div class="hero">
-  <img src="logo-256x256.png" alt="XPost AI Checker - X(Twitter)誹謗中傷分析ツールのロゴ" class="hero__logo" />
+<div class="hero story-hero">
   <div class="hero__text">
-    <h1>X(Twitter)の誹謗中傷をAIで証拠化｜PDF生成サービス｜XPost AI Checker</h1>
-    <p class="lead"><strong>誹謗中傷・脅迫・名誉毀損の投稿をAIが自動分析。証拠PDFを納品します。</strong></p>
-<div class="cta">
-  <a href="plans/" class="btn-cta-primary">今すぐ申し込む</a>
-  <a href="contact/" class="btn-cta-secondary">お問い合わせ</a>
-</div>
-    <div class="badges">
-      <div class="badge">✅  ✅  投稿を自動分類し、懸念度を★1〜5で採点</div>
-      <div class="badge">🔍🔍 根拠語句の強調表示</div>
-      <div class="badge">📦 📦  PDF/A相当（長期保存可能なPDF）・改ざん防止ハッシュ</div>
+    <h1>その投稿、AIが冷静に証拠化します｜XPost AI Checker</h1>
+    <p class="lead">SNSで傷つくあなたへ。<br>感情ではなく、証拠で守るという選択を。</p>
+    <div class="cta">
+      <a href="plans/" class="btn-cta-primary">プランを見る</a>
+      <a href="contact/" class="btn-cta-secondary">無料で相談する</a>
     </div>
   </div>
+  <img src="logo-256x256.png" alt="心を守るAI証拠生成サービス">
 </div>
 
-# X(Twitter) 誹謗中傷をAIで分析し、証拠PDFに
+---
+## あなたも、こんな悩みを抱えていませんか？
 
-## サービス概要
+- SNSで心ない言葉を投げられた  
+- 通報しても、削除されずに拡散された  
+- 投稿が消されて、証拠が残らなかった  
+- 弁護士に相談したいけど、何を渡せばいいか分からない  
 
-XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（名誉毀損/侮辱/脅迫など）を抽出**、**根拠とともにPDFに整理**するサービスです。弁護士相談・削除依頼・訴訟準備に活用できます。
+> 「どうしたらいいか分からない」  
+> そんな状況を、私たちは何度も見てきました。
 
-<div class="cards service-icons">
-  <div class="card">
-    <h3>✅ 自動分類</h3>
-    <p>投稿をカテゴリに自動分類し、懸念度を★1〜5で採点。</p>
-  </div>
-  <div class="card">
-    <h3>🔍 根拠の明記</h3>
-    <p>該当箇所を強調表示し、根拠語句・理由を併記。判断の透明性を担保。</p>
-  </div>
-  <div class="card">
-    <h3>🛡️ 証拠PDF</h3>
-    <p>PDF/A相当（長期保存可能）＋ハッシュで改ざん防止。ZIPで一括納品。</p>
-  </div>
-</div>
+---
 
-## レポート サンプル
+## AIが、あなたの代わりに冷静に動きます
+
+XPost AI Checker は、X（Twitter）の投稿をAIが自動で分析し、  
+誹謗中傷・名誉毀損・脅迫などを分類。  
+**根拠語句と理由を明示したPDFレポート**を生成します。
+
+- 🔍 投稿をAIが自動分類  
+- 💬 懸念度を★1〜5で可視化  
+- 📦 証拠PDFを一括納品（PDF/A準拠・改ざん防止ハッシュ付）
+
+> AIは感情に流されません。  
+> あなたの代わりに、冷静で客観的な“証拠”を整えます。
+
+---
+
+## なぜこのサービスを作ったのか
+
+開発者である私も、SNSでの誹謗中傷を何度も目の当たりにしてきました。  
+心ない投稿が拡散され、誤解が広がり、傷ついて眠れなくなる人たち。  
+それは決して、特別な誰かの話ではありません。  
+いつ、自分や大切な人が同じ目に遭ってもおかしくない――  
+そう感じたのが、すべての始まりでした。
+
+---
+
+> 「どうすれば、傷ついた人が冷静に動けるだろうか」  
+> 「どうすれば、“感情ではなく事実”で向き合えるのだろうか」
+
+この問いに向き合い続けた結果、私が見つけた答えが「AI」でした。  
+AIなら、怒りや悲しみに影響されることなく、  
+冷静に言葉のニュアンスや脅迫性を分析できる。  
+人の感情を支えるために、**感情に左右されない仕組み**を作ろう。  
+そう決意して、XPost AI Checkerの開発を始めました。
+
+---
+
+もちろん、最初からうまくいったわけではありません。   
+思うように精度が出ず、何度も立ち止まりました。  
+
+それでも、「正しく守るためにこそ正確でありたい」という想いだけで続けてきました。  
+
+---
+
+こうしてようやく、**弁護士相談や削除依頼にも使えるレベル**の証拠PDFを  
+安定して生成できるようになったのです。  
+
+> 完璧ではなくても、「正確で誠実」なAIを。  
+> それが、私の信念です。  
+
+SNSで傷ついた人が、冷静に、そして確実に前へ進めるように。  
+このサービスは、そんな願いから生まれました。
+
+---
+
+## 実際のレポート（サンプル）
+
 <div class="teasers">
   <div class="teaser">
-    <div class="caption"> まとめレポート</div>
+    <div class="caption">まとめレポート</div>
     <a href="samples/teaser-summary.png" target="_blank">
       <img src="samples/teaser-summary.png" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDFA）" loading="lazy">
     </a>
-    <a href="samples/summary_report.pdf" class="mini" target="_blank">まとめPDFを開く</a>
+    <a href="samples/summary_report.pdf" class="mini" target="_blank">PDFを開く</a>
   </div>
-
   <div class="teaser">
     <div class="caption">個別エビデンス</div>
     <a href="samples/teaser-kobetsu-2.png" target="_blank">
       <img src="samples/teaser-kobetsu-2.png" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス" loading="lazy">
     </a>
-    <a href="samples/kobetsu.pdf" class="mini" target="_blank">個別PDFを開く</a>
+    <a href="samples/kobetsu.pdf" class="mini" target="_blank">PDFを開く</a>
   </div>
 </div>
 
+> これが、AIが生成する“あなたの代わりに冷静な証拠”です。  
+
+---
+
+## あなたが得られるもの
+
+| 項目 | 内容 |
+|------|------|
+| 🕒 時間の節約 | スクショ作業・分類作業を自動化。数百件でもまとめて処理。 |
+| 🧠 精神的な安心 | 感情的に対処せず、冷静な資料を残せる。 |
+| 🧾 証拠力 | PDF/A相当の形式＋改ざん防止ハッシュ付き。 |
+| ⚖️ 活用範囲 | 弁護士相談、削除依頼、警察相談などに転用可能。 |
+
+> 「AIが整えた証拠」を手にした瞬間、あなたの不安は“整理された事実”に変わります。
+
+---
 
 ## プランと料金
+
 | プラン | 件数 | 価格（税込） | 納期目安 |
 |--------|------:|--------------:|----------:|
 | お試し | 50件まで | ¥3,000 | 約3日 |
 | ベーシック | 100件まで | ¥5,500 | 約5日 |
 | スタンダード | 300件まで | ¥15,000 | 約7日 |
 
-[プランの詳細と購入](plans.md){ .md-button }
+[プランの詳細を見る](plans.md){ .md-button }
 
+> 対象外が多い場合は返金いたします。  
+> 安心してご利用ください。
+
+---
 
 ## ご利用の流れ
 
@@ -119,7 +181,8 @@ XPost AI Checker は、X（Twitter）投稿をAIで分析し、**問題投稿（
    AI分析結果をZIPで納品します。ダウンロードURLをメールでお送りします。
 <br/>
 
-> **対象外が多数と判定された場合は返金します。** 鍵アカウント・削除済み投稿・取得不能URLが多い場合は、**全額または一部返金**いたします。
+> 鍵アカウント・削除済み投稿は対象外ですが、  
+> 対象外が多い場合は**全額または一部返金**いたします。
 
 ## 納品内容（成果物）
 
@@ -142,16 +205,42 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
 
 > サンプルはデモデータであり、実在の投稿とは関係ありません。
 
-## よくある質問（抜粋）
-- 鍵付きアカウントは対象外です（公開投稿のみ）。  
-- 画像・動画は対象外（テキスト本文のみ）。  
-- 削除済み投稿は取得不可。  
+## よくある質問
+- Q. 鍵付きアカウントは対象ですか？  
+  A. 対象外です（公開投稿のみ）。  
+- Q. 画像や動画は分析されますか？  
+  A. テキスト本文のみが対象です。  
+- Q. 削除済み投稿は？  
+  A. 取得できないため除外となります。  
 
 詳細は[FAQ](faq.md)をご覧ください。
 
 ## 法的・免責
 - 本サービスはAIによる分析支援を目的としており、法的判断を代行するものではありません。  
 - 詳細は[特定商取引法に基づく表記](legal.md)をご確認ください。
+
+## 開発者からあなたへ
+
+> SNSで傷つく人を、少しでも減らしたい。  
+>  
+> 「冷静に、正確に、そして確実に」——  
+> 感情ではなく“証拠”で立ち向かえるように。  
+>  
+> その一歩を、AIがあなたと共に歩みます。
+
+---
+
+<div class="cta-block">
+  <h3>迷っているあなたへ。</h3>
+  <p>今すぐ動けなくても大丈夫です。  
+  この記事をブックマークしておいてください。  
+  SNSトラブルは、いつ起こるかわかりません。</p>
+
+  <div class="cta">
+    <a href="plans/" class="btn-cta-primary">プランを見る</a>
+    <a href="contact/" class="btn-cta-secondary">無料で相談する</a>
+  </div>
+</div>
 
 ---
 ## 開発者ブログ
@@ -165,21 +254,21 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
 <div class="blog-cards">
 
   <article class="blog-card">
-    <h3>AIがSNS誹謗中傷を自動判定する時代へ</h3>
+    <h3>XPost AI Checkerリリース｜AIがSNS誹謗中傷を自動判定する時代へ</h3>
     <p>SNS誹謗中傷の証拠をAIが自動分析しPDF化。投稿の問題レベルを5段階で判定し、弁護士相談にも使えるレポートを作成する新サービス「XPost AI Checker」をリリースしました。</p>
-    <a class="blog-link" href="blog/001_xpost-ai-checker-release/">記事を読む</a>
+    <a class="blog-link" href="001_xpost-ai-checker-release/">記事を読む</a>
+  </article>
+ 
+  <article class="blog-card">
+    <h3>XPost AI Checkerの仕組み｜AIがSNS投稿を分析して証拠PDFを自動生成するまで</h3>
+    <p>XPost AI Checkerは、X（Twitter）の投稿を自動で取得し、AIが文脈を解析して懸念度を判定。結果をPDF/A形式で保存し、削除申請や警察相談に使える証拠を自動生成します。その仕組みをわかりやすく解説します。</p>
+    <a class="blog-link" href="002_xpost-ai-checker-how-it-works/">記事を読む</a>
   </article>
 
   <article class="blog-card">
-    <h3>AIはどのように“問題投稿”を見抜くのか</h3>
-    <p>X（Twitter）の投稿をAIがどのように分類し、誹謗中傷の可能性を検出しているのか。その自然言語処理技術と判定基準の仕組みをわかりやすく解説します。</p>
-    <a class="blog-link" href="blog/002_xpost-ai-checker-how-it-works/">記事を読む</a>
-  </article>
-
-  <article class="blog-card">
-    <h3>SNS投稿を“証拠”にする方法｜AIが作るPDFは法的に使えるのか？</h3>
-    <p>SNS投稿を法的な証拠として残すための手順を解説。AIが作成するPDF/A形式レポートの信頼性、保存形式、弁護士相談での活用方法を紹介します。</p>
-    <a class="blog-link" href="blog/003_xpost-ai-checker-how-to-use/">記事を読む</a>
+    <h3>XPost AI Checker使い方ガイド｜AIがSNS投稿を自動で分析し証拠PDFを作るまでの流れ</h3>
+    <p>XPost AI Checkerの基本的な使い方をステップごとに解説。X（Twitter）の投稿URLをまとめて送信するだけで、AIが誹謗中傷や脅迫投稿を分析し、証拠PDFを自動生成します。購入から納品までの手順を詳しく紹介。</p>
+    <a class="blog-link" href="003_xpost-ai-checker-how-to-use/">記事を読む</a>
   </article>
 
   <article class="blog-card">
@@ -188,8 +277,13 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
     <a class="blog-link" href="blog/013_sns-trouble-handbook/">記事を読む</a>
   </article>
 
-</div>
+  <article class="blog-card">
+    <h3>自己愛性パーソナリティ障害シリーズまとめ｜理不尽な人に振り回されないために</h3>
+    <p>自己愛性パーソナリティ障害（NPD）に悩む人のための実践的ガイド。理解・距離・記録・相談・回復の5ステップで、SNSや人間関係での被害を防ぐ方法を体系的にまとめました。</p>
+    <a class="blog-link" href="014_npd-series/">記事を読む</a>
+  </article>
 
+</div>
 
 <div style="text-align:right;">
   <a class="md-button" href="blog/">すべての記事を見る →</a>
@@ -200,7 +294,7 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
   <h3>迷ったらまずは「お試し」から</h3>
   <p>AIが自動で仕分け、<strong>PDF/A準拠の証拠PDF</strong>をお届けします。</p>
   <div class="cta">
-    <a href="plans/" class="btn-cta-primary">今すぐ申し込む</a>
-    <a href="contact/" class="btn-cta-secondary">お問い合わせ</a>
+    <a href="plans/" class="btn-cta-primary">プランを見る</a>
+    <a href="contact/" class="btn-cta-secondary">無料で相談する</a>
   </div>
 </div>
