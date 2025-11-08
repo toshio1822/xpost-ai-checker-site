@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Wayback MachineでX（旧Twitter）の投稿を保存しようとするとエラーになる理由を実際に検証。保存できない技術的な背景と、確実に投稿を残す方法を紹介します。">
+        <meta name="description" content="Wayback MachineでX（Twitter）投稿を保存しようとするとエラーになる理由を解説。Twitter投稿が保存できない技術的な背景と、確実にツイートを残す代替手段（AI証拠化など）を紹介します。">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Wayback MachineでX投稿を保存できない理由と対処法【実証付き】 - XPost AI Checker</title>
+        <title>Wayback MachineでX（Twitter）投稿を保存できない理由と対処法【実証付き】 - XPost AI Checker</title>
       
     
     
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/extra.css?v=202511021902">
+      <link rel="stylesheet" href="../../assets/extra.css?v=202511072248">
     
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -75,7 +75,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue-grey">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -120,7 +120,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Wayback MachineでX投稿を保存できない理由と対処法【実証付き】
+              Wayback MachineでX（Twitter）投稿を保存できない理由と対処法【実証付き】
             
           </span>
         </div>
@@ -133,7 +133,7 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="green"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue-grey"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
     
   
 </form>
@@ -395,88 +395,81 @@
 
 <div class="hero">
   <div class="hero__text">
-    <h1>Wayback MachineでX投稿を保存できない理由と対処法【実証付き】</h1>
-    <p class="lead">「Wayback MachineでXの投稿を保存しようとしたけど、できなかった」──その原因を実際に検証しました。保存できない理由と、確実に投稿を残す方法を紹介します。</p>
+    <h1>Wayback MachineでX（Twitter）投稿を保存できない理由と対処法【実証付き】</h1>
+    <p class="lead">「Wayback MachineでTwitter投稿を保存しようとしたけど、エラーになる」「昔のX投稿を残したい」──そんな経験はありませんか？  
+    実は、現在Wayback MachineではX（旧Twitter）の投稿を保存できません。この記事では、その理由と確実に投稿を残す方法を、実際の検証結果とともに紹介します。</p>
   </div>
 </div>
 
-<h2 id="wayback-machineweb">Wayback Machineとは？──Webページを“過去”に戻すサービス<a class="headerlink" href="#wayback-machineweb" title="Permanent link">&para;</a></h2>
-<p><a href="https://web.archive.org/">Wayback Machine</a>（ウェイバックマシン）は、アメリカの非営利団体 <strong>Internet Archive</strong> が運営する<br />
-世界最大のWebアーカイブです。</p>
-<p>URLを入力すると、そのページの「過去の状態」を保存・閲覧できます。<br />
-ニュースサイト、企業ページ、ブログなど、静的なHTMLサイトの保存に強く、<br />
-“インターネットのタイムマシン”とも呼ばれています。</p>
 <hr />
-<h2 id="xtwitter">実際に試してみた：X（旧Twitter）の投稿を保存できるか？<a class="headerlink" href="#xtwitter" title="Permanent link">&para;</a></h2>
-<p>今回は、実際にWayback MachineでX投稿のURLを入力してみました。</p>
-<p>入力したURLはこちらです：</p>
-<pre><code>https://x.com/xpostaichecker1/status/1974673598930731272
-</code></pre>
-<h3 id="1-url">1. URLを入力して検索<a class="headerlink" href="#1-url" title="Permanent link">&para;</a></h3>
-<p>まずはトップページの検索ボックスにURLを入力します。</p>
+<h2 id="wayback-machineweb">Wayback Machineとは？──Webページを“過去”に戻すサービス<a class="headerlink" href="#wayback-machineweb" title="Permanent link">&para;</a></h2>
+<p><a href="https://web.archive.org/">Wayback Machine</a>（ウェイバックマシン）は、アメリカの非営利団体 <strong>Internet Archive</strong> が運営する世界最大のWebアーカイブです。</p>
+<p>URLを入力するだけで、そのページの「過去の状態」を保存・閲覧できます。<br />
+ニュースサイトや企業ページ、ブログなど、静的なHTMLサイトの保存に強く、“インターネットのタイムマシン”とも呼ばれています。</p>
+<hr />
+<h2 id="wayback-machinextwitter">Wayback MachineでX（Twitter）投稿を保存できる？<a class="headerlink" href="#wayback-machinextwitter" title="Permanent link">&para;</a></h2>
+<p>今回は実際に、Wayback MachineでTwitter投稿を保存できるかを検証してみました。<br />
+入力したURLはこちらです：</p>
+<p>https://x.com/xpostaichecker1/status/1974673598930731272</p>
+<h3 id="1-wayback-machinetwitterurl">1. Wayback Machineの検索ボックスにTwitter投稿URLを入力<a class="headerlink" href="#1-wayback-machinetwitterurl" title="Permanent link">&para;</a></h3>
 <div class="teaser">
-  <a href="/samples/wayback-machine01.png" target="_blank" rel="noopener">
-    <img src="/samples/wayback-machine01.png" alt="Wayback Machine トップページ" loading="lazy">
+  <a href="/samples/wayback-machine01.webp" target="_blank" rel="noopener">
+    <img src="/samples/wayback-machine01.webp" alt="Wayback MachineでTwitter投稿URLを入力した画面">
   </a>
 </div>
 
 <hr />
 <h3 id="2">2. 「アーカイブされていません」と表示される<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
-<p>検索すると以下のように表示されました。</p>
-<div class="teaser">
-  <a href="/samples/wayback-machine02.png" target="_blank" rel="noopener">
-    <img src="/samples/wayback-machine02.png" alt="Wayback Machine 未保存" loading="lazy">
-  </a>
-</div>
-
 <blockquote>
 <p><strong>Hrm. Wayback Machine has not archived that URL.</strong></p>
 </blockquote>
 <p>つまり、「このURLは保存されていない」という意味です。<br />
 「Save this URL in the Wayback Machine」ボタンで手動保存を試みます。</p>
-<hr />
-<h3 id="3-save-page-now">3. 「Save Page Now」を実行しても保存できない<a class="headerlink" href="#3-save-page-now" title="Permanent link">&para;</a></h3>
-<p>保存ページにURLを入力して「SAVE PAGE」を押しても、次の画面に進みます。</p>
 <div class="teaser">
-  <a href="/samples/wayback-machine03.png" target="_blank" rel="noopener">
-    <img src="/samples/wayback-machine03.png" alt="wayback machine Save Page Now" loading="lazy">
+  <a href="/samples/wayback-machine02.webp" target="_blank" rel="noopener">
+    <img src="/samples/wayback-machine02.webp" alt="Wayback MachineでTwitter投稿が保存されていない表示">
   </a>
 </div>
 
-<p>ここで保存リクエストを送信しても……</p>
+<hr />
+<h3 id="3-save-page">3. 「Save Page」ボタンで保存を試みる<a class="headerlink" href="#3-save-page" title="Permanent link">&para;</a></h3>
+<div class="teaser">
+  <a href="/samples/wayback-machine03.webp" target="_blank" rel="noopener">
+    <img src="/samples/wayback-machine03.webp" alt="Wayback MachineのSave Page Now機能でTwitter投稿を保存">
+  </a>
+</div>
+
 <hr />
 <h3 id="4-sorry">4. 結果：「Sorry, 保存に制限があります」<a class="headerlink" href="#4-sorry" title="Permanent link">&para;</a></h3>
-<p>最終的に、以下のエラーメッセージが表示されました。</p>
-<div class="teaser">
-  <a href="/samples/wayback-machine04.png" target="_blank" rel="noopener">
-    <img src="/samples/wayback-machine04.png" alt="wayback machine 保存エラー" loading="lazy">
-  </a>
-</div>
-
 <blockquote>
 <p><strong>Sorry. We’re currently facing some limitations when it comes to archiving this site.</strong></p>
 </blockquote>
-<p>これは「このサイト（X）は保存制限の対象である」という意味です。<br />
-つまり、<strong>Wayback MachineではXの投稿を保存できない</strong>のです。</p>
+<p>これは「このサイト（X／Twitter）は保存制限の対象である」という意味です。<br />
+つまり、<strong>Wayback MachineではTwitter投稿を保存できない</strong>のです。</p>
+<div class="teaser">
+  <a href="/samples/wayback-machine04.webp" target="_blank" rel="noopener">
+    <img src="/samples/wayback-machine04.webp" alt="Wayback MachineでTwitter投稿保存エラーの画面">
+  </a>
+</div>
+
 <hr />
-<h2 id="wayback-machinex">なぜWayback MachineではX投稿を保存できないのか？<a class="headerlink" href="#wayback-machinex" title="Permanent link">&para;</a></h2>
+<h2 id="wayback-machinetwitter3">Wayback MachineがTwitter投稿を保存できない3つの理由<a class="headerlink" href="#wayback-machinetwitter3" title="Permanent link">&para;</a></h2>
 <h3 id="1robotstxt">理由①：robots.txtによるクロール制限<a class="headerlink" href="#1robotstxt" title="Permanent link">&para;</a></h3>
-<p>Xはサイトの設定ファイル（robots.txt）で、<br />
-<strong>Wayback Machineなどのアーカイブ用クローラをブロック</strong>しています。<br />
-そのため、アーカイブ側がアクセスしても投稿データを取得できません。</p>
+<p>X（旧Twitter）はサイト設定ファイル（robots.txt）で、<br />
+<strong>Wayback Machineなどのクローラによるアクセスをブロック</strong>しています。<br />
+そのため、アーカイブ側が投稿データを取得できません。</p>
 <hr />
-<h3 id="2javascript">理由②：JavaScriptで動的に生成される投稿<a class="headerlink" href="#2javascript" title="Permanent link">&para;</a></h3>
+<h3 id="2twitterjavascript">理由②：Twitter投稿はJavaScriptで動的生成される<a class="headerlink" href="#2twitterjavascript" title="Permanent link">&para;</a></h3>
 <p>Xの投稿はHTML内に直接埋め込まれておらず、JavaScriptで動的に生成されます。<br />
 Wayback Machineは静的HTMLを保存する仕組みのため、<br />
-<strong>ページを開いても本文が空白</strong>になってしまいます。</p>
+<strong>ページを開いても本文が空白になる</strong>ケースが多くあります。</p>
 <hr />
-<h3 id="3x">理由③：X側のアクセス制限によるもの<a class="headerlink" href="#3x" title="Permanent link">&para;</a></h3>
-<p>X（旧Twitter）は、外部サービスが投稿ページに自動アクセスすることを制限しています。<br />
-これはセキュリティやプライバシーを守るための仕組みで、<br />
-Wayback Machineのようなアーカイブツールもアクセスをブロックされてしまいます。  </p>
-<p>そのため、Xの投稿URLを入力しても保存が完了せず、エラーが表示されます。</p>
+<h3 id="3x">理由③：X側のアクセス制限<a class="headerlink" href="#3x" title="Permanent link">&para;</a></h3>
+<p>X（旧Twitter）は外部サービスが投稿ページに自動アクセスすることを制限しています。<br />
+これはプライバシー保護や不正アクセス対策のためで、<br />
+Wayback Machineのようなアーカイブツールも対象となります。</p>
 <hr />
-<h2 id="wayback-machinex_1">結論：Wayback MachineではX投稿は保存できない<a class="headerlink" href="#wayback-machinex_1" title="Permanent link">&para;</a></h2>
+<h2 id="wayback-machinetwitter">Wayback MachineとTwitter投稿の関係まとめ<a class="headerlink" href="#wayback-machinetwitter" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -504,30 +497,30 @@ Wayback Machineのようなアーカイブツールもアクセスをブロッ�
 </tbody>
 </table>
 <hr />
-<h2 id="sns">SNS投稿を“確実に残す”にはどうすればいい？<a class="headerlink" href="#sns" title="Permanent link">&para;</a></h2>
-<p>Wayback MachineのようなWebアーカイブでは、<br />
-<strong>SNS投稿（動的ページ）の保存や証拠化はできません。</strong><br />
-そこで有効なのが、投稿URLを直接解析して保存できる専用サービスです。</p>
-<hr />
-<h2 id="xpost-ai-checkerurl">XPost AI Checkerなら、投稿URLをそのまま保存・分析<a class="headerlink" href="#xpost-ai-checkerurl" title="Permanent link">&para;</a></h2>
-<p><strong>XPost AI Checker</strong> は、X（旧Twitter）の投稿URLを直接処理し、<br />
-AIが内容を自動分析して<strong>PDF形式で証拠化</strong>できるサービスです。</p>
-<h3 id="_1">主な特徴<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<h2 id="wayback-machine">Wayback Machineの代わりの方法<a class="headerlink" href="#wayback-machine" title="Permanent link">&para;</a></h2>
+<p>Wayback Machineが使えない今、<strong>Twitter投稿を確実に保存する</strong>には別の方法が必要です。  </p>
+<h3 id="1-pdf">1. スクリーンショット＋PDF保存<a class="headerlink" href="#1-pdf" title="Permanent link">&para;</a></h3>
+<p>もっとも簡単な方法は、投稿のスクリーンショットをPDFとして保存する方法です。<br />
+ただし、<strong>改ざん防止や信頼性の証明</strong>が難しく、法的証拠には弱い側面があります。</p>
+<h3 id="2-xpost-ai-checkerai">2. XPost AI Checker（AIによる自動証拠化）<a class="headerlink" href="#2-xpost-ai-checkerai" title="Permanent link">&para;</a></h3>
+<p><strong>XPost AI Checker</strong> は、X（Twitter）の投稿URLをそのまま入力するだけで、<br />
+AIが内容を解析し、<strong>PDF形式で証拠化</strong>できるサービスです。</p>
+<p><strong>特徴</strong></p>
 <ul>
-<li>投稿URLをまとめて入力するだけで自動収集  </li>
-<li>AIが投稿内容を分析（誹謗中傷・侮辱・脅迫などを分類）  </li>
+<li>投稿URLをまとめて自動収集  </li>
+<li>AIが誹謗中傷・脅迫などのリスクを自動分類  </li>
 <li>改ざん防止付きPDF/A-2b形式で保存  </li>
-<li>ハッシュ値・投稿日時・スクリーンショットを自動付与  </li>
+<li>投稿日時・ハッシュ値・スクリーンショットを自動付与  </li>
 </ul>
 <div class="teaser">
-  <a href="/samples/teaser-summary.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-summary.png" alt="AI分析PDFサンプル" loading="lazy">
+  <a href="/samples/teaser-summary.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-summary.webp" alt="XPost AI CheckerのAI分析PDFサンプル">
   </a>
   <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">PDFサンプルを見る</a>
 </div>
 
 <hr />
-<h2 id="wayback-machineai">Wayback MachineとAIチェックの違い<a class="headerlink" href="#wayback-machineai" title="Permanent link">&para;</a></h2>
+<h2 id="wayback-machinexpost-ai-checker">Wayback MachineとXPost AI Checkerの違い<a class="headerlink" href="#wayback-machinexpost-ai-checker" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -540,7 +533,7 @@ AIが内容を自動分析して<strong>PDF形式で証拠化</strong>できる�
 <tr>
 <td>保存対象</td>
 <td>Webページ全体</td>
-<td>Xの投稿URL</td>
+<td>X（Twitter）の投稿URL</td>
 </tr>
 <tr>
 <td>保存形式</td>
@@ -553,33 +546,100 @@ AIが内容を自動分析して<strong>PDF形式で証拠化</strong>できる�
 <td>あり（誹謗中傷・脅迫などを分類）</td>
 </tr>
 <tr>
-<td>保存結果</td>
-<td>履歴確認のみ</td>
-<td>法的証拠に使える形式</td>
-</tr>
-<tr>
 <td>対応サイト</td>
-<td>全般（静的HTML）</td>
+<td>静的HTML中心</td>
 <td>X（旧Twitter）専用</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="wayback-machineai_1">まとめ｜Wayback Machineは「保存」まで。証拠化はAIの出番。<a class="headerlink" href="#wayback-machineai_1" title="Permanent link">&para;</a></h2>
+<h2 id="faq">よくある質問（FAQ）<a class="headerlink" href="#faq" title="Permanent link">&para;</a></h2>
+<h3 id="wayback-machinextwitter_1">Wayback MachineでX（Twitter）のツイートは保存できますか？<a class="headerlink" href="#wayback-machinextwitter_1" title="Permanent link">&para;</a></h3>
+<p>現状はできません。robots.txtの制限や動的生成、アクセス制御により、保存エラーになるのが一般的です。</p>
+<h3 id="_1">以前は保存できたのに、今はできないのはなぜ？<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>X側の仕様変更やクローラ制御の強化により、保存の成功率が大きく下がっています。現在は恒常的にブロックされる傾向です。</p>
+<h3 id="_2">スクリーンショットだけで証拠として十分ですか？<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>最低限の記録には有効ですが、改ざん防止や出典検証の観点で弱いです。ハッシュやメタデータが付いたPDF/Aなどの形式が望ましいです。</p>
+<h3 id="_3">代替手段はありますか？<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>URLを直接解析して保存・整形する専用ツールが有効です。たとえばXPost AI Checkerなら、AI分析付きでPDF/A-2bに証拠化できます。</p>
+<h3 id="_4">いつ保存すべき？<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>問題のある投稿を見つけたら即時に。削除や鍵化で取得不能になる前に、一次保存→証拠化まで一気に行うのが安全です。</p>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Wayback MachineでX（Twitter）のツイートは保存できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "現状はできません。robots.txtの制限や動的生成、アクセス制御により、保存エラーになるのが一般的です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "以前は保存できたのに、今はできないのはなぜ？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "X側の仕様変更やクローラ制御の強化により、保存の成功率が大きく下がっています。現在は恒常的にブロックされる傾向です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "archive.today（archive.ph）ならTwitter投稿を保存できますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "一部で成功例はありますが、安定しません。ログインや動的描画が絡むため、取得失敗や不完全保存が起きやすいです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "スクリーンショットだけで証拠として十分ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最低限の記録には有効ですが、改ざん防止や出典検証の観点で弱いです。ハッシュやメタデータが付いたPDF/Aなどの形式が望ましいです。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "代替手段はありますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "URLを直接解析して保存・整形する専用ツールが有効です。たとえばXPost AI Checkerなら、AI分析付きでPDF/A-2bに証拠化できます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "いつ保存すべき？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "問題のある投稿を見つけたら即時に。削除や鍵化で取得不能になる前に、一次保存から証拠化まで一気に行うのが安全です。"
+      }
+    }
+  ]
+}
+</script>
+
+<hr />
+<h2 id="wayback-machinetwitter_1">まとめ｜Wayback Machineは「過去を残す」だけ。Twitter保存は別の手段で。<a class="headerlink" href="#wayback-machinetwitter_1" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Wayback MachineではX投稿を保存できない（技術的・運用上の制限）  </li>
-<li>SNS投稿を確実に残したいなら、URLを直接処理できる仕組みが必要  </li>
-<li>XPost AI Checkerなら、投稿をAIが分析し“証拠PDF”として保存できる  </li>
+<li>Wayback MachineではX（Twitter）投稿を保存できない（技術的・運用上の制限）  </li>
+<li>SNS投稿を確実に残すには、URLを直接処理できる専用ツールが必要  </li>
+<li>XPost AI Checkerなら、投稿をAIが分析し“証拠PDF”として保存可能  </li>
 </ul>
-<p>保存が目的ならWayback Machine、<br />
-<strong>証拠として残したいならAI。</strong></p>
-<p>それぞれの役割を理解して使い分けることで、<br />
-“見えなくなる投稿”を確実に残すことができます。</p>
+<p>役割を理解して使い分けることで、“消えてしまう投稿”を確実に残すことができます。</p>
 <p><a href="https://xpostaichecker.jp/" class="md-button--primary">Xの投稿をAIで証拠化する</a></p>
+<hr />
+<h2 id="_5">関連記事<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="https://xpostaichecker.jp/blog/012_sns-proof-technical/">SNS投稿を「証拠として残す」には？スクショだけでは足りない理由</a></li>
+<li><a href="https://xpostaichecker.jp/blog/007_web-gyotaku-how-to-and-tips/">ウェブ魚拓でSNS投稿を保存する方法と注意点【2025年版】</a></li>
+</ul>
 <hr />
 <div class="cta-block">
   <h3>特別オファー：2025年11月末まで30％OFF！</h3>
-  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう！</p>
+  <p>今すぐクーポンを利用して、XPost AI Checkerをお得に試してみましょう。</p>
   <p><strong>クーポンコード</strong>: <code>U5I1SB1R</code></p>
   <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試す</a>
 </div>
@@ -658,7 +718,9 @@ AIが内容を自動分析して<strong>PDF形式で証拠化</strong>できる�
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="../../assets/thanks.js?v=202511021902"></script>
+        <script src="../../assets/lazy-images.js?v=202511072248"></script>
+      
+        <script src="../../assets/thanks.js?v=202511072248"></script>
       
     
   </body>

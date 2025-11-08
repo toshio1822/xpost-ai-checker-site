@@ -82,15 +82,15 @@ AIが分類した結果は、PDFとして保存されます。
 <div class="teasers">
   <div class="teaser">
     <div class="caption">まとめレポート</div>
-    <a href="/samples/teaser-summary.png" target="_blank">
-      <img src="/samples/teaser-summary.png" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDFA）" loading="lazy">
+    <a href="/samples/teaser-summary.webp" target="_blank">
+      <img src="/samples/teaser-summary.webp" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDFA）">
     </a>
     <a href="/samples/summary_report.pdf" class="mini" target="_blank">PDFを開く</a>
   </div>
   <div class="teaser">
     <div class="caption">個別エビデンス</div>
-    <a href="/samples/teaser-kobetsu-2.png" target="_blank">
-      <img src="/samples/teaser-kobetsu-2.png" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス" loading="lazy">
+    <a href="/samples/teaser-kobetsu-2.webp" target="_blank">
+      <img src="/samples/teaser-kobetsu-2.webp" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス">
     </a>
     <a href="/samples/kobetsu.pdf" class="mini" target="_blank">PDFを開く</a>
   </div>

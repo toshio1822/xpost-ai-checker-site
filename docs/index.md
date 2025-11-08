@@ -12,7 +12,7 @@ description: X(Twitter)の誹謗中傷投稿をAIが自動分析。証拠PDFを�
       <a href="contact/" class="btn-cta-secondary">無料で相談する</a>
     </div>
   </div>
-  <img src="logo-256x256.png" alt="心を守るAI証拠生成サービス">
+  <img src="logo-256x256.webp" alt="心を守るAI証拠生成サービス">
 </div>
 
 ---
@@ -87,15 +87,15 @@ SNSで傷ついた人が、冷静に、そして確実に前へ進めるよう�
 <div class="teasers">
   <div class="teaser">
     <div class="caption">まとめレポート</div>
-    <a href="samples/teaser-summary.png" target="_blank">
-      <img src="samples/teaser-summary.png" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDFA）" loading="lazy">
+    <a href="samples/teaser-summary.webp" target="_blank">
+      <img src="samples/teaser-summary.webp" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDFA）">
     </a>
     <a href="samples/summary_report.pdf" class="mini" target="_blank">PDFを開く</a>
   </div>
   <div class="teaser">
     <div class="caption">個別エビデンス</div>
-    <a href="samples/teaser-kobetsu-2.png" target="_blank">
-      <img src="samples/teaser-kobetsu-2.png" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス" loading="lazy">
+    <a href="samples/teaser-kobetsu-2.webp" target="_blank">
+      <img src="samples/teaser-kobetsu-2.webp" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス">
     </a>
     <a href="samples/kobetsu.pdf" class="mini" target="_blank">PDFを開く</a>
   </div>
@@ -138,8 +138,8 @@ SNSで傷ついた人が、冷静に、そして確実に前へ進めるよう�
 1. **URLリストの作成**  
    [テンプレート](samples/input_urls.csv)をダウンロードして、チェックを行いたいX(Twitter)の投稿URLを入力してください。  
     <div class="step-images">
-      <a href="images/url_list.png" target="_blank">
-        <img src="images/url_list.png" alt="URLリスト" loading="lazy">
+      <a href="images/url_list.webp" target="_blank">
+        <img src="images/url_list.webp" alt="URLリスト">
       </a>
     </div>
 <br/>
@@ -147,11 +147,11 @@ SNSで傷ついた人が、冷静に、そして確実に前へ進めるよう�
 2. **Stripeでお支払い（カード・GooglePay対応）**  
    ご希望のプランの「購入する」ボタンからお支払いください。  
     <div class="step-images">
-      <a href="images/purchase1.png" target="_blank">
-        <img src="images/purchase1.png" alt="購入する1" loading="lazy">
+      <a href="images/purchase1.webp" target="_blank">
+        <img src="images/purchase1.webp" alt="購入する1">
       </a>
-      <a href="images/purchase2.png" target="_blank">
-        <img src="images/purchase2.png" alt="購入する2" loading="lazy">
+      <a href="images/purchase2.webp" target="_blank">
+        <img src="images/purchase2.webp" alt="購入する2">
       </a>
     </div>
 <br/>
@@ -163,11 +163,11 @@ SNSで傷ついた人が、冷静に、そして確実に前へ進めるよう�
 ※ファイルの提出には、Googleアカウントが必要です。<br/>
 　Googleアカウントをお持ちでない場合は、[お問い合わせ]からご連絡ください。  
     <div class="step-images">
-      <a href="images/submit_url_list1.png" target="_blank">
-        <img src="images/submit_url_list1.png" alt="URLリストの提出1" loading="lazy">
+      <a href="images/submit_url_list1.webp" target="_blank">
+        <img src="images/submit_url_list1.webp" alt="URLリストの提出1">
       </a>
-      <a href="images/submit_url_list2.png" target="_blank">
-        <img src="images/submit_url_list2.png" alt="URLリストの提出2" loading="lazy">
+      <a href="images/submit_url_list2.webp" target="_blank">
+        <img src="images/submit_url_list2.webp" alt="URLリストの提出2">
       </a>
     </div>
 <br/>
@@ -256,19 +256,19 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
   <article class="blog-card">
     <h3>XPost AI Checkerリリース｜AIがSNS誹謗中傷を自動判定する時代へ</h3>
     <p>SNS誹謗中傷の証拠をAIが自動分析しPDF化。投稿の問題レベルを5段階で判定し、弁護士相談にも使えるレポートを作成する新サービス「XPost AI Checker」をリリースしました。</p>
-    <a class="blog-link" href="001_xpost-ai-checker-release/">記事を読む</a>
+    <a class="blog-link" href="blog/001_xpost-ai-checker-release/">記事を読む</a>
   </article>
  
   <article class="blog-card">
     <h3>XPost AI Checkerの仕組み｜AIがSNS投稿を分析して証拠PDFを自動生成するまで</h3>
     <p>XPost AI Checkerは、X（Twitter）の投稿を自動で取得し、AIが文脈を解析して懸念度を判定。結果をPDF/A形式で保存し、削除申請や警察相談に使える証拠を自動生成します。その仕組みをわかりやすく解説します。</p>
-    <a class="blog-link" href="002_xpost-ai-checker-how-it-works/">記事を読む</a>
+    <a class="blog-link" href="blog/002_xpost-ai-checker-how-it-works/">記事を読む</a>
   </article>
 
   <article class="blog-card">
     <h3>XPost AI Checker使い方ガイド｜AIがSNS投稿を自動で分析し証拠PDFを作るまでの流れ</h3>
     <p>XPost AI Checkerの基本的な使い方をステップごとに解説。X（Twitter）の投稿URLをまとめて送信するだけで、AIが誹謗中傷や脅迫投稿を分析し、証拠PDFを自動生成します。購入から納品までの手順を詳しく紹介。</p>
-    <a class="blog-link" href="003_xpost-ai-checker-how-to-use/">記事を読む</a>
+    <a class="blog-link" href="blog/003_xpost-ai-checker-how-to-use/">記事を読む</a>
   </article>
 
   <article class="blog-card">
@@ -280,7 +280,7 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
   <article class="blog-card">
     <h3>自己愛性パーソナリティ障害シリーズまとめ｜理不尽な人に振り回されないために</h3>
     <p>自己愛性パーソナリティ障害（NPD）に悩む人のための実践的ガイド。理解・距離・記録・相談・回復の5ステップで、SNSや人間関係での被害を防ぐ方法を体系的にまとめました。</p>
-    <a class="blog-link" href="014_npd-series/">記事を読む</a>
+    <a class="blog-link" href="blog/014_npd-series/">記事を読む</a>
   </article>
 
 </div>

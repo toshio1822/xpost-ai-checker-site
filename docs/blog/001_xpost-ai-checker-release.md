@@ -52,16 +52,16 @@ SNSの投稿をAIで分析し、内容を整理して、<strong>そのまま証�
   <p class="caption"><strong>サマリーレポート</strong>：懸念度が高い順に投稿を並び替え。優先して対応が必要な投稿を簡単に特定できます。</p>
 
 <div class="teaser">
-  <a href="/samples/teaser-summary.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-summary.png" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDF）" loading="lazy">
+  <a href="/samples/teaser-summary.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-summary.webp" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDF）">
   </a>
   <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">まとめPDFを開く</a>
 </div>
 
 <p class="caption"><strong>個別PDF</strong>：投稿のスクリーンショットを含め、証拠としてそのまま利用可能。</p>
 <div class="teaser">
-  <a href="/samples/teaser-kobetsu.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-kobetsu.png" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス" loading="lazy">
+  <a href="/samples/teaser-kobetsu.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-kobetsu.webp" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス">
   </a>
   <a href="/samples/kobetsu.pdf" class="mini" target="_blank" rel="noopener">個別PDFを開く</a>
 </div>

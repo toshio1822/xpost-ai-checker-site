@@ -29,8 +29,8 @@ description: XPost AI Checkerの基本的な使い方をステップごとに解
 
 URLリストには、X（Twitter）の投稿画面のURLを貼り付けます。
 <div class="teaser">
-  <a href="/samples/x-url-copy.png" target="_blank" rel="noopener">
-    <img src="/samples/x-url-copy.png" alt="X(Twitter)のURLコピー"  loading="lazy">
+  <a href="/samples/x-url-copy.webp" target="_blank" rel="noopener">
+    <img src="/samples/x-url-copy.webp" alt="X(Twitter)のURLコピー" >
   </a>
 </div>
 
@@ -41,8 +41,8 @@ URLリストには、X（Twitter）の投稿画面のURLを貼り付けます。
 - <a href="https://xpostaichecker.jp/samples/input_urls.csv" target="_blank" rel="noopener">サンプルテンプレート</a> をダウンロードして使用可能  
 
 <div class="teaser">
-  <a href="/samples/url-list.png" target="_blank" rel="noopener">
-    <img src="/samples/url-list.png" alt="URLリストサンプル" width="400" loading="lazy">
+  <a href="/samples/url-list.webp" target="_blank" rel="noopener">
+    <img src="/samples/url-list.webp" alt="URLリストサンプル" width="400">
   </a>
   <p class="caption">URLを1行ずつ記載したCSVファイルを用意します。</p>
 </div>
@@ -55,23 +55,23 @@ URLリストには、X（Twitter）の投稿画面のURLを貼り付けます。
 
 <a href="https://xpostaichecker.jp/plans/" target="_blank" rel="noopener">料金プラン</a> ページから、ご希望のプランの「購入する」ボタンをクリックします。  
 <div class="teaser">
-  <a href="/samples/shiharai1.png" target="_blank" rel="noopener">
-    <img src="/samples/shiharai1.png" alt="支払い"  loading="lazy">
+  <a href="/samples/shiharai1.webp" target="_blank" rel="noopener">
+    <img src="/samples/shiharai1.webp" alt="支払い" >
   </a>
 </div>
 
 支払情報を入力して「支払う」ボタンをクリックしてください。
 <div class="teaser">
-  <a href="/samples/shiharai2.png" target="_blank" rel="noopener">
-    <img src="/samples/shiharai2.png" alt="支払い"  loading="lazy">
+  <a href="/samples/shiharai2.webp" target="_blank" rel="noopener">
+    <img src="/samples/shiharai2.webp" alt="支払い" >
   </a>
 </div>
 
 支払い完了後、「注文番号」と「発注フォームへ進む」ボタンが表示されます。  
 提出フォームで「注文番号」が必要になるので、コピーしておきます。
 <div class="teaser">
-  <a href="/samples/shiharai3.png" target="_blank" rel="noopener">
-    <img src="/samples/shiharai3.png" alt="支払い"  loading="lazy">
+  <a href="/samples/shiharai3.webp" target="_blank" rel="noopener">
+    <img src="/samples/shiharai3.webp" alt="支払い" >
   </a>
 </div>
 
@@ -91,8 +91,8 @@ URLリストには、X（Twitter）の投稿画面のURLを貼り付けます。
 
 Googleアカウントをお持ちでない場合は、<a href="https://xpostaichecker.jp/contact/" target="_blank">お問い合わせページ</a>からご連絡ください。
 <div class="teaser">
-  <a href="/samples/haccyu1.png" target="_blank" rel="noopener">
-    <img src="/samples/haccyu1.png" alt="支払い"  loading="lazy">
+  <a href="/samples/haccyu1.webp" target="_blank" rel="noopener">
+    <img src="/samples/haccyu1.webp" alt="支払い" >
   </a>
 </div>
 
@@ -122,8 +122,8 @@ Googleアカウントをお持ちでない場合は、<a href="https://xpostaich
 ### 🧾 サマリーレポート（例）
 
 <div class="teaser">
-  <a href="/samples/teaser-summary.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-summary.png" alt="サマリーレポートPDFのサンプル" loading="lazy">
+  <a href="/samples/teaser-summary.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-summary.webp" alt="サマリーレポートPDFのサンプル">
   </a>
   <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">PDFを開く</a>
 </div>
@@ -133,8 +133,8 @@ Googleアカウントをお持ちでない場合は、<a href="https://xpostaich
 ### 📄 個別エビデンス（例）
 
 <div class="teaser">
-  <a href="/samples/teaser-kobetsu.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-kobetsu.png" alt="個別エビデンス" loading="lazy">
+  <a href="/samples/teaser-kobetsu.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-kobetsu.webp" alt="個別エビデンス">
   </a>
   <a href="/samples/kobetsu.pdf" class="mini" target="_blank" rel="noopener">PDFを開く</a>
 </div>

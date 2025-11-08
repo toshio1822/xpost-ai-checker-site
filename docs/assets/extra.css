@@ -598,20 +598,6 @@ a[href*="details"] {
   transform: none;
 }
 
-/* モバイル対応 */
-@media (max-width: 76.1875em) { /* Materialのデフォルトブレークポイント */
-  .md-sidebar {
-    display: none; /* モバイルでは非表示 */
-  }
-  .md-sidebar--active {
-    display: block;
-    width: 240px;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-  }
-}
-
 /* サイドバーはテーマ既定に任せる。必要最小限のホバーだけ */
 @media (min-width: 76.1875em) {
   .md-sidebar { /* 何も書かない（背景・色は変更しない） */ }

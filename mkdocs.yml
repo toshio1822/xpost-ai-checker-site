@@ -13,7 +13,7 @@ theme:
   palette:
   - scheme: default
     primary: blue
-    accent: green
+    accent: blue grey
 nav:
 - ホーム: index.md
 - 料金プラン: plans.md
@@ -30,11 +30,12 @@ extra:
   social:
   - icon: fontawesome/brands/x-twitter
     link: https://x.com/TOSHIO_1983
-  social_image: assets/og.png
+  social_image: assets/og.webp
 extra_css:
-- assets/extra.css?v=202511021902
+- assets/extra.css?v=202511072248
 extra_javascript:
-- assets/thanks.js?v=202511021902
+- assets/lazy-images.js?v=202511072248
+- assets/thanks.js?v=202511072248
 markdown_extensions:
 - attr_list
 - md_in_html

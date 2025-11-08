@@ -41,15 +41,15 @@ AIによる自動分析は、文章を瞬時に分類し、危険度を可視化
 - 長期保存に適した<strong>PDF/A</strong>での出力
 
 <div class="teaser">
-  <a href="/samples/teaser-summary.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-summary.png" alt="サマリーレポートPDFのサンプル" loading="lazy">
+  <a href="/samples/teaser-summary.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-summary.webp" alt="サマリーレポートPDFのサンプル">
   </a>
   <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">まとめPDFを開く</a>
 </div>
 
 <div class="teaser">
-  <a href="/samples/teaser-kobetsu.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-kobetsu.png" alt="個別エビデンスPDFのサンプル" loading="lazy">
+  <a href="/samples/teaser-kobetsu.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-kobetsu.webp" alt="個別エビデンスPDFのサンプル" loading="lazy">
   </a>
   <a href="/samples/kobetsu.pdf" class="mini" target="_blank" rel="noopener">個別PDFを開く</a>
 </div>

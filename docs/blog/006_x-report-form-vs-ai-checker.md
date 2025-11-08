@@ -95,8 +95,8 @@ Xの公式ヘルプセンターには、**問い合わせフォーム**が存在
 * **改ざん防止ハッシュ付き**で証拠として残せる
 
 <div class="teaser">
-  <a href="/samples/teaser-summary.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-summary.png" alt="サマリーレポートPDFのサンプル" loading="lazy">
+  <a href="/samples/teaser-summary.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-summary.webp" alt="サマリーレポートPDFのサンプル">
   </a>
   <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">まとめPDFを開く</a>
 </div>

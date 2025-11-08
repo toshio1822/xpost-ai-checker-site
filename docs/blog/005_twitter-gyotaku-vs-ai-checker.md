@@ -59,15 +59,15 @@ Twitter魚拓は1件ずつ手作業で行うため、**数十件・数百件の�
 - 改ざん防止のための**ハッシュ値**を付与  
 
 <div class="teaser">
-  <a href="/samples/teaser-summary.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-summary.png" alt="サマリーレポートPDFのサンプル" loading="lazy">
+  <a href="/samples/teaser-summary.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-summary.webp" alt="サマリーレポートPDFのサンプル">
   </a>
   <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">まとめPDFを開く</a>
 </div>
 
 <div class="teaser">
-  <a href="/samples/teaser-kobetsu.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-kobetsu.png" alt="個別エビデンスPDFのサンプル" loading="lazy">
+  <a href="/samples/teaser-kobetsu.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-kobetsu.webp" alt="個別エビデンスPDFのサンプル">
   </a>
   <a href="/samples/kobetsu.pdf" class="mini" target="_blank" rel="noopener">個別PDFを開く</a>
 </div>

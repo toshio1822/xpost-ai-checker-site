@@ -67,8 +67,8 @@ AIの分析結果をもとに、各投稿を2ページ構成の<strong>証拠PDF
 - 投稿本文と根拠語句を可視化  
 
 <div class="teaser">
-  <a href="/samples/teaser-kobetsu.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-kobetsu.png" alt="個別エビデンス" loading="lazy">
+  <a href="/samples/teaser-kobetsu.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-kobetsu.webp" alt="個別エビデンス">
   </a>
   <a href="/samples/kobetsu.pdf" class="mini" target="_blank" rel="noopener">PDFを開く</a>
 </div>
@@ -79,8 +79,8 @@ AIの分析結果をもとに、各投稿を2ページ構成の<strong>証拠PDF
 また、複数の投稿をまとめた サマリーレポートPDF も自動で作成され、
 「どの投稿が特に問題か」が一目でわかるようになっています。
 <div class="teaser">
-  <a href="/samples/teaser-summary.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-summary.png" alt="サマリーレポートPDFのサンプル" loading="lazy">
+  <a href="/samples/teaser-summary.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-summary.webp" alt="サマリーレポートPDFのサンプル">
   </a>
   <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">まとめPDFを開く</a>
 </div>

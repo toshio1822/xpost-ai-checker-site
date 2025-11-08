@@ -34,32 +34,32 @@ URLを入力するだけで、ページ全体を保存し「魚拓URL」を発�
 ### 1. 保存したいURLをコピー
 X（旧Twitter）の投稿やブログ記事など、保存しておきたいページのURLをコピーします。
 <div class="teaser">
-  <a href="/samples/web-gyotaku01.png" target="_blank" rel="noopener">
-    <img src="/samples/web-gyotaku01.png" alt="ウェブ魚拓-URLコピー" loading="lazy">
+  <a href="/samples/web-gyotaku01.webp" target="_blank" rel="noopener">
+    <img src="/samples/web-gyotaku01.webp" alt="ウェブ魚拓-URLコピー">
   </a>
 </div>
 
 ### 2. ウェブ魚拓のトップページを開く
 https://megalodon.jp にアクセスし、検索ボックスにURLを貼り付け、「検索と確認」ボタンをクリックします。
 <div class="teaser">
-  <a href="/samples/web-gyotaku02.png" target="_blank" rel="noopener">
-    <img src="/samples/web-gyotaku02.png" alt="ウェブ魚拓-URL入力" loading="lazy">
+  <a href="/samples/web-gyotaku02.webp" target="_blank" rel="noopener">
+    <img src="/samples/web-gyotaku02.webp" alt="ウェブ魚拓-URL入力">
   </a>
 </div>
 
 ### 3. 「取得」をクリック
 「取得」ボタンをクリックします。
 <div class="teaser">
-  <a href="/samples/web-gyotaku03.png" target="_blank" rel="noopener">
-    <img src="/samples/web-gyotaku03.png" alt="ウェブ魚拓-取得" loading="lazy">
+  <a href="/samples/web-gyotaku03.webp" target="_blank" rel="noopener">
+    <img src="/samples/web-gyotaku03.webp" alt="ウェブ魚拓-取得">
   </a>
 </div>
 
 ### 4. 保存内容を確認
 魚拓ページが開くので、ページの本文や画像が正しく表示されているか確認しましょう。
 <div class="teaser">
-  <a href="/samples/web-gyotaku04.png" target="_blank" rel="noopener">
-    <img src="/samples/web-gyotaku04.png" alt="ウェブ魚拓-結果確" loading="lazy">
+  <a href="/samples/web-gyotaku04.webp" target="_blank" rel="noopener">
+    <img src="/samples/web-gyotaku04.webp" alt="ウェブ魚拓-結果確">
   </a>
 </div>
 
@@ -104,8 +104,8 @@ AIが作成するPDFは、**PDF/A-2b形式（長期保存対応）**。
 ## 実際に試してみよう：魚拓＋AIチェックで安心の保存を
 
 <div class="teaser">
-  <a href="/samples/teaser-summary.png" target="_blank" rel="noopener">
-    <img src="/samples/teaser-summary.png" alt="AI判定PDFサンプル" loading="lazy">
+  <a href="/samples/teaser-summary.webp" target="_blank" rel="noopener">
+    <img src="/samples/teaser-summary.webp" alt="AI判定PDFサンプル">
   </a>
   <a href="/samples/summary_report.pdf" class="mini" target="_blank" rel="noopener">PDFサンプルを見る</a>
 </div>

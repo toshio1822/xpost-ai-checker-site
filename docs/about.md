@@ -12,7 +12,7 @@ description: X（旧Twitter）の投稿をAIで分析・証拠化する「XPost 
 </div>
 
 <div align="center" style="margin: 24px 0;">
-  <img src="/images/profile_toshio.png" alt="運営者アイコン" width="240" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+  <img src="/images/profile_toshio.webp" alt="運営者アイコン" width="240" style="border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
   <p style="font-weight: 600; margin-top: 8px;">TOSHIO（開発・運営）</p>
 </div>
 
