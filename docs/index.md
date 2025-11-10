@@ -1,5 +1,5 @@
 ---
-title: 「誹謗中傷で眠れない夜」から抜け出す第一歩を｜XPost AI Checker
+title: 【証拠PDFを自動生成】X(Twitter) 誹謗中傷・名誉毀損 分析AI | XPost AI Checker - XPost AI Checker
 description: X(Twitter)の誹謗中傷投稿をAIが自動分析。証拠PDFを生成し、冷静な対応を支える新しいツール。感情に流されず、客観的な“証拠”をあなたの手に。
 ---
 
@@ -282,6 +282,13 @@ AI分析の完了後、以下のファイルを **ZIP形式** にまとめてお
     <p>自己愛性パーソナリティ障害（NPD）に悩む人のための実践的ガイド。理解・距離・記録・相談・回復の5ステップで、SNSや人間関係での被害を防ぐ方法を体系的にまとめました。</p>
     <a class="blog-link" href="blog/014_npd-series/">記事を読む</a>
   </article>
+
+  <article class="blog-card">
+    <h3>SNS誹謗中傷対策シリーズまとめ｜X（旧Twitter）で困ったときの実践ガイド</h3>
+    <p>SNSで誹謗中傷に遭ったときに必要な「記録・通報・相談・法律知識」のすべてを網羅。X（旧Twitter）に特化した全5記事を、順番に読み進められるシリーズガイドです。</p>
+    <a class="blog-link" href="015_x-twitter-series/">記事を読む</a>
+  </article>
+
 
 </div>
 

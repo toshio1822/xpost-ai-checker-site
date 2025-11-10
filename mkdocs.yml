@@ -32,10 +32,10 @@ extra:
     link: https://x.com/TOSHIO_1983
   social_image: assets/og.webp
 extra_css:
-- assets/extra.css?v=202511072248
+- assets/extra.css?v=202511092209
 extra_javascript:
-- assets/lazy-images.js?v=202511072248
-- assets/thanks.js?v=202511072248
+- assets/lazy-images.js?v=202511092209
+- assets/thanks.js?v=202511092209
 markdown_extensions:
 - attr_list
 - md_in_html

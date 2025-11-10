@@ -9,6 +9,12 @@ XPost AI Checker XPost AI Checker の背景や仕組み、使い方、リリー�
 
 <div class="blog-cards">
   <article class="blog-card">
+    <h3>SNS誹謗中傷対策シリーズまとめ｜X（旧Twitter）で困ったときの実践ガイド</h3>
+    <p>SNSで誹謗中傷に遭ったときに必要な「記録・通報・相談・法律知識」のすべてを網羅。X（旧Twitter）に特化した全5記事を、順番に読み進められるシリーズガイドです。</p>
+    <a class="blog-link" href="015_x-twitter-series/">記事を読む</a>
+  </article>
+
+  <article class="blog-card">
     <h3>自己愛性パーソナリティ障害シリーズまとめ｜理不尽な人に振り回されないために</h3>
     <p>自己愛性パーソナリティ障害（NPD）に悩む人のための実践的ガイド。理解・距離・記録・相談・回復の5ステップで、SNSや人間関係での被害を防ぐ方法を体系的にまとめました。</p>
     <a class="blog-link" href="014_npd-series/">記事を読む</a>
@@ -45,8 +51,8 @@ XPost AI Checker XPost AI Checker の背景や仕組み、使い方、リリー�
   </article>
 
   <article class="blog-card">
-    <h3>Wayback MachineでX投稿を保存できない理由と対処法【実証付き】</h3>
-    <p>Wayback MachineでX（旧Twitter）の投稿を保存しようとするとエラーになる理由を実際に検証。保存できない技術的な背景と、確実に投稿を残す方法を紹介します。</p>
+    <h3>Wayback MachineでX（Twitter）投稿を保存できない理由と対処法【実証付き】</h3>
+    <p>Wayback MachineでX（Twitter）投稿を保存しようとするとエラーになる理由を解説。Twitter投稿が保存できない技術的な背景と、確実にツイートを残す代替手段（AI証拠化など）を紹介します。</p>
     <a class="blog-link" href="008_wayback-machine-x-fail/">記事を読む</a>
   </article>
 
