@@ -132,13 +132,7 @@ date: 2025-11-01
 
 ---
 
-前回：[◀ 自己愛的な人が好むSNSの使い方とは？](009_npd-sns-behavior.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[被害者が孤立しないために ▶](011_npd-support-and-care.md)
----
-
-<div class="cta-block">
-  <h3>巻き込み型トラブルは、「証拠」と「距離」で防げます。</h3>
-  <p><strong>XPost AI Checker</strong>なら、拡散・引用RTなどの投稿をまとめて保存し、AIが攻撃性を分析。<br>
-  SNS上の集団トラブルを客観的に整理し、冷静な対処を支援します。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">投稿を記録する</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 自己愛的な人が好むSNSの使い方とは？｜匿名性・承認欲求・フォロワー操作の心理構造](009_npd-sns-behavior.md) | [シリーズトップに戻る](_index.md) | 次回：[被害者が孤立しないために｜相談・記録・心のケアの選択肢 ▶](011_npd-support-and-care.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

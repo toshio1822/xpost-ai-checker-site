@@ -128,13 +128,7 @@ SNS上での関係性は、あくまで自分の承認を補強するための**
 
 ---
 
-前回：[◀ 警察・弁護士に提出できる証拠のまとめ方](008_npd-police-template.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[巻き込み型トラブルの構造とは？ ▶](010_npd-entanglement-trouble.md)
----
-
-<div class="cta-block">
-  <h3>「反応しない」「記録する」――それが最も冷静な対応です。</h3>
-  <p><strong>XPost AI Checker</strong>なら、X（旧Twitter）の投稿を自動保存し、AIが誹謗中傷・脅迫の可能性を分類。<br>
-  SNSトラブルから身を守る「冷静な証拠づくり」をサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を残す</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 警察・弁護士に提出できる証拠のまとめ方｜テンプレート＆チェックリスト付き](008_npd-police-template.md) | [シリーズトップに戻る](_index.md) | 次回：[巻き込み型トラブルの構造とは？｜“味方”が“加害者”になる瞬間 ▶](010_npd-entanglement-trouble.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

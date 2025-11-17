@@ -132,14 +132,7 @@ XPost AI Checkerのようなサービスを使えば：
 
 ---
 
-  前回：[◀ X投稿を証拠として保存する方法 ](002_x-twitter-proof-save.md) | 
-  [シリーズトップに戻る](../015_x-twitter-series.md) | 次回：[SNS誹謗中傷に関する法律相談の選び方 ▶](004_x-twitter-houhouritsu.md)
-
----
-
-<div class="cta-block">
-  <h3>証拠がなければ動けません。</h3>
-  <p>投稿が削除される前に、証拠として残しておきませんか？<br>
-  XPost AI Checkerなら、X（旧Twitter）の投稿をURLだけでPDF保存できます。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">投稿を保存する（無料）</a>
-</div>
+<!-- NAV-CHAIN:START -->
+前回：[◀ X（Twitter）の投稿を証拠として残すには？削除前にやるべき「3つの情報」の記録法](002_x-twitter-proof-save.md) | [シリーズトップに戻る](_index.md) | 次回：[SNS誹謗中傷は弁護士に相談すべき？判断ポイントと相談先の選び方 ▶](004_x-twitter-houhouritsu.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

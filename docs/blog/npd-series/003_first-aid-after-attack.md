@@ -119,12 +119,7 @@ SNSでの誹謗中傷は、反応するほど燃え広がります。
 
 ---
 
-前回：[◀ SNSで見かける“自己愛的な人”の特徴とは](002_npd-sns-patterns.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[関わってしまったら｜冷静に距離を取るための対処法 ▶](004_npd-boundary-and-safety.md)
----
-
-<div class="cta-block">
-  <h3>理不尽な攻撃に遭ったら、まず「反応」より「記録」。</h3>
-  <p><strong>XPost AI Checker</strong>なら、X（旧Twitter）の投稿を自動で保存し、AIが誹謗中傷・脅迫などの可能性を分析。<br>冷静な行動をサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を残す</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ SNSで見かける“自己愛的な人”の特徴とは｜攻撃・支配・自己正当化の構図](002_npd-sns-patterns.md) | [シリーズトップに戻る](_index.md) | 次回：[関わってしまったら｜冷静に距離を取るための対処法 ▶](004_npd-boundary-and-safety.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

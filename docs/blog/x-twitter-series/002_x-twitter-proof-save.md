@@ -123,13 +123,7 @@ XPost AI Checker のようなサービスを使えば、以下のようなメリ
 
 ---
 
-  前回：[◀ 誹謗中傷を受けたら？初動対応](001_x-twitter-hibou-chusho-taisho.md) | 
-  [シリーズトップに戻る](../015_x-twitter-series.md) | 次回：[X（旧Twitter）誹謗中傷の通報と削除要請の手順 ▶](003_x-twitter-tsuho.md)
-
----
-
-<div class="cta-block">
-  <h3>投稿が消える前に、記録しておきませんか？</h3>
-  <p><strong>XPost AI Checker</strong>なら、X（旧Twitter）の投稿URLを入力するだけで、証拠として必要な情報をPDF化して残せます。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">投稿を保存する（無料）</a>
-</div>
+<!-- NAV-CHAIN:START -->
+前回：[◀ X（旧Twitter）で誹謗中傷を受けたら？削除より先にやるべき初動対応【法的・実務ガイド】](001_x-twitter-hibou-chusho-taisho.md) | [シリーズトップに戻る](_index.md) | 次回：[X（旧Twitter）誹謗中傷の通報・削除依頼ガイド｜アプリからの報告とフォーム申請の違いとは ▶](003_x-twitter-tsuho.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

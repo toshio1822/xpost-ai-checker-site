@@ -16,9 +16,51 @@ theme:
     accent: blue grey
 nav:
 - ホーム: index.md
-- 料金プラン: plans.md
-- よくある質問: faq.md
-- ブログ: blog/index.md
+- 開発者ブログ:
+  - AI証拠化・サービス紹介:
+    - シリーズトップ: blog/ai-evidence-series/_index.md
+    - リリース: blog/ai-evidence-series/001_xpost-ai-checker-release.md
+    - 仕組み: blog/ai-evidence-series/002_xpost-ai-checker-how-it-works.md
+    - 使い方: blog/ai-evidence-series/003_xpost-ai-checker-how-to-use.md
+    - 誹謗中傷分析の仕組み: blog/ai-evidence-series/004_ai-slander-analysis-mechanism.md
+    - SNS証拠の技術ポイント: blog/ai-evidence-series/005_sns-proof-technical.md
+  - 証拠保存・魚拓代替:
+    - シリーズトップ: blog/archive-proof-series/_index.md
+    - 魚拓 vs AI Checker: blog/archive-proof-series/001_twitter-gyotaku-vs-ai-checker.md
+    - ウェブ魚拓の使い方: blog/archive-proof-series/002_web-gyotaku-how-to-and-tips.md
+    - Wayback MachineがXで使えない理由: blog/archive-proof-series/003_wayback-machine-x-fail.md
+    - 削除された投稿の確認と対策: blog/archive-proof-series/004_deleted-x-posts-check.md
+  - 通報・被害対応:
+    - シリーズトップ: blog/report-safety-series/_index.md
+    - Xの通報フォームとAI証拠化: blog/report-safety-series/001_x-report-form-vs-ai-checker.md
+    - SNSトラブル総合ハンドブック: blog/report-safety-series/002_sns-trouble-handbook.md
+  - AI分析・教育・炎上予防:
+    - シリーズトップ: blog/ai-education-series/_index.md
+    - 炎上を防ぐ投稿チェック: blog/ai-education-series/001_sns-enjo-prevention.md
+    - AIが誹謗中傷を検出する仕組み: blog/ai-education-series/002_ai-detects-hate-speech.md
+  - X（Twitter）誹謗中傷対策:
+    - シリーズトップ: blog/x-twitter-series/_index.md
+    - 初動対応: blog/x-twitter-series/001_x-twitter-hibou-chusho-taisho.md
+    - 証拠保存: blog/x-twitter-series/002_x-twitter-proof-save.md
+    - 通報・削除: blog/x-twitter-series/003_x-twitter-tsuho.md
+    - 弁護士相談: blog/x-twitter-series/004_x-twitter-houhouritsu.md
+    - 法的リスク: blog/x-twitter-series/005_x-twitter-law.md
+  - NPD（自己愛性パーソナリティ障害）:
+    - シリーズトップ: blog/npd-series/_index.md
+    - NPDとは: blog/npd-series/001_npd-what-is.md
+    - SNSに見える行動: blog/npd-series/002_npd-sns-patterns.md
+    - 攻撃直後の応急処置: blog/npd-series/003_first-aid-after-attack.md
+    - 距離と境界線: blog/npd-series/004_npd-boundary-and-safety.md
+    - 周囲への伝え方: blog/npd-series/005_npd-how-to-explain.md
+    - やること・やらないこと: blog/npd-series/006_npd-do-and-dont.md
+    - AIで中傷を記録: blog/npd-series/007_npd-ai-evidence.md
+    - 警察・弁護士への提出: blog/npd-series/008_npd-police-template.md
+    - 自己愛的なSNSの使い方: blog/npd-series/009_npd-sns-behavior.md
+    - 巻き込み型トラブル: blog/npd-series/010_npd-entanglement-trouble.md
+    - 孤立しないために: blog/npd-series/011_npd-support-and-care.md
+    - モラハラ・ガスライティングとの違い: blog/npd-series/012_npd-vs-morahara-gaslighting.md
+    - 別れ際の“最後の攻撃”: blog/npd-series/013_npd-final-attack.md
+    - シリーズ総まとめ: blog/npd-series/014_npd-series-summary.md
 - お問い合わせ: contact.md
 - 運営者情報: about.md
 - 法的表記: legal.md
@@ -29,19 +71,22 @@ extra:
     property: G-BDWT0LDTZT
   social:
   - icon: fontawesome/brands/x-twitter
-    link: https://x.com/TOSHIO_1983
+    link: https://x.com/xpostaichecker
   social_image: assets/og.webp
 extra_css:
-- assets/extra.css?v=202511092209
+- assets/extra.css?v=202511162304
 extra_javascript:
-- assets/lazy-images.js?v=202511092209
-- assets/thanks.js?v=202511092209
+- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202511162304
 markdown_extensions:
 - attr_list
 - md_in_html
 - admonition
 - tables
 - footnotes
+- pymdownx.snippets:
+    base_path:
+    - docs
+    check_paths: true
 - toc:
     permalink: true
 plugins:

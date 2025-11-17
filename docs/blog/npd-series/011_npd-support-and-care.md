@@ -129,13 +129,7 @@ date: 2025-11-01
 
 ---
 
-前回：[◀ 巻き込み型トラブルの構造とは？](010_npd-entanglement-trouble.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[NPDとモラハラ・ガスライティングの違いとは？ ▶](012_npd-vs-morahara-gaslighting.md)
----
-
-<div class="cta-block">
-  <h3>孤立しないための第一歩は、「記録」と「共有」。</h3>
-  <p><strong>XPost AI Checker</strong>なら、X（旧Twitter）の投稿を自動保存し、AIが誹謗中傷・脅迫などを分析。<br>
-  あなたの冷静な判断と回復をサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を残す</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 巻き込み型トラブルの構造とは？｜“味方”が“加害者”になる瞬間](010_npd-entanglement-trouble.md) | [シリーズトップに戻る](_index.md) | 次回：[自己愛性パーソナリティ障害とモラハラ・ガスライティングの違いとは？｜心理的支配の構造を理解する ▶](012_npd-vs-morahara-gaslighting.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

@@ -140,12 +140,7 @@ AIが分類した結果は、PDFとして保存されます。
 
 ---
 
-前回：[◀ やるべきこと・やってはいけないこと](006_npd-do-and-dont.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[警察・弁護士に提出できる証拠のまとめ方 ▶](008_npd-police-template.md)
----
-
-<div class="cta-block">
-  <h3>感情的な反論より、「AIによる記録」を。</h3>
-  <p><strong>XPost AI Checker</strong>は、X（旧Twitter）の投稿を自動で保存し、AIが誹謗中傷・脅迫などを分類。<br>
-  証拠の整理と冷静な判断をサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐチェックする</a>
-</div>
+<!-- NAV-CHAIN:START -->
+前回：[◀ やるべきこと・やってはいけないこと｜自己愛性パーソナリティ障害の人への実践対応ガイド](006_npd-do-and-dont.md) | [シリーズトップに戻る](_index.md) | 次回：[警察・弁護士に提出できる証拠のまとめ方｜テンプレート＆チェックリスト付き ▶](008_npd-police-template.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

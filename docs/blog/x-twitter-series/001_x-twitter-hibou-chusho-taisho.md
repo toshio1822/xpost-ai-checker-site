@@ -127,13 +127,7 @@ SNS運営・行政機関・専門家の支援を組み合わせることで、
 
 ---
 
-  前回：― | [シリーズトップに戻る](../015_x-twitter-series.md) | 次回：[X（旧Twitter）の投稿を法的証拠として残す方法 ▶](002_x-twitter-proof-save.md)
-
----
-
-<div class="cta-block">
-  <h3>投稿が削除される前に、確実に記録を。</h3>
-  <p><strong>XPost AI Checker</strong>なら、X（旧Twitter）の投稿URLを入力するだけで、AIが自動的に投稿内容をPDF化し、改ざん防止情報と共に保存します。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を残す（無料）</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：― | [シリーズトップに戻る](_index.md) | 次回：[X（Twitter）の投稿を証拠として残すには？削除前にやるべき「3つの情報」の記録法 ▶](002_x-twitter-proof-save.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

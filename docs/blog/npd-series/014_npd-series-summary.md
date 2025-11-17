@@ -122,13 +122,7 @@ NPDの被害者は、時間が経つと「私にも悪いところがあった�
 
 ---
 
-前回：[◀ 別れ際の“最後の攻撃”とは？](013_npd-final-attack.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：―
----
-
-<div class="cta-block">
-  <h3>冷静さを取り戻すために、「記録」から始めよう。</h3>
-  <p><strong>XPost AI Checker</strong>は、X（旧Twitter）の投稿を自動保存し、AIが誹謗中傷・脅迫・虚偽通報などを分類。<br>
-  あなたの「冷静な証拠づくり」をサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を残す</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 別れ際の“最後の攻撃”とは？｜逆恨み・晒し・虚偽通報への備え方](013_npd-final-attack.md) | [シリーズトップに戻る](_index.md) | 次回：―
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

@@ -47,18 +47,3 @@ description: X（Twitter）誹謗中傷のAI分析と証拠PDF作成の料金プ
 - PDF/A相当のレポート（長期保存に適した設定）
 
 [FAQへ](faq.md)｜[特商法表記](legal.md)｜[お問い合わせ](contact.md)｜[トップへ戻る](index.md)
-
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"Product",
-  "name":"XPost AI Checker（X誹謗中傷AI分析・証拠PDF作成）",
-  "description":"X（Twitter）の誹謗中傷投稿をAIで分類し、証拠PDFを作成・納品します。",
-  "brand":{"@type":"Brand","name":"XPost AI Checker"},
-  "offers":[
-    {"@type":"Offer","name":"お試し","price":"3000","priceCurrency":"JPY","url":"https://xpostaichecker.jp/plans/","availability":"https://schema.org/InStock"},
-    {"@type":"Offer","name":"ベーシック","price":"5500","priceCurrency":"JPY","url":"https://xpostaichecker.jp/plans/","availability":"https://schema.org/InStock"},
-    {"@type":"Offer","name":"スタンダード","price":"15000","priceCurrency":"JPY","url":"https://xpostaichecker.jp/plans/","availability":"https://schema.org/InStock"}
-  ]
-}
-</script>

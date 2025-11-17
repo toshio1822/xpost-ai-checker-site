@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>XPost AI Checker｜X投稿の炎上リスクチェック</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {
+    font-family: "Noto Sans JP", system-ui, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #fafafa;
+    line-height: 1.7;
+    color: #333;
+}
+
+.card {
+    background: #fff;
+    padding: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    max-width: 720px;
+    margin: auto;
+}
+
+/* ブランド用クラスはもう使わないので削除してOK
+.brand {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1d9bf0;
+    margin-bottom: 4px;
+    display: block;
+}
+*/
+
+.title-bar {
+    background: #ffca28;
+    padding: 10px 14px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin: -22px -22px 16px -22px;
+    border-radius: 12px 12px 0 0;
+}
+
+textarea {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
+#inputCounter {
+    text-align: right;
+    margin-top: 6px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    margin-top: 24px;
+    background: #1d9bf0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+button:hover {
+    background: #0d8adf;
+}
+
+.notice {
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: #555;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+
+    <!-- タイトルバーにだけブランド名を添える -->
+    <div class="title-bar">
+        X投稿あんしんチェッカー(<font color="red">ベータ版</font>) | XPost AI Checker
+    </div>
+
+    <!-- サービス説明文 -->
+    <p style="margin-top:0; font-size:0.95rem;">
+        X（旧Twitter）に投稿する前に、文章の炎上リスクをAIが自動チェックするサービスです。<br>
+        攻撃的に聞こえる表現・誤解されやすい言い回し・属性でひとくくりにする表現などを検出し、<br>
+        安全な投稿に書き換えた3種類の修正案（マイルド／ビジネス／ユーモア）も提案します。
+    </p>
+
+    <form id="checkForm" action="ai_check.php" method="POST">
+        <label for="postText"><b>チェックしたい文章を入力してください（最大140文字）</b></label><br>
+        <textarea
+            name="text"
+            id="postText"
+            rows="6"
+            placeholder="例：このまま続くなら直接話したほうがいいかもしれない。"
+        ></textarea>
+
+        <div id="inputCounter">0 / 140文字</div>
+
+        <button type="submit">AIでチェックする</button>
+
+        <div class="notice">
+            ※ 個人情報・住所・電話番号・本名などは入力しないでください。<br>
+            ※ AIの判断は100%ではありません。投稿前にご自身でも内容をご確認ください。
+        </div>
+    </form>
+
+</div>
+
+<script>
+const textarea = document.getElementById('postText');
+const counter  = document.getElementById('inputCounter');
+const maxLen   = 140;
+const form     = document.getElementById('checkForm');
+
+function updateCounter() {
+    const len = textarea.value.length;
+    counter.textContent = `${len} / ${maxLen}文字`;
+    counter.style.color = len > maxLen ? "red" : "#555";
+}
+
+// 入力中の文字数表示
+textarea.addEventListener('input', updateCounter);
+updateCounter();
+
+// フォーム送信前チェック
+form.addEventListener('submit', function (e) {
+    const len = textarea.value.length;
+    if (len === 0) {
+        e.preventDefault();
+        alert("文章が入力されていません。");
+        return;
+    }
+    if (len > maxLen) {
+        e.preventDefault();
+        alert(`140文字を超えています（現在 ${len} 文字）。\n文章を短くしてから再度チェックしてください。`);
+        return;
+    }
+});
+</script>
+
+</body>
+</html>
+

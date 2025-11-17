@@ -135,13 +135,7 @@ NPDは、自分の価値を常に他人との比較や支配で確認しよう�
 
 ---
 
-前回：[◀ 被害者が孤立しないために](011_npd-support-and-care.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[別れ際の“最後の攻撃”とは？ ▶](013_npd-final-attack.md)
----
-
-<div class="cta-block">
-  <h3>支配の構造を理解すれば、恐怖は減ります。</h3>
-  <p><strong>XPost AI Checker</strong>なら、SNS投稿を自動で保存し、AIが誹謗中傷・脅迫などを分類。<br>
-  証拠を可視化することで、心理的支配から一歩離れた視点を取り戻せます。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">投稿を記録する</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 被害者が孤立しないために｜相談・記録・心のケアの選択肢](011_npd-support-and-care.md) | [シリーズトップに戻る](_index.md) | 次回：[別れ際の“最後の攻撃”とは？｜逆恨み・晒し・虚偽通報への備え方 ▶](013_npd-final-attack.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

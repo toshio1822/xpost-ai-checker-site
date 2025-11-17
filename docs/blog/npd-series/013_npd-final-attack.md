@@ -124,13 +124,7 @@ date: 2025-11-01
 
 ---
 
-前回：[◀ NPDとモラハラ・ガスライティングの違いとは？](012_npd-vs-morahara-gaslighting.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[理不尽な人に振り回されないために ▶](014_npd-series-summary.md)
----
-
-<div class="cta-block">
-  <h3>感情より「証拠」と「準備」を。</h3>
-  <p><strong>XPost AI Checker</strong>なら、SNS投稿を自動保存し、AIが中傷や虚偽通報の兆候を分析。<br>
-  あなたの冷静な対処と安全をサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">投稿を記録する</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 自己愛性パーソナリティ障害とモラハラ・ガスライティングの違いとは？｜心理的支配の構造を理解する](012_npd-vs-morahara-gaslighting.md) | [シリーズトップに戻る](_index.md) | 次回：[理不尽な人に振り回されないために｜自己愛性パーソナリティ障害シリーズ総まとめ ▶](014_npd-series-summary.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

@@ -137,12 +137,8 @@ NPDの人の内面には、**強い劣等感や不安**が隠れています。
 
 ---
 
-前回：― | [シリーズトップに戻る](../014_npd-series.md) | 次回：[SNSで見かける“自己愛的な人”の特徴とは ▶](002_npd-sns-patterns.md)
----
+<!-- NAV-CHAIN:START -->
+前回：― | [シリーズトップに戻る](_index.md) | 次回：[SNSで見かける“自己愛的な人”の特徴とは｜攻撃・支配・自己正当化の構図 ▶](002_npd-sns-patterns.md)
+<!-- NAV-CHAIN:END -->
 
-<div class="cta-block">
-  <h3>理不尽な投稿を受けたときは「証拠を残す」が第一歩。</h3>
-  <p><strong>XPost AI Checker</strong>なら、X（旧Twitter）の投稿を自動保存し、AIが誹謗中傷・脅迫などを分析します。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">今すぐ試してみる</a>
-</div>
-
+--8<-- "snippets/coupon.md"

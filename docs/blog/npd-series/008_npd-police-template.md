@@ -161,13 +161,7 @@ X（旧Twitter）において、@example（表示名：A氏）より
 
 ---
 
-前回：[◀ 理不尽な投稿から自分を守る｜AIで中傷を記録・分析する新常識](007_npd-ai-evidence.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[自己愛的な人が好むSNSの使い方とは？ ▶](009_npd-sns-behavior.md)
----
-
-<div class="cta-block">
-  <h3>証拠は「残す」だけでなく「整える」。</h3>
-  <p><strong>XPost AI Checker</strong>なら、投稿の自動保存からPDF/A生成、AIによる分類まで一括で処理。<br>
-  警察・弁護士提出にも使える資料作成をサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を整理する</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 理不尽な投稿から自分を守る｜AIで中傷を記録・分析する新常識](007_npd-ai-evidence.md) | [シリーズトップに戻る](_index.md) | 次回：[自己愛的な人が好むSNSの使い方とは？｜匿名性・承認欲求・フォロワー操作の心理構造 ▶](009_npd-sns-behavior.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

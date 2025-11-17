@@ -112,15 +112,7 @@ SNSでの投稿が違法とされるかは、以下のポイントで総合的�
 
 ---
 
-  前回：[◀ SNS誹謗中傷で弁護士に相談すべき？](004_x-twitter-houhouritsu.md) | 
-  [シリーズトップに戻る](../015_x-twitter-series.md) | 次回：―
-
----
-
-<div class="cta-block">
-  <h3>もし誹謗中傷を見つけたら、証拠の保存を。</h3>
-  <p>XPost AI Checkerなら、X（旧Twitter）の投稿をURLだけで保存。<br>
-  後から削除されても、証拠として残せます。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">投稿を保存する（無料）</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ SNS誹謗中傷は弁護士に相談すべき？判断ポイントと相談先の選び方](004_x-twitter-houhouritsu.md) | [シリーズトップに戻る](_index.md) | 次回：―
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

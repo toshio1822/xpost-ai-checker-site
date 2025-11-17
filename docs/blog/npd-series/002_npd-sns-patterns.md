@@ -215,12 +215,7 @@ SNSで理不尽な投稿に出会ったとき、**感情的に反論するより
 
 ---
 
-前回：[◀ なぜ理不尽な人に振り回されるのか](001_npd-what-is.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[攻撃を受けた直後にやるべき3つのこと ▶](003_first-aid-after-attack.md)
----
-
-<div class="cta-block">
-  <h3>理不尽な投稿を受けたら、反論よりも「記録」を。</h3>
-  <p><strong>XPost AI Checker</strong>なら、Xの投稿を自動保存し、AIが中傷・脅迫の可能性を分類。<br>冷静な対応をサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を残す</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ なぜ理不尽な人に振り回されるのか｜自己愛性パーソナリティ障害を理解する](001_npd-what-is.md) | [シリーズトップに戻る](_index.md) | 次回：[攻撃を受けた直後にやるべき3つのこと｜感情を壊さないための初動対応 ▶](003_first-aid-after-attack.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

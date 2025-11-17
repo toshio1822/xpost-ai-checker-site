@@ -84,12 +84,7 @@ date: 2025-11-01
 
 ---
 
-前回：[◀ 家族や友人が信じてくれないとき｜第三者に“事実”で伝えるコツ](005_npd-how-to-explain.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[理不尽な投稿から自分を守る｜AIで中傷を記録・分析する新常識 ▶](007_npd-ai-evidence.md)
----
-
-<div class="cta-block">
-  <h3>感情より「証拠」を。冷静さがあなたを守ります。</h3>
-  <p><strong>XPost AI Checker</strong>なら、X（旧Twitter）の投稿を自動保存し、AIが誹謗中傷・脅迫などの可能性を分析。<br>記録を通じて冷静な行動をサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を残す</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 家族や友人が信じてくれないとき｜第三者に“事実”で伝えるコツ](005_npd-how-to-explain.md) | [シリーズトップに戻る](_index.md) | 次回：[理不尽な投稿から自分を守る｜AIで中傷を記録・分析する新常識 ▶](007_npd-ai-evidence.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

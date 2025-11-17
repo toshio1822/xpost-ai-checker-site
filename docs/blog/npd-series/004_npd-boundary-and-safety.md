@@ -128,12 +128,7 @@ NPDの人は、他人の時間・感情・空間に踏み込んでくる傾向�
 
 ---
 
-前回：[◀ 攻撃を受けた直後にやるべき3つのこと](003_first-aid-after-attack.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[家族や友人が信じてくれないとき｜第三者に“事実”で伝えるコツ ▶](005_npd-how-to-explain.md)
----
-
-<div class="cta-block">
-  <h3>理不尽な相手に疲れたら、「記録」と「距離」を。</h3>
-  <p><strong>XPost AI Checker</strong>は、X（旧Twitter）の投稿を自動保存し、AIが誹謗中傷・脅迫の可能性を分類。<br>感情的な反応を抑え、冷静な対応を支援します。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を残す</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 攻撃を受けた直後にやるべき3つのこと｜感情を壊さないための初動対応](003_first-aid-after-attack.md) | [シリーズトップに戻る](_index.md) | 次回：[家族や友人が信じてくれないとき｜第三者に“事実”で伝えるコツ ▶](005_npd-how-to-explain.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

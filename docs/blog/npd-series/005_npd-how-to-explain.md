@@ -126,12 +126,7 @@ X（旧Twitter）での投稿を大量に保存したい場合は、
 
 ---
 
-前回：[◀ 関わってしまったら｜冷静に距離を取るための対処法](004_npd-boundary-and-safety.md) | [シリーズトップに戻る](../014_npd-series.md) | 次回：[やるべきこと・やってはいけないこと ▶](006_npd-do-and-dont.md)
----
-
-<div class="cta-block">
-  <h3>被害を「感情」ではなく「記録」で伝えよう。</h3>
-  <p><strong>XPost AI Checker</strong>なら、X（旧Twitter）の投稿を自動で保存し、AIが誹謗中傷・脅迫などの可能性を分類。<br>第三者に伝える際の資料づくりをサポートします。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">証拠を残す</a>
-</div>
-
+<!-- NAV-CHAIN:START -->
+前回：[◀ 関わってしまったら｜冷静に距離を取るための対処法](004_npd-boundary-and-safety.md) | [シリーズトップに戻る](_index.md) | 次回：[やるべきこと・やってはいけないこと｜自己愛性パーソナリティ障害の人への実践対応ガイド ▶](006_npd-do-and-dont.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"

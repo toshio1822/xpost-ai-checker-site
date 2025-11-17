@@ -123,14 +123,7 @@ date: 2025-11-09
 
 ---
 
-  前回：[◀ Xへの通報と削除依頼の違い](003_x-twitter-tsuho.md) | 
-  [シリーズトップに戻る](../015_x-twitter-series.md) | 次回：[SNS誹謗中傷の罪名と罰則まとめ ▶](005_x-twitter-law.md)
-
----
-
-<div class="cta-block">
-  <h3>削除や交渉の前に、まずは証拠の保存を。</h3>
-  <p>弁護士に相談する場合も、証拠がなければ始まりません。<br>
-  XPost AI Checkerなら、投稿の内容・URL・日時をPDFで自動保存できます。</p>
-  <a href="https://xpostaichecker.jp/" class="md-button--primary">投稿を保存する（無料）</a>
-</div>
+<!-- NAV-CHAIN:START -->
+前回：[◀ X（旧Twitter）誹謗中傷の通報・削除依頼ガイド｜アプリからの報告とフォーム申請の違いとは](003_x-twitter-tsuho.md) | [シリーズトップに戻る](_index.md) | 次回：[SNS誹謗中傷に当たる投稿とは？名誉毀損・侮辱などの罪名と罰則をわかりやすく解説 ▶](005_x-twitter-law.md)
+<!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"
