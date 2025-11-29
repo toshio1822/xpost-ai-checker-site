@@ -81,10 +81,39 @@ button:hover {
     font-size: 0.85rem;
     color: #555;
 }
+
+#loadingOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(2px);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.4rem;
+    color: #1d9bf0;
+    font-weight: bold;
+}
+
+.loader {
+    padding: 20px 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    border: 2px solid #1d9bf0;
+}
+
 </style>
 </head>
 
 <body>
+<div id="loadingOverlay">
+    <div class="loader">AIチェック中...</div>
+</div>
 
 <div class="card">
 
@@ -115,7 +144,9 @@ button:hover {
 
         <div class="notice">
             ※ 個人情報・住所・電話番号・本名などは入力しないでください。<br>
-            ※ AIの判断は100%ではありません。投稿前にご自身でも内容をご確認ください。
+            ※ AIの判断は100%ではありません。投稿前にご自身でも内容をご確認ください。<br>
+            ※ 本サービスは OpenAI 社の API を利用して判定を行っています。<br>
+            ※ 送信された文章はチェック結果の生成にのみ使用し、当サービス側では保存しません。
         </div>
     </form>
 
@@ -126,20 +157,44 @@ const textarea = document.getElementById('postText');
 const counter  = document.getElementById('inputCounter');
 const maxLen   = 140;
 const form     = document.getElementById('checkForm');
+const overlay  = document.getElementById('loadingOverlay');
+
+/**
+ * X（Twitter）っぽい文字数カウント
+ * - 改行: CRLF を LF に揃える（1改行＝1文字）
+ * - ASCII（U+00FF 以下）: 0.5文字
+ * - それ以外（日本語など）: 1文字
+ * 合計を切り上げて「文字数」とする
+ */
+function countCharacters(value) {
+    const normalized = value.replace(/\r\n/g, "\n");
+    let weight = 0; // 0.5単位で加算
+
+    for (const ch of normalized) {
+        const code = ch.codePointAt(0);
+        if (code <= 0xFF) {
+            // 半角（英数字・半角記号など）
+            weight += 0.5;
+        } else {
+            // 全角（日本語・全角記号など）
+            weight += 1;
+        }
+    }
+    return Math.ceil(weight);
+}
 
 function updateCounter() {
-    const len = textarea.value.length;
+    const len = countCharacters(textarea.value);
     counter.textContent = `${len} / ${maxLen}文字`;
     counter.style.color = len > maxLen ? "red" : "#555";
 }
 
-// 入力中の文字数表示
 textarea.addEventListener('input', updateCounter);
 updateCounter();
 
-// フォーム送信前チェック
 form.addEventListener('submit', function (e) {
-    const len = textarea.value.length;
+    const len = countCharacters(textarea.value);
+
     if (len === 0) {
         e.preventDefault();
         alert("文章が入力されていません。");
@@ -150,6 +205,9 @@ form.addEventListener('submit', function (e) {
         alert(`140文字を超えています（現在 ${len} 文字）。\n文章を短くしてから再度チェックしてください。`);
         return;
     }
+
+    // 送信OKなのでローディング開始
+    overlay.style.display = "flex";
 });
 </script>
 

@@ -156,10 +156,64 @@ $suggested_business = $ai["suggested_texts"]["business"] ?? "";
 $suggested_humor    = $ai["suggested_texts"]["humor"]    ?? "";
 
 // 文字数
-$len_input    = mb_strlen($input_text, 'UTF-8');
-$len_soft     = mb_strlen($suggested_soft, 'UTF-8');
-$len_business = mb_strlen($suggested_business, 'UTF-8');
-$len_humor    = mb_strlen($suggested_humor, 'UTF-8');
+$len_input    = count_x_chars($input_text);
+$len_soft     = count_x_chars($suggested_soft);
+$len_business = count_x_chars($suggested_business);
+$len_humor    = count_x_chars($suggested_humor);
+
+// X（Twitter）風の文字数カウント（index.html と同じルール）
+// - 改行: CRLF → LF に揃える（1改行 = 1文字）
+// - ASCII（U+00FF以下）: 0.5文字
+// - それ以外（日本語など）: 1文字
+// 合計を切り上げて「文字数」とする
+function count_x_chars($text) {
+    // 改行を正規化
+    $normalized = str_replace("\r\n", "\n", $text);
+    $len = mb_strlen($normalized, 'UTF-8');
+    $weight = 0.0; // 0.5単位で加算
+
+    for ($i = 0; $i < $len; $i++) {
+        $ch = mb_substr($normalized, $i, 1, 'UTF-8');
+        $code = unpack('N', mb_convert_encoding($ch, 'UTF-32BE', 'UTF-8'))[1];
+
+        if ($code <= 0xFF) {
+            // 半角（英数字・半角記号など）
+            $weight += 0.5;
+        } else {
+            // 全角（日本語・全角記号など）
+            $weight += 1.0;
+        }
+    }
+
+    return (int)ceil($weight);
+}
+
+// X風のカウントで最大 $max 文字に切り詰める関数
+function truncate_x_chars($text, $max = 140) {
+    if ($text === '' || $max <= 0) return '';
+
+    $normalized = str_replace("\r\n", "\n", $text);
+    $len = mb_strlen($normalized, 'UTF-8');
+    $weight = 0.0;
+    $result = '';
+
+    for ($i = 0; $i < $len; $i++) {
+        $ch = mb_substr($normalized, $i, 1, 'UTF-8');
+        $code = unpack('N', mb_convert_encoding($ch, 'UTF-32BE', 'UTF-8'))[1];
+        $add  = ($code <= 0xFF) ? 0.5 : 1.0;
+
+        // 次の文字を足したときに 140 を超えるなら終了
+        if (ceil($weight + $add) > $max) {
+            break;
+        }
+
+        $result .= $ch;
+        $weight += $add;
+    }
+
+    return $result;
+}
+
 
 // ===== Twitter投稿URL生成 =====
 function tweet_url($text) {

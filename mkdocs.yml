@@ -61,6 +61,7 @@ nav:
     - モラハラ・ガスライティングとの違い: blog/npd-series/012_npd-vs-morahara-gaslighting.md
     - 別れ際の“最後の攻撃”: blog/npd-series/013_npd-final-attack.md
     - シリーズ総まとめ: blog/npd-series/014_npd-series-summary.md
+- X投稿あんしんチェッカー(ベータ版): https://xpostaichecker.jp/ai-check/
 - お問い合わせ: contact.md
 - 運営者情報: about.md
 - 法的表記: legal.md
@@ -74,9 +75,9 @@ extra:
     link: https://x.com/xpostaichecker
   social_image: assets/og.webp
 extra_css:
-- assets/extra.css?v=202511162304
+- assets/extra.css?v=202511291902
 extra_javascript:
-- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202511162304
+- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202511291902
 markdown_extensions:
 - attr_list
 - md_in_html
