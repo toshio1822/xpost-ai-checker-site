@@ -130,9 +130,9 @@ if (!$response_json) {
 }
 
 $response = json_decode($response_json, true);
+
 if (isset($response["error"])) {
     echo "APIエラー: " . htmlspecialchars($response["error"]["message"]);
-    echo "<pre>" . htmlspecialchars($response_json) . "</pre>";
     exit;
 }
 
@@ -218,9 +218,8 @@ function truncate_x_chars($text, $max = 140) {
 // ===== Twitter投稿URL生成 =====
 function tweet_url($text) {
     if (!$text) return "";
-    if (mb_strlen($text, 'UTF-8') > 140) {
-        $text = mb_substr($text, 0, 140, 'UTF-8');
-    }
+    // X方式で切り詰める
+    $text = truncate_x_chars($text, 140);
     return "https://twitter.com/intent/tweet?text=" . urlencode($text);
 }
 
@@ -229,7 +228,7 @@ $tweet_soft_url     = tweet_url($suggested_soft);
 $tweet_business_url = tweet_url($suggested_business);
 $tweet_humor_url    = tweet_url($suggested_humor);
 
-// ===== 炎マークとラベル =====
+// ===== 炎アイコン =====
 function fire_marks($score) {
     $score = max(0, min(5, (int)$score));
     return str_repeat("🔥", $score) . str_repeat("・", 5 - $score);
@@ -253,114 +252,112 @@ $overall_risk_label = risk_label_from_score($overall_risk_score);
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>SNS投稿チェック結果｜XPost AI Checker</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AIチェック結果｜X投稿あんしんチェッカー</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <style>
 body {
     font-family: "Noto Sans JP", system-ui, sans-serif;
     background:#fafafa;
     padding:20px;
+    line-height:1.8;
     color:#333;
-    line-height:1.7;
 }
 
-/* 共通カード */
+/* カードUI */
 .card {
     background:#fff;
-    padding:20px;
+    padding:22px;
     border-radius:12px;
-    box-shadow:0 2px 8px rgba(0,0,0,0.05);
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
     max-width:800px;
     margin:0 auto 22px auto;
 }
 
 /* 見出し（左に黄色ライン） */
 .section-title {
-    font-size:1rem;
+    font-size:1.05rem;
     font-weight:600;
-    margin:0 0 10px 0;
+    margin-bottom:10px;
     padding-left:10px;
     border-left:4px solid #ffca28;
 }
 
-/* 注意カード */
-.caution-card {
-    background:#fffdf5;
+.phrase {
+    background: #fff3b0;
+    padding:2px 4px;
+    border-radius:4px;
+    font-weight:bold;
 }
 
-/* 凡例 */
-.legend-list {
-    font-size:0.9rem;
-    margin-top:8px;
-    padding-left:18px;
-}
-
-/* Xボタン */
+/* Tweetボタン */
 .tweet-btn {
     display:inline-block;
+    margin-top:10px;
     padding:10px 14px;
     background:#1d9bf0;
     color:#fff;
     border-radius:8px;
     text-decoration:none;
-    font-size:0.9rem;
-    margin-top:14px;
 }
 .tweet-btn:hover {
     background:#0d8adf;
 }
+
+/* 注意カード */
+.caution {
+    background:#fff9e5;
+}
 </style>
 </head>
+
 <body>
 
-<!-- 🔥 炎上リスク -->
+<!-- 🔥 リスク評価 -->
 <div class="card">
     <h3 class="section-title">炎上リスク</h3>
-    <div>
-        <b style="font-size:1.2rem; color:#ff5722;">
-            <?= fire_marks($overall_risk_score) ?>
-        </b>
-        （<?= htmlspecialchars($overall_risk_label) ?>）
+
+    <div style="font-size:1.3rem; color:#ff5722;">
+        <?= fire_marks($overall_risk_score) ?>（<?= htmlspecialchars($overall_risk_label) ?>）
     </div>
-    <ul class="legend-list">
+
+    <ul style="font-size:0.9rem; margin-top:8px; padding-left:18px;">
         <li>🔥・・・・・・：ごく低い（ほぼ安全）</li>
-        <li>🔥🔥・・・・・：低い（少し注意）</li>
-        <li>🔥🔥🔥・・・・：中程度（多少リスクあり）</li>
-        <li>🔥🔥🔥🔥・・・：高い（注意が必要）</li>
-        <li>🔥🔥🔥🔥🔥：非常に高い（炎上リスク大）</li>
+        <li>🔥🔥・・・・・：低い（やや注意）</li>
+        <li>🔥🔥🔥・・・・：中程度（状況次第で誤解の可能性）</li>
+        <li>🔥🔥🔥🔥・・・：高い（炎上リスクあり）</li>
+        <li>🔥🔥🔥🔥🔥：非常に高い（投稿前に再検討推奨）</li>
     </ul>
 </div>
 
-<!-- 📝 元の投稿 -->
+<!-- 📝 元の文章 -->
 <div class="card">
     <h3 class="section-title">元の投稿</h3>
-    （<?= $len_input ?>/140文字）<br>
-    <?= nl2br(htmlspecialchars($input_text)) ?>
+    <div style="margin-bottom:6px; font-size:0.9rem; color:#666;">
+        （<?= $len_input ?>/140文字）
+    </div>
+
+    <div><?= nl2br(htmlspecialchars($input_text)) ?></div>
 
     <?php if ($tweet_original_url): ?>
-        <br>
-        <a class="tweet-btn" target="_blank" href="<?= htmlspecialchars($tweet_original_url) ?>">
-            元の投稿のままXに投稿する
-        </a>
+        <a class="tweet-btn" href="<?= htmlspecialchars($tweet_original_url) ?>" target="_blank">このまま投稿する</a>
     <?php endif; ?>
 </div>
 
 <!-- 🔍 懸念箇所 -->
 <div class="card">
-    <h3 class="section-title">懸念箇所</h3>
+    <h3 class="section-title">懸念される表現</h3>
+
     <?php if (empty($highlight_spans)): ?>
-        特に懸念箇所はありません。
+        特に懸念される表現はありませんでした。
     <?php else: ?>
         <ul>
-        <?php foreach ($highlight_spans as $span): ?>
-            <li>
-                <span style="background:yellow;font-weight:bold;">
-                    <?= htmlspecialchars($span["phrase"] ?? "") ?>
-                </span><br>
-                理由：<?= htmlspecialchars($span["reason"] ?? "") ?>
-            </li>
-        <?php endforeach; ?>
+            <?php foreach ($highlight_spans as $s): ?>
+                <li>
+                    <span class="phrase"><?= htmlspecialchars($s["phrase"]) ?></span><br>
+                    理由：<?= htmlspecialchars($s["reason"]) ?>
+                </li>
+            <?php endforeach; ?>
         </ul>
     <?php endif; ?>
 </div>
@@ -371,58 +368,64 @@ body {
     <?= nl2br(htmlspecialchars($summary_reason)) ?>
 </div>
 
-<!-- 🟡 修正案：やわらかマイルド版 -->
-<div class="card">
-    <h3 class="section-title">修正案（やわらかマイルド版）</h3>
-    （<?= $len_soft ?>/140文字）<br>
-    <?= nl2br(htmlspecialchars($suggested_soft)) ?>
+<!-- 🟡 修正案（3タイプ） -->
+<?php
+$variants = [
+    ["label" => "やわらかマイルド版", "text" => $suggested_soft,     "len" => $len_soft,     "url" => $tweet_soft_url],
+    ["label" => "事務的ビジネス版",   "text" => $suggested_business, "len" => $len_business, "url" => $tweet_business_url],
+    ["label" => "ユーモア版",         "text" => $suggested_humor,    "len" => $len_humor,    "url" => $tweet_humor_url],
+];
 
-    <?php if ($tweet_soft_url): ?>
-        <br>
-        <a class="tweet-btn" href="<?= htmlspecialchars($tweet_soft_url) ?>" target="_blank">
-            この修正案でXに投稿する
-        </a>
+foreach ($variants as $v):
+?>
+<div class="card">
+    <h3 class="section-title">修正案（<?= $v["label"] ?>）</h3>
+
+    <div style="margin-bottom:6px; font-size:0.9rem; color:#666;">
+        （<?= $v["len"] ?>/140文字）
+    </div>
+
+    <?= nl2br(htmlspecialchars($v["text"])) ?>
+
+    <?php if ($v["url"]): ?>
+    <br>
+    <a class="tweet-btn" href="<?= htmlspecialchars($v["url"]) ?>" target="_blank">
+        この内容で投稿する
+    </a>
     <?php endif; ?>
 </div>
+<?php endforeach; ?>
 
-<!-- 🟦 修正案：事務的ビジネス版 -->
-<div class="card">
-    <h3 class="section-title">修正案（事務的ビジネス版）</h3>
-    （<?= $len_business ?>/140文字）<br>
-    <?= nl2br(htmlspecialchars($suggested_business)) ?>
-
-    <?php if ($tweet_business_url): ?>
-        <br>
-        <a class="tweet-btn" href="<?= htmlspecialchars($tweet_business_url) ?>" target="_blank">
-            この修正案でXに投稿する
-        </a>
-    <?php endif; ?>
+<!-- ⚠ 注意 -->
+<div class="card caution">
+    <h3 class="section-title">注意事項</h3>
+    AIの判定は100%正確ではありません。<br>
+    文脈や口調により結果が変わる場合があります。<br>
+    最終判断はご自身で行ってください。
 </div>
 
-<!-- 🟩 修正案：ユーモア版 -->
-<div class="card">
-    <h3 class="section-title">修正案（ユーモア版）</h3>
-    （<?= $len_humor ?>/140文字）<br>
-    <?= nl2br(htmlspecialchars($suggested_humor)) ?>
-
-    <?php if ($tweet_humor_url): ?>
-        <br>
-        <a class="tweet-btn" href="<?= htmlspecialchars($tweet_humor_url) ?>" target="_blank">
-            この修正案でXに投稿する
-        </a>
-    <?php endif; ?>
-</div>
-
-<!-- ⚠ 注意書き -->
-<div class="card caution-card">
-    <h3 class="section-title">注意書き</h3>
-    AIの判断は100%正確ではありません。<br>
-    文脈やタイミングによって結果が変わる場合があります。<br>
-    最終的な投稿内容はご自身で確認し、判断してください。
-</div>
-
-<div style="text-align:center; margin-top:10px;">
+<!-- 戻るボタン -->
+<div style="text-align:center; margin-bottom:20px;">
     <a href="index.html">別の文章をチェックする</a>
+</div>
+
+<!-- 広告 -->
+<div style="font-size:0.8rem; color:#888; margin-bottom:4px;">
+【広告】
+</div>
+
+<div>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523"
+     crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-8182034043692523"
+     data-ad-slot="5100913315"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 </div>
 
 </body>

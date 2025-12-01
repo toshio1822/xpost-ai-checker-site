@@ -2,8 +2,9 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>XPost AI Checker｜X投稿の炎上リスクチェック</title>
+<title>X投稿あんしんチェッカー｜炎上リスクをAIが無料で診断</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="X（旧Twitter）の投稿前チェックツール。AIが炎上リスク・攻撃的表現・誤解されやすい言い回しを自動判定し、安全な文章に書き換えた3種類の修正案も無料で提案します。">
 
 <style>
 body {
@@ -24,24 +25,30 @@ body {
     margin: auto;
 }
 
-/* ブランド用クラスはもう使わないので削除してOK
-.brand {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #1d9bf0;
-    margin-bottom: 4px;
-    display: block;
-}
-*/
-
+/* タイトルバー */
 .title-bar {
     background: #ffca28;
     padding: 10px 14px;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     font-weight: bold;
     color: #333;
     margin: -22px -22px 16px -22px;
     border-radius: 12px 12px 0 0;
+}
+
+.subtitle {
+    margin-top: 6px;
+    font-size: 0.93rem;
+    color: #444;
+}
+
+.feature-box {
+    background: #fff8e1;
+    padding: 12px 16px;
+    border-left: 4px solid #ffca28;
+    border-radius: 8px;
+    margin: 14px 0 18px 0;
+    font-size: 0.9rem;
 }
 
 textarea {
@@ -77,9 +84,21 @@ button:hover {
 }
 
 .notice {
-    margin-top: 16px;
-    font-size: 0.85rem;
+    margin-top: 18px;
+    font-size: 0.82rem;
     color: #555;
+}
+
+.section-title {
+    margin: 28px 0 6px;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* 選択肢のLiデザイン */
+.feature-list li {
+    margin-bottom: 6px;
 }
 
 #loadingOverlay {
@@ -106,7 +125,6 @@ button:hover {
     box-shadow: 0 4px 16px rgba(0,0,0,0.15);
     border: 2px solid #1d9bf0;
 }
-
 </style>
 </head>
 
@@ -117,17 +135,28 @@ button:hover {
 
 <div class="card">
 
-    <!-- タイトルバーにだけブランド名を添える -->
+    <!-- タイトル -->
     <div class="title-bar">
-        X投稿あんしんチェッカー(<font color="red">ベータ版</font>) | XPost AI Checker
+        X投稿あんしんチェッカー｜炎上リスクをAIが無料診断
     </div>
 
-    <!-- サービス説明文 -->
-    <p style="margin-top:0; font-size:0.95rem;">
-        X（旧Twitter）に投稿する前に、文章の炎上リスクをAIが自動チェックするサービスです。<br>
-        攻撃的に聞こえる表現・誤解されやすい言い回し・属性でひとくくりにする表現などを検出し、<br>
-        安全な投稿に書き換えた3種類の修正案（マイルド／ビジネス／ユーモア）も提案します。
+    <!-- 説明（SEO最適化済み） -->
+    <p class="subtitle">
+        X（旧Twitter）に投稿する前に、文章の炎上リスクをAIが無料でチェックします。<br>
+        攻撃的な表現・誤解されやすい言い回し・差別的と受け取られる可能性のある文を自動判定し、より安全で伝わりやすい文章案も生成します。
     </p>
+
+    <!-- 特徴まとめ -->
+    <div class="feature-box">
+        <strong>AIがチェックするポイント</strong>
+        <ul class="feature-list">
+            <li>・攻撃的・挑発的に読まれる表現</li>
+            <li>・誤解されやすい曖昧な言い回し</li>
+            <li>・属性でひとくくりにする不適切な表現</li>
+            <li>・炎上につながる“強すぎる主張”</li>
+        </ul>
+        さらに、文章の修正案を <strong>「マイルド / ビジネス / ユーモア」</strong> の3種類で提案します。
+    </div>
 
     <form id="checkForm" action="ai_check.php" method="POST">
         <label for="postText"><b>チェックしたい文章を入力してください（最大140文字）</b></label><br>
@@ -142,13 +171,50 @@ button:hover {
 
         <button type="submit">AIでチェックする</button>
 
+        <!-- 注意書き -->
         <div class="notice">
-            ※ 個人情報・住所・電話番号・本名などは入力しないでください。<br>
-            ※ AIの判断は100%ではありません。投稿前にご自身でも内容をご確認ください。<br>
-            ※ 本サービスは OpenAI 社の API を利用して判定を行っています。<br>
-            ※ 送信された文章はチェック結果の生成にのみ使用し、当サービス側では保存しません。
+            ※ 個人情報（住所・電話番号・本名など）は入力しないでください。<br>
+            ※ AIの判断は100%ではありません。最終的な投稿内容はご自身でご確認ください。<br>
+            ※ 当サービスは OpenAI API を利用しています。<br>
+            ※ 送信された文章は判定処理にのみ使用し、保存は行いません。
         </div>
+
+        <!-- 広告ラベル -->
+        <div style="margin-top:24px; font-size:0.8rem; color:#888;">
+            【広告】
+        </div>
+
+        <!-- AdSense -->
+        <div style="margin-top:4px;">
+
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523"
+                 crossorigin="anonymous"></script>
+
+            <ins class="adsbygoogle"
+                style="display:block"
+                data-ad-client="ca-pub-8182034043692523"
+                data-ad-slot="2783524124"
+                data-ad-format="auto"
+                data-full-width-responsive="true"></ins>
+
+            <script>
+                (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+
+        </div>
+
     </form>
+
+    <!-- 下部に「証拠化サービス」案内を追加（自然な導線） -->
+    <div class="section-title">もし、すでにトラブルが起きている場合は…</div>
+    <p style="font-size:0.9rem;">
+        投稿前の安全チェックだけでなく、誹謗中傷・虚偽通報・攻撃的引用などが発生したあとに  
+        <strong>「証拠として残す」</strong> ことも非常に重要です。
+        <br><br>
+        XPost AI Checker では、問題投稿をAIが分類し、PDF/A準拠の証拠レポートに自動整理できます。
+        <br>
+        → <a href="https://xpostaichecker.jp/" target="_blank">証拠化サービスを見る</a>
+    </p>
 
 </div>
 
@@ -161,22 +227,16 @@ const overlay  = document.getElementById('loadingOverlay');
 
 /**
  * X（Twitter）っぽい文字数カウント
- * - 改行: CRLF を LF に揃える（1改行＝1文字）
- * - ASCII（U+00FF 以下）: 0.5文字
- * - それ以外（日本語など）: 1文字
- * 合計を切り上げて「文字数」とする
  */
 function countCharacters(value) {
     const normalized = value.replace(/\r\n/g, "\n");
-    let weight = 0; // 0.5単位で加算
+    let weight = 0;
 
     for (const ch of normalized) {
         const code = ch.codePointAt(0);
         if (code <= 0xFF) {
-            // 半角（英数字・半角記号など）
             weight += 0.5;
         } else {
-            // 全角（日本語・全角記号など）
             weight += 1;
         }
     }
@@ -202,11 +262,10 @@ form.addEventListener('submit', function (e) {
     }
     if (len > maxLen) {
         e.preventDefault();
-        alert(`140文字を超えています（現在 ${len} 文字）。\n文章を短くしてから再度チェックしてください。`);
+        alert(`140文字を超えています（現在 ${len} 文字）。\n短くしてから再度チェックしてください。`);
         return;
     }
 
-    // 送信OKなのでローディング開始
     overlay.style.display = "flex";
 });
 </script>

@@ -20,3 +20,24 @@
   </p>
 </div>
 
+<!-- CTA の後に控えめな広告エリア -->
+<div style="margin-top: 32px; font-size: 0.75rem; color: #aaa; text-align:center;">
+    【広告】
+</div>
+
+<div style="margin-top: 6px;">
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523"
+         crossorigin="anonymous"></script>
+    <!-- AI Checker_CTA下 -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-8182034043692523"
+         data-ad-slot="4148468888"
+         data-ad-format="auto"
+         data-full-width-responsive="true"></ins>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+
+</div>
