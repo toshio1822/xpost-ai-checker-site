@@ -79,9 +79,9 @@ extra:
     link: https://x.com/xpostaichecker
   social_image: assets/og.webp
 extra_css:
-- assets/extra.css?v=202601031541
+- assets/extra.css?v=202601041716
 extra_javascript:
-- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202601031541
+- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202601041716
 markdown_extensions:
 - attr_list
 - md_in_html
