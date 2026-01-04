@@ -313,20 +313,31 @@ body {
 
 <body>
 
+
+<!-- 🧡 まず最初に：安心の前置き -->
+<div class="card" style="background:#f3f8ff;">
+    <h3 class="section-title">この結果の見方</h3>
+    <div style="font-size:0.95rem; color:#334;">
+        この結果は、投稿文が<strong>第三者にどう受け取られる可能性があるか</strong>を整理した「目安」です。<br>
+        あなたの意図や人格を評価するものではありません。<br>
+        不安が強いときは、まず<strong>誤解されやすい箇所</strong>だけ確認してみてください。
+    </div>
+</div>
+
 <!-- 🔥 リスク評価 -->
 <div class="card">
-    <h3 class="section-title">炎上リスク</h3>
+    <h3 class="section-title">受け取られ方のリスク（目安）</h3>
 
     <div style="font-size:1.3rem; color:#ff5722;">
         <?= fire_marks($overall_risk_score) ?>（<?= htmlspecialchars($overall_risk_label) ?>）
     </div>
 
     <ul style="font-size:0.9rem; margin-top:8px; padding-left:18px;">
-        <li>🔥・・・・・・：ごく低い（ほぼ安全）</li>
-        <li>🔥🔥・・・・・：低い（やや注意）</li>
-        <li>🔥🔥🔥・・・・：中程度（状況次第で誤解の可能性）</li>
-        <li>🔥🔥🔥🔥・・・：高い（炎上リスクあり）</li>
-        <li>🔥🔥🔥🔥🔥：非常に高い（投稿前に再検討推奨）</li>
+        <li>🔥・・・・・・：ごく低い（誤解されにくい傾向）</li>
+        <li>🔥🔥・・・・・：低い（少しだけ言い回し注意）</li>
+        <li>🔥🔥🔥・・・・：中程度（文脈しだいで強く見える可能性）</li>
+        <li>🔥🔥🔥🔥・・・：高い（読み手によっては対立を招く可能性）</li>
+        <li>🔥🔥🔥🔥🔥：非常に高い（投稿前に整えると安心）</li>
     </ul>
 </div>
 
@@ -346,10 +357,10 @@ body {
 
 <!-- 🔍 懸念箇所 -->
 <div class="card">
-    <h3 class="section-title">懸念される表現</h3>
+    <h3 class="section-title">誤解されやすい可能性のある箇所</h3>
 
     <?php if (empty($highlight_spans)): ?>
-        特に懸念される表現はありませんでした。
+        目立って誤解されやすい箇所は見当たりませんでした（文脈しだいで印象は変わります）。
     <?php else: ?>
         <ul>
             <?php foreach ($highlight_spans as $s): ?>
@@ -368,6 +379,15 @@ body {
     <?= nl2br(htmlspecialchars($summary_reason)) ?>
 </div>
 
+<!-- 🟢 修正案の見方（クッション） -->
+<div class="card" style="background:#f7fbf7;">
+    <h3 class="section-title">修正案について</h3>
+    <div style="font-size:0.95rem; color:#334;">
+        以下は、誤解を避けたい場合の<strong>書き方の一例</strong>です。<br>
+        必ず修正する必要はありません。あなたが納得できる形で調整してOKです。
+    </div>
+</div>
+
 <!-- 🟡 修正案（3タイプ） -->
 <?php
 $variants = [
@@ -380,6 +400,16 @@ foreach ($variants as $v):
 ?>
 <div class="card">
     <h3 class="section-title">修正案（<?= $v["label"] ?>）</h3>
+
+    <?php
+    $desc = "";
+    if ($v["label"] === "やわらかマイルド版") $desc = "感情の強さを少し抑え、誤解されにくく整えます。";
+    if ($v["label"] === "事務的ビジネス版")   $desc = "事実と要望を整理し、冷静に伝える形に寄せます。";
+    if ($v["label"] === "ユーモア版")         $desc = "角が立ちにくい軽い言い回しに寄せます（誰かを笑い者にしません）。";
+    ?>
+    <div style="margin:-4px 0 10px; font-size:0.9rem; color:#666;">
+        <?= htmlspecialchars($desc) ?>
+    </div>
 
     <div style="margin-bottom:6px; font-size:0.9rem; color:#666;">
         （<?= $v["len"] ?>/140文字）
@@ -399,9 +429,9 @@ foreach ($variants as $v):
 <!-- ⚠ 注意 -->
 <div class="card caution">
     <h3 class="section-title">注意事項</h3>
-    AIの判定は100%正確ではありません。<br>
-    文脈や口調により結果が変わる場合があります。<br>
-    最終判断はご自身で行ってください。
+    この結果は「目安」です。AIの判定は100%正確ではありません。<br>
+    文脈や関係性によって受け取られ方は変わります。<br>
+    不安が残る場合は、表現を少し整える／一度下書きに戻すなどで調整してみてください。
 </div>
 
 <!-- 戻るボタン -->

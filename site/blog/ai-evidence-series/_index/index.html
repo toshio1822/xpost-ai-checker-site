@@ -6,7 +6,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="SNSの誹謗中傷をAIが自動で分析し、法務レベルのPDF証拠として残す技術を紹介。XPost AI Checkerの仕組み・使い方・技術的背景をまとめたシリーズです。">
+        <meta name="description" content="SNS誹謗中傷をAIが自動で分析し、証拠PDFとして残す技術と実践方法を解説。XPost AI Checkerの仕組み・使い方・AIの分類ロジック・証拠保存の技術背景を体系的に学べるシリーズ。">
       
       
       
@@ -24,7 +24,7 @@
     
     
       
-        <title>AI証拠化・サービス紹介シリーズ｜誹謗中傷を「証拠」に変えるテクノロジー - XPost AI Checker</title>
+        <title>AI証拠化ガイド｜SNS誹謗中傷を「確実な証拠」に変える技術と使い方 - XPost AI Checker</title>
       
     
     
@@ -50,7 +50,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/extra.css?v=202512012045">
+      <link rel="stylesheet" href="../../../assets/extra.css?v=202601031541">
     
     <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
@@ -88,7 +88,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#ai1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -124,7 +124,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              AI証拠化・サービス紹介シリーズ｜誹謗中傷を「証拠」に変えるテクノロジー
+              AI証拠化ガイド｜SNS誹謗中傷を「確実な証拠」に変える技術と使い方
             
           </span>
         </div>
@@ -389,27 +389,78 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#ai1" class="md-nav__link">
     <span class="md-ellipsis">
-      🧭 シリーズ構成
+      🧭 シリーズ構成：AI証拠化のすべてを1つに
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      📘 このシリーズでわかること
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📘 このシリーズでわかること">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-sns" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. SNSトラブルは「証拠化」すれば状況が大きく変わる
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. AIが誹謗中傷を正確に分類する仕組みが理解できる
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. “法務レベルの証拠PDF”がどう作られるのか
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. 誰でも使える“実践的なツール”としての価値
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      📘 このシリーズで伝えたいこと
+      🌿 読み進め方のヒント
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#aisns" class="md-nav__link">
     <span class="md-ellipsis">
-      🌿 読み進め方のヒント
+      🎯 まとめ：AI証拠化は、SNSトラブル対処の“新しい基盤”
     </span>
   </a>
   
@@ -1515,6 +1566,98 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../npd-series/015_npd_distorted_narrative/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    (補章)相手の語りに違和感がある
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../npd-series/016_npd_x-twitter_visibility/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    (補章)X（Twitter）での言動がしんどい
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../npd-series/017_npd_x-twitter_no-response_strategy/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    (補章)公開で絡まれて困っている・脅されている
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../npd-series/018_npd_typical_behavior_patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    (補章)無反応が必要だと分かっても納得できない
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1636,17 +1779,17 @@
 
 <div class="hero">
   <div class="hero__text">
-    <h1>AI証拠化・サービス紹介シリーズ<br>― 誹謗中傷を「証拠」に変えるテクノロジー ―</h1>
+    <h1>AI証拠化・サービス紹介シリーズ<br>― 誹謗中傷を「揺るがない証拠」に変える技術 ―</h1>
     <p class="lead">
-      SNS上の誹謗中傷やトラブルを、AIが分析し自動で「証拠」として残す。<br>
-      本シリーズでは、XPost AI Checkerの仕組み・使い方・技術的背景を<br>
-      わかりやすく紹介します。
+      SNSトラブルは、感情ではなく「記録」で解決する時代へ。<br>
+      本シリーズでは、X（旧Twitter）の誹謗中傷をAIが自動で分析し、<br>
+      法務レベルのPDFとして保存する仕組みと実践方法を詳しく紹介します。
     </p>
   </div>
 </div>
 
 <hr />
-<h2 id="_1">🧭 シリーズ構成<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h2 id="ai1">🧭 シリーズ構成：AI証拠化のすべてを1つに<a class="headerlink" href="#ai1" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
@@ -1657,72 +1800,120 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="../001_xpost-ai-checker-release/">第1回</a></td>
-<td>XPost AI Checker リリースのお知らせ</td>
-<td>誹謗中傷をAIで「見える化」するサービスの誕生</td>
+<td><a href="../001_xpost-ai-checker-release/">第1回：XPost AI Checker リリース</a></td>
+<td>サービス誕生の背景</td>
+<td>誹謗中傷をAIで「見える化」する必要性</td>
 </tr>
 <tr>
-<td><a href="../002_xpost-ai-checker-how-it-works/">第2回</a></td>
-<td>AIが投稿をどう解析するか</td>
-<td>自然言語処理とスコアリングの仕組み</td>
+<td><a href="../002_xpost-ai-checker-how-it-works/">第2回：AIは投稿をどう解析するか</a></td>
+<td>解析ロジック</td>
+<td>NLPによる分類・強度スコアリング・安全判定</td>
 </tr>
 <tr>
-<td><a href="../003_xpost-ai-checker-how-to-use/">第3回</a></td>
-<td>XPost AI Checker の使い方ガイド</td>
-<td>実際に使ってみる：入力から結果まで</td>
+<td><a href="../003_xpost-ai-checker-how-to-use/">第3回：XPost AI Checkerの使い方</a></td>
+<td>操作方法ガイド</td>
+<td>投稿URLの入力からPDF生成までの流れ</td>
 </tr>
 <tr>
-<td><a href="../004_ai-slander-analysis-mechanism/">第4回</a></td>
-<td>誹謗中傷分析の技術的仕組み</td>
-<td>AIの分類ロジックと精度チューニングの裏側</td>
+<td><a href="../004_ai-slander-analysis-mechanism/">第4回：誹謗中傷分析の技術的仕組み</a></td>
+<td>AIの裏側</td>
+<td>誹謗中傷分類モデルの構築と精度向上</td>
 </tr>
 <tr>
-<td><a href="../005_sns-proof-technical/">第5回</a></td>
-<td>SNS証拠保存の技術的ポイント</td>
-<td>スクリーンショットでは足りない「完全証拠化」技術</td>
+<td><a href="../005_sns-proof-technical/">第5回：SNS証拠保存の技術</a></td>
+<td>証拠化の重要ポイント</td>
+<td>スクショだけでは足りない理由と完全証拠化の要件</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="_2">📘 このシリーズで伝えたいこと<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<ol>
-<li><strong>SNSトラブルは「感情」ではなく「記録」で解決できる。</strong>  </li>
-<li><strong>AI技術で、誹謗中傷の内容と強度を客観的に評価できる。</strong>  </li>
-<li><strong>法務現場でも使えるレベルの「証拠PDF」を自動生成できる。</strong>  </li>
-<li><strong>誰でも、専門知識がなくても使えるツールがある。</strong></li>
-</ol>
+<h2 id="_1">📘 このシリーズでわかること<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<h3 id="1-sns"><strong>1. SNSトラブルは「証拠化」すれば状況が大きく変わる</strong><a class="headerlink" href="#1-sns" title="Permanent link">&para;</a></h3>
+<ul>
+<li>スクショだけでは不十分な理由  </li>
+<li>言い逃れを防ぐために必要な情報  </li>
+<li>第三者に“伝わる形”で整理する重要性  </li>
+</ul>
+<p>誹謗中傷への対応は、冷静に「証拠」を揃えることから始まります。</p>
 <hr />
-<h2 id="_3">🌿 読み進め方のヒント<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<h3 id="2-ai"><strong>2. AIが誹謗中傷を正確に分類する仕組みが理解できる</strong><a class="headerlink" href="#2-ai" title="Permanent link">&para;</a></h3>
+<ul>
+<li>自然言語処理（NLP）  </li>
+<li>コンテキスト理解  </li>
+<li>改ざん検知を前提としたPDF生成  </li>
+<li>分類ラベル：誹謗中傷 / 名誉毀損 / 脅迫 / 差別 / ハラスメント etc.</li>
+</ul>
+<p>なぜAIが“危険な投稿”を特定できるのか、その理由が分かります。</p>
+<hr />
+<h3 id="3-pdf"><strong>3. “法務レベルの証拠PDF”がどう作られるのか</strong><a class="headerlink" href="#3-pdf" title="Permanent link">&para;</a></h3>
+<p>ただ保存するだけではなく、<br />
+<strong>「証拠として成立する形式」</strong> にまとめることが大切です。</p>
+<p>本シリーズでは、以下の点も解説します：</p>
+<ul>
+<li>PDF/A形式での長期保存  </li>
+<li>改ざん検知用のハッシュ値  </li>
+<li>投稿本文・URL・日時・スクショの統合  </li>
+<li>分類と根拠語句のセット表示  </li>
+</ul>
+<p>これにより、法務・相談機関へそのまま提出できる品質になります。</p>
+<hr />
+<h3 id="4"><strong>4. 誰でも使える“実践的なツール”としての価値</strong><a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<p>XPost AI Checkerは、専門知識がなくても使えるよう設計されています。</p>
+<ul>
+<li>投稿URLをまとめて提出  </li>
+<li>AIが分類＆解析  </li>
+<li>PDF一括生成  </li>
+<li>ZIPで提供  </li>
+<li>懸念の強い投稿をハイライト表示  </li>
+</ul>
+<p>「難しい作業が必要」と思われがちな証拠化を、<br />
+<strong>誰でも確実に実践できるようにするためのサービス</strong>です。</p>
+<hr />
+<h2 id="_2">🌿 読み進め方のヒント<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
 <tr>
-<th>目的</th>
-<th>おすすめの記事</th>
+<th>学びたいこと</th>
+<th>読むべき記事</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>まずサービスを知りたい</td>
-<td>第1回：リリースのお知らせ</td>
+<td>サービス全体像を知りたい</td>
+<td>第1回：リリース概要</td>
 </tr>
 <tr>
-<td>仕組みを理解したい</td>
-<td>第2回：AIの解析ロジック</td>
+<td>AIが何をしているか知りたい</td>
+<td>第2回：解析ロジック</td>
 </tr>
 <tr>
 <td>実際に使ってみたい</td>
 <td>第3回：使い方ガイド</td>
 </tr>
 <tr>
-<td>技術的な裏側を知りたい</td>
-<td>第4回：誹謗中傷分析の仕組み</td>
+<td>AI技術の裏側を知りたい</td>
+<td>第4回：分析の技術</td>
 </tr>
 <tr>
-<td>証拠としての信頼性を確認したい</td>
-<td>第5回：SNS証拠の技術的ポイント</td>
+<td>証拠として成立する理由を知りたい</td>
+<td>第5回：証拠技術の解説</td>
 </tr>
 </tbody>
 </table>
+<hr />
+<h2 id="aisns">🎯 まとめ：AI証拠化は、SNSトラブル対処の“新しい基盤”<a class="headerlink" href="#aisns" title="Permanent link">&para;</a></h2>
+<p>SNSでの誹謗中傷は年々増え続け、<br />
+スクショや魚拓だけでは防ぎきれない時代になりました。</p>
+<ul>
+<li>客観性  </li>
+<li>改ざん防止  </li>
+<li>再現性  </li>
+<li>網羅性  </li>
+</ul>
+<p>これらを同時に満たす「AI証拠化」は、<br />
+今後のSNSトラブル対策の基盤になる技術です。</p>
+<p>本シリーズを通じて、<br />
+<strong>「AI × 証拠化」の全体像と活用のヒント</strong> を得ていただければ幸いです。</p>
 <hr />
 <div class="cta-wrapper" style="margin-top: 40px; padding: 24px; border: 1px solid #eee; border-radius: 8px; background: #fafafa;">
   <h2>📌 SNSトラブルに備えるなら、今できることを。</h2>
@@ -1842,7 +2033,7 @@
     
       <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
-        <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202512012045"></script>
+        <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202601031541"></script>
       
     
   </body>

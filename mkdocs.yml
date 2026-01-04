@@ -61,6 +61,10 @@ nav:
     - モラハラ・ガスライティングとの違い: blog/npd-series/012_npd-vs-morahara-gaslighting.md
     - 別れ際の“最後の攻撃”: blog/npd-series/013_npd-final-attack.md
     - シリーズ総まとめ: blog/npd-series/014_npd-series-summary.md
+    - (補章)相手の語りに違和感がある: blog/npd-series/015_npd_distorted_narrative.md
+    - (補章)X（Twitter）での言動がしんどい: blog/npd-series/016_npd_x-twitter_visibility.md
+    - (補章)公開で絡まれて困っている・脅されている: blog/npd-series/017_npd_x-twitter_no-response_strategy.md
+    - (補章)無反応が必要だと分かっても納得できない: blog/npd-series/018_npd_typical_behavior_patterns.md
 - X投稿あんしんチェッカー(ベータ版): https://xpostaichecker.jp/ai-check/
 - お問い合わせ: contact.md
 - 運営者情報: about.md
@@ -75,9 +79,9 @@ extra:
     link: https://x.com/xpostaichecker
   social_image: assets/og.webp
 extra_css:
-- assets/extra.css?v=202512012045
+- assets/extra.css?v=202601031541
 extra_javascript:
-- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202512012045
+- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202601031541
 markdown_extensions:
 - attr_list
 - md_in_html

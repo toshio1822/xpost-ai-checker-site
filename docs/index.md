@@ -1,5 +1,5 @@
 ---
-title:【SNSトラブル対策AI】Xの誹謗中傷を証拠PDFに自動保存｜XPost AI Checker
+title: 【SNSトラブル対策AI】Xの誹謗中傷を証拠PDFに自動保存｜XPost AI Checker
 description: Xの誹謗中傷・名誉毀損・虚偽通報をAIが自動分析し、PDF/A対応の証拠レポートを生成します。削除前の投稿も記録可能。警察相談・弁護士相談に備える「SNSトラブル対策の決定版」。
 ---
 

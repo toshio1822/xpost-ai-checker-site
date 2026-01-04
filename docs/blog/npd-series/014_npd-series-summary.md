@@ -123,6 +123,6 @@ NPDの被害者は、時間が経つと「私にも悪いところがあった�
 ---
 
 <!-- NAV-CHAIN:START -->
-前回：[◀ 別れ際の“最後の攻撃”とは？｜逆恨み・晒し・虚偽通報への備え方](013_npd-final-attack.md) | [シリーズトップに戻る](_index.md) | 次回：―
+前回：[◀ 別れ際の“最後の攻撃”とは？｜逆恨み・晒し・虚偽通報への備え方](013_npd-final-attack.md) | [シリーズトップに戻る](_index.md) | 次回：[なぜNPDの人は「一部の事実」を全体の真実のように語るのか▶](015_npd_distorted_narrative.md)
 <!-- NAV-CHAIN:END -->
 --8<-- "snippets/coupon.md"
