@@ -16,6 +16,11 @@ theme:
     accent: blue grey
 nav:
 - ホーム: index.md
+- 無料サービス:
+  - X投稿あんしんチェッカー: https://xpostaichecker.jp/ai-check/
+  - XPost AI Checker(お試し版): https://xpostaichecker.jp/evidence/
+- 有料サービス:
+  - XPost AI Checker: service.md
 - 開発者ブログ:
   - AI証拠化・サービス紹介:
     - シリーズトップ: blog/ai-evidence-series/_index.md
@@ -65,7 +70,7 @@ nav:
     - (補章)X（Twitter）での言動がしんどい: blog/npd-series/016_npd_x-twitter_visibility.md
     - (補章)公開で絡まれて困っている・脅されている: blog/npd-series/017_npd_x-twitter_no-response_strategy.md
     - (補章)無反応が必要だと分かっても納得できない: blog/npd-series/018_npd_typical_behavior_patterns.md
-- X投稿あんしんチェッカー(ベータ版): https://xpostaichecker.jp/ai-check/
+    - (補章)被害者ポジションが手放せない心理: blog/npd-series/019_npd_victim_position_anxiety_structure.md
 - お問い合わせ: contact.md
 - 運営者情報: about.md
 - 法的表記: legal.md
@@ -79,9 +84,9 @@ extra:
     link: https://x.com/xpostaichecker
   social_image: assets/og.webp
 extra_css:
-- assets/extra.css?v=202601041716
+- assets/extra.css?v=202601072027
 extra_javascript:
-- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202601041716
+- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202601072027
 markdown_extensions:
 - attr_list
 - md_in_html

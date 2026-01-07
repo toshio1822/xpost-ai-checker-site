@@ -895,4 +895,7 @@ date: 2025-12-26
 <!-- NAV-CHAIN:START -->
 前回：[◀ 第17回：無反応戦略](017_npd_x-twitter_no-response_strategy.md) |
 [シリーズトップに戻る](_index.md)
+次回：[▶ 被害者ポジションが手放せない心理｜不安を解消しない自己愛的パターン](019_npd_victim_position_anxiety_structure.md) |
 <!-- NAV-CHAIN:END -->
+--8<-- "snippets/coupon.md"
+

@@ -2,19 +2,21 @@
 declare(strict_types=1);
 
 /**
- * evidence/index.php
+ * evidence/index.php（動作保証 + エラー可視化強化 + SEO）
  *
- * ✅ ブラウザに API_KEY を渡さない（サーバ側で Worker を代理呼び出し）
- * ✅ 画面遷移なし：PDF生成 → status更新 → doneで「PDFを開く」有効化
- * ✅ Worker status: queued / running / done / failed（app.pyに合わせる）
- * ✅ AdSense：広告は1つだけ（ログの下）※邪魔にならず信頼感優先
- * ✅ 有料版への自然な動線（次の選択肢として案内）
- * ✅ タイトルに「XPost AI Checker」を明示
- * ✅ ログ時刻は日本時間（JST）
+ * ✅ API_KEYはサーバ保持（ブラウザに出さない）
+ * ✅ create_job → status polling → doneで「PDFを開く」有効化
+ * ✅ Worker status: queued / running / done / failed
+ * ✅ PDFは302(Location)対応
+ * ✅ AdSense：広告1枠（ログ下）
+ * ✅ 有料導線あり
+ * ✅ SEO：title/description/canonical/OGP/h1(sr-only)/下部テキスト
+ * ✅ ログ時刻：日本時間（JST）
+ * ✅ エラー可視化：worker_http + detail + raw先頭
  */
 
 // ============================================================
-// 設定読み込み（Xserverの外に置いた config.php を読む）
+// 設定読み込み
 // ============================================================
 $config_path = __DIR__ . '/../../config/config.php';
 
@@ -33,8 +35,6 @@ if (!is_array($cfg)) {
   exit;
 }
 
-// ★ あなたの環境のキー名（ここは維持）
-//   $cfg['XPOST_PDF_WORKER_URL'] / $cfg['XPOST_PDF_API_KEY']
 $WORKER_URL = trim((string)($cfg['XPOST_PDF_WORKER_URL'] ?? ''));
 $API_KEY    = trim((string)($cfg['XPOST_PDF_API_KEY'] ?? ''));
 
@@ -61,6 +61,14 @@ function now_iso(): string {
   return gmdate('c');
 }
 
+function snippet(?string $s, int $limit = 400): ?string {
+  if ($s === null) return null;
+  $s = trim($s);
+  if ($s === '') return null;
+  if (mb_strlen($s) > $limit) return mb_substr($s, 0, $limit) . '...';
+  return $s;
+}
+
 function validate_x_url(string $url): void {
   $url = trim($url);
   if ($url === '') throw new RuntimeException("URLが空です");
@@ -69,16 +77,21 @@ function validate_x_url(string $url): void {
   if (!$p || empty($p['scheme']) || empty($p['host'])) {
     throw new RuntimeException("URLの形式が不正です");
   }
+
   $scheme = strtolower((string)$p['scheme']);
-  if (!in_array($scheme, ['http','https'], true)) {
+  if (!in_array($scheme, ['http', 'https'], true)) {
     throw new RuntimeException("URLは http(s) のみ対応しています");
   }
 
   $host = strtolower((string)$p['host']);
-  $ok_host = (
-    $host === 'x.com' || $host === 'twitter.com' ||
-    str_ends_with($host, '.x.com') || str_ends_with($host, '.twitter.com')
-  );
+  $ok_host = false;
+
+  if (function_exists('str_ends_with')) {
+    $ok_host = ($host === 'x.com' || $host === 'twitter.com' || str_ends_with($host, '.x.com') || str_ends_with($host, '.twitter.com'));
+  } else {
+    $ok_host = ($host === 'x.com' || $host === 'twitter.com' || substr($host, -4) === '.x.com' || substr($host, -12) === '.twitter.com');
+  }
+
   if (!$ok_host) {
     throw new RuntimeException("x.com / twitter.com のURLのみ対応しています");
   }
@@ -90,8 +103,9 @@ function validate_x_url(string $url): void {
 }
 
 /**
- * JSON API を呼ぶ（workerのJSONレスポンス想定）
- * 返り値に _ok, _http を付ける
+ * Worker API呼び出し（JSON想定）
+ * - json: 配列なら入る
+ * - raw : 生文字列（JSONでなくても入る）
  */
 function curl_json(string $method, string $url, array $headers, ?string $body_json = null, int $timeout = 60): array {
   $ch = curl_init($url);
@@ -111,22 +125,26 @@ function curl_json(string $method, string $url, array $headers, ?string $body_js
   curl_close($ch);
 
   if ($resp === false) {
-    return ['_ok' => false, '_http' => $code, 'error' => $err ?: 'curl error'];
+    return [
+      '_ok' => false,
+      '_http' => $code,
+      'error' => $err ?: 'curl error',
+      'raw' => null,
+      'json' => null,
+    ];
   }
 
-  $data = json_decode($resp, true);
-  if (!is_array($data)) {
-    return ['_ok' => ($code >= 200 && $code < 400), '_http' => $code, 'raw' => $resp];
-  }
+  $json = json_decode($resp, true);
 
-  $data['_ok'] = ($code >= 200 && $code < 400);
-  $data['_http'] = $code;
-  return $data;
+  return [
+    '_ok' => ($code >= 200 && $code < 400),
+    '_http' => $code,
+    'error' => null,
+    'raw' => $resp,
+    'json' => is_array($json) ? $json : null,
+  ];
 }
 
-/**
- * PDF取得用（Locationヘッダの302転送を拾うためヘッダも取得）
- */
 function curl_fetch_with_headers(string $url, array $headers, int $timeout = 120): array {
   $ch = curl_init($url);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -166,7 +184,7 @@ function curl_fetch_with_headers(string $url, array $headers, int $timeout = 120
 }
 
 // ============================================================
-// API（ブラウザから叩く：ただしキーはサーバ保持）
+// API（ブラウザ→このPHP→Worker）
 // ============================================================
 $action = (string)($_GET['action'] ?? '');
 
@@ -178,7 +196,7 @@ if ($action === 'create_job') {
     $target_url = (string)($req['url'] ?? '');
     validate_x_url($target_url);
   } catch (Throwable $e) {
-    json_response(['ok' => false, 'error' => $e->getMessage()], 400);
+    json_response(['ok' => false, 'where' => 'validate', 'detail' => $e->getMessage()], 400);
   }
 
   $endpoint = $WORKER_URL . '/jobs?mode=job';
@@ -189,23 +207,65 @@ if ($action === 'create_job') {
   $body = json_encode(['url' => $target_url], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 
   $r = curl_json('POST', $endpoint, $headers, $body, 60);
+
+  // Worker error
   if (!($r['_ok'] ?? false)) {
-    json_response(['ok' => false, 'error' => $r['error'] ?? 'worker error', 'worker_http' => $r['_http'] ?? null], 502);
+    $detail = null;
+    if (is_array($r['json']) && isset($r['json']['detail'])) {
+      $detail = (string)$r['json']['detail'];
+    } elseif (!empty($r['error'])) {
+      $detail = (string)$r['error'];
+    } else {
+      $detail = snippet((string)($r['raw'] ?? ''), 500);
+    }
+
+    json_response([
+      'ok' => false,
+      'where' => 'create_job',
+      'worker_http' => $r['_http'] ?? null,
+      'detail' => $detail,
+      'raw' => snippet($r['raw'], 500),
+      'ts' => now_iso(),
+    ], 502);
+  }
+
+  // JSONでない / job_idが無い（←今回の「null」の本丸）
+  $json = $r['json'];
+  if (!is_array($json)) {
+    json_response([
+      'ok' => false,
+      'where' => 'create_job',
+      'worker_http' => $r['_http'] ?? null,
+      'detail' => 'Workerの応答がJSONではありません（job_idを取得できません）',
+      'raw' => snippet($r['raw'], 500),
+      'ts' => now_iso(),
+    ], 502);
+  }
+
+  $job_id = $json['job_id'] ?? null;
+  if (!is_string($job_id) || trim($job_id) === '') {
+    json_response([
+      'ok' => false,
+      'where' => 'create_job',
+      'worker_http' => $r['_http'] ?? null,
+      'detail' => 'Worker応答に job_id が含まれていません（job_id=null）',
+      'raw' => snippet($r['raw'], 500),
+      'ts' => now_iso(),
+    ], 502);
   }
 
   json_response([
     'ok' => true,
-    'job_id' => $r['job_id'] ?? null,
-    'status_url' => $r['status_url'] ?? null,
-    'download_url' => $r['download_url'] ?? null,
-    'worker_http' => $r['_http'] ?? null,
+    'job_id' => $job_id,
     'ts' => now_iso(),
   ]);
 }
 
 if ($action === 'status') {
   $job_id = (string)($_GET['job_id'] ?? '');
-  if ($job_id === '') json_response(['ok' => false, 'error' => 'job_id required'], 400);
+  if (trim($job_id) === '' || strtolower(trim($job_id)) === 'null') {
+    json_response(['ok' => false, 'where' => 'status', 'detail' => 'job_id が空です（null）'], 400);
+  }
 
   $endpoint = $WORKER_URL . '/jobs/' . rawurlencode($job_id);
   $headers = [
@@ -214,19 +274,48 @@ if ($action === 'status') {
   ];
 
   $r = curl_json('GET', $endpoint, $headers, null, 30);
+
   if (!($r['_ok'] ?? false)) {
-    json_response(['ok' => false, 'error' => $r['error'] ?? 'worker error', 'worker_http' => $r['_http'] ?? null], 502);
+    $detail = null;
+    if (is_array($r['json']) && isset($r['json']['detail'])) {
+      $detail = (string)$r['json']['detail'];
+    } elseif (!empty($r['error'])) {
+      $detail = (string)$r['error'];
+    } else {
+      $detail = snippet((string)($r['raw'] ?? ''), 500);
+    }
+
+    json_response([
+      'ok' => false,
+      'where' => 'status',
+      'worker_http' => $r['_http'] ?? null,
+      'detail' => $detail,
+      'raw' => snippet($r['raw'], 500),
+      'ts' => now_iso(),
+    ], 502);
+  }
+
+  $json = $r['json'];
+  if (!is_array($json)) {
+    json_response([
+      'ok' => false,
+      'where' => 'status',
+      'worker_http' => $r['_http'] ?? null,
+      'detail' => 'Workerの応答がJSONではありません',
+      'raw' => snippet($r['raw'], 500),
+      'ts' => now_iso(),
+    ], 502);
   }
 
   json_response([
     'ok' => true,
     'job' => [
-      'job_id' => $r['job_id'] ?? $job_id,
-      'url' => $r['url'] ?? null,
-      'status' => $r['status'] ?? null,      // queued / running / done / failed
-      'created_at' => $r['created_at'] ?? null,
-      'updated_at' => $r['updated_at'] ?? null,
-      'error' => $r['error'] ?? null,
+      'job_id' => $json['job_id'] ?? $job_id,
+      'url' => $json['url'] ?? null,
+      'status' => $json['status'] ?? null,
+      'created_at' => $json['created_at'] ?? null,
+      'updated_at' => $json['updated_at'] ?? null,
+      'error' => $json['error'] ?? null,
     ],
     'worker_http' => $r['_http'] ?? null,
     'ts' => now_iso(),
@@ -235,7 +324,7 @@ if ($action === 'status') {
 
 if ($action === 'pdf') {
   $job_id = (string)($_GET['job_id'] ?? '');
-  if ($job_id === '') {
+  if (trim($job_id) === '' || strtolower(trim($job_id)) === 'null') {
     http_response_code(400);
     header('Content-Type: text/plain; charset=UTF-8');
     echo "job_id required";
@@ -243,13 +332,10 @@ if ($action === 'pdf') {
   }
 
   $endpoint = $WORKER_URL . '/jobs/' . rawurlencode($job_id) . '/pdf';
-  $headers = [
-    'X-API-Key: ' . $API_KEY,
-  ];
+  $headers = ['X-API-Key: ' . $API_KEY];
 
   $r = curl_fetch_with_headers($endpoint, $headers, 120);
 
-  // worker が 302（署名URL）を返したら、そのままブラウザへ転送（帯域節約）
   if (($r['http'] ?? 0) === 302 && !empty($r['location'])) {
     header('Location: ' . $r['location'], true, 302);
     exit;
@@ -269,8 +355,12 @@ if ($action === 'pdf') {
 }
 
 // ============================================================
-// UI（HTML / JS）
+// SEO固定値
 // ============================================================
+$CANONICAL_URL = 'https://xpostaichecker.jp/evidence/';
+$PAGE_TITLE = 'XPost AI Checker(お試し版)｜X（旧Twitter）投稿の証拠PDFを無料で作成';
+$PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDFを無料で作成できます。誹謗中傷・トラブル対応・削除前の記録保存に。PDF完成後すぐにダウンロード可能。';
+
 ?>
 <!doctype html>
 <html lang="ja">
@@ -278,10 +368,16 @@ if ($action === 'pdf') {
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <!-- ✅ タイトルに「XPost AI Checker」を入れる -->
-  <title>XPost AI Checker｜X投稿の証拠PDFを作成（無料）</title>
+  <title><?= htmlspecialchars($PAGE_TITLE, ENT_QUOTES, 'UTF-8') ?></title>
+  <meta name="description" content="<?= htmlspecialchars($PAGE_DESC, ENT_QUOTES, 'UTF-8') ?>">
+  <link rel="canonical" href="<?= htmlspecialchars($CANONICAL_URL, ENT_QUOTES, 'UTF-8') ?>">
 
-  <meta name="description" content="X（旧Twitter）の投稿URLを入力するだけで、証拠PDFを作成できます。PDFが完成したら「PDFを開く」が有効になります。">
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="XPost AI Checker">
+  <meta property="og:title" content="<?= htmlspecialchars($PAGE_TITLE, ENT_QUOTES, 'UTF-8') ?>">
+  <meta property="og:description" content="<?= htmlspecialchars($PAGE_DESC, ENT_QUOTES, 'UTF-8') ?>">
+  <meta property="og:url" content="<?= htmlspecialchars($CANONICAL_URL, ENT_QUOTES, 'UTF-8') ?>">
 
   <style>
     body{
@@ -385,7 +481,6 @@ if ($action === 'pdf') {
       font-size:.92rem;
     }
 
-    /* AdSense block（広告を隠さず、UIと混ぜない） */
     .adsense-block{
       margin:22px 0;
       padding:14px;
@@ -400,7 +495,6 @@ if ($action === 'pdf') {
       font-weight:700;
     }
 
-    /* CTA（押し売りに見えない“次の選択肢”） */
     .cta{
       border:1px solid #eee;
       border-radius:12px;
@@ -416,7 +510,44 @@ if ($action === 'pdf') {
       color:#444;
     }
 
-    /* Loading overlay */
+    .seo-block h2{
+      margin:0 0 8px 0;
+      font-size:1.05rem;
+    }
+    .seo-block p{ margin:0; }
+
+    .sr-only{
+      position:absolute;
+      width:1px;
+      height:1px;
+      padding:0;
+      margin:-1px;
+      overflow:hidden;
+      clip:rect(0,0,0,0);
+      white-space:nowrap;
+      border:0;
+    }
+
+    /* エラーボックス（可視化） */
+    .error-box{
+      margin-top:10px;
+      padding:12px 14px;
+      border-radius:10px;
+      border:1px solid #f3b4b4;
+      background:#ffebee;
+      color:#7a1b1b;
+      font-weight:700;
+    }
+    .error-box .small{
+      display:block;
+      margin-top:6px;
+      font-weight:400;
+      color:#7a1b1b;
+      opacity:.9;
+      white-space:pre-wrap;
+      word-break:break-word;
+    }
+
     #loadingOverlay{
       display:none;
       position:fixed;
@@ -456,11 +587,18 @@ if ($action === 'pdf') {
 
 <body>
 
-<div class="card">
-  <!-- ✅ 画面にも「XPost AI Checker」を明示 -->
-  <div class="title-bar">XPost AI Checker｜X投稿の証拠PDFを作成（無料）</div>
+<h1 class="sr-only">X（旧Twitter）投稿の証拠PDFを無料で作成｜XPost AI Checker</h1>
 
-  <div class="feature-box">
+<div class="card">
+  <div class="title-bar">XPost AI Checker(お試し版)｜X投稿の証拠PDFを作成（無料）</div>
+
+  <div class="feature-box seo-block" style="margin-top:18px;">
+    <h2>X（旧Twitter）投稿を証拠として保存したい方へ</h2>
+    <p class="muted">
+      このページでは、X（旧Twitter）の投稿URLを入力するだけで、投稿内容を証拠PDFとして保存できます。<br>
+      誹謗中傷・トラブル対応・削除前の記録保存など、「後から説明できる形で残したい」場面で利用されています。<br>
+    </p>
+    <br/>
     <div>✅ 投稿URLを入れるだけで、証拠PDFを作成します。</div>
     <div>✅ PDFが準備できたら「PDFを開く」が有効になります。</div>
     <div class="muted" style="margin-top:8px;">
@@ -477,6 +615,9 @@ if ($action === 'pdf') {
     <span id="status" class="badge idle">idle</span>
   </div>
 
+  <!-- ✅ ここにエラーを可視化 -->
+  <div id="errorBox" class="error-box" style="display:none;"></div>
+
   <div class="feature-box">
     <div>job_id: <code id="jobid">-</code></div>
     <div class="muted">完了まで数十秒かかる場合があります。</div>
@@ -485,7 +626,7 @@ if ($action === 'pdf') {
   <h3 style="margin:18px 0 10px;">ログ</h3>
   <pre id="log">ここにログが表示されます。</pre>
 
-  <!-- ✅ 広告は1つだけ：ログの下（目的達成後の読み物フェーズ） -->
+  <!-- ✅ 広告は1つだけ：ログの下 -->
   <div class="adsense-block" id="adBlockOnlyOne">
     <div class="adsense-label">広告</div>
     <ins class="adsbygoogle"
@@ -497,7 +638,7 @@ if ($action === 'pdf') {
   </div>
   <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
 
-  <!-- 有料導線（自然：押し売りにしない「次の選択肢」） -->
+  <!-- 有料導線（自然） -->
   <div class="cta">
     <h3>より強い証拠保全が必要な方へ（有料）</h3>
     <div class="muted">
@@ -510,7 +651,9 @@ if ($action === 'pdf') {
       <li>必要な作業をまとめて代行</li>
     </ul>
     <div class="row" style="margin-top:14px;">
-      <a class="btn btn-accent" href="https://xpostaichecker.jp/" target="_blank" rel="noopener">有料の証拠化サービスを見る</a>
+      <a class="btn btn-accent" href="https://xpostaichecker.jp/service/" target="_blank" rel="noopener">
+        X投稿の証拠化を代行する有料サービスを見る
+      </a>
       <span class="muted">※ 別タブで開きます</span>
     </div>
   </div>
@@ -524,7 +667,6 @@ if ($action === 'pdf') {
   </div>
 </div>
 
-<!-- 生成中オーバーレイ -->
 <div id="loadingOverlay">
   <div class="loadingBox">
     <div style="font-weight:700; margin-bottom:8px;">
@@ -536,9 +678,6 @@ if ($action === 'pdf') {
 </div>
 
 <script>
-  // ==========================================================
-  // UI Helpers
-  // ==========================================================
   const elUrl = document.getElementById('url');
   const btnCreate = document.getElementById('btnCreate');
   const btnOpen = document.getElementById('btnOpen');
@@ -547,14 +686,13 @@ if ($action === 'pdf') {
   const elLog = document.getElementById('log');
   const overlay = document.getElementById('loadingOverlay');
   const loadingText = document.getElementById('loadingText');
+  const errorBox = document.getElementById('errorBox');
 
   let currentJobId = null;
   let pollTimer = null;
 
-  // ✅ 日本時間（JST）でログ時刻を出す
   function nowJST() {
-    // 例: 2026-01-04 16:52:11
-    return new Date().toLocaleString('ja-JP', {
+    const s = new Date().toLocaleString('ja-JP', {
       timeZone: 'Asia/Tokyo',
       year: 'numeric',
       month: '2-digit',
@@ -563,7 +701,8 @@ if ($action === 'pdf') {
       minute: '2-digit',
       second: '2-digit',
       hour12: false
-    }).replace(/\//g, '-');
+    });
+    return s.replace(/\//g, '-');
   }
 
   function log(line){
@@ -585,9 +724,21 @@ if ($action === 'pdf') {
     overlay.style.display = 'none';
   }
 
+  function clearError(){
+    errorBox.style.display = 'none';
+    errorBox.textContent = '';
+  }
+  function showError(title, detail){
+    errorBox.style.display = 'block';
+    errorBox.innerHTML = `${title}<span class="small">${detail || ''}</span>`;
+  }
+
   function stopPolling(){
-    if (pollTimer) clearInterval(pollTimer);
-    pollTimer = null;
+    if (pollTimer) {
+      clearTimeout(pollTimer);
+      clearInterval(pollTimer);
+      pollTimer = null;
+    }
   }
 
   function enableOpen(jobId){
@@ -597,19 +748,21 @@ if ($action === 'pdf') {
     };
   }
 
-  // ==========================================================
-  // API
-  // ==========================================================
   async function createJob(url){
     const res = await fetch('?action=create_job', {
       method: 'POST',
       headers: {'Content-Type':'application/json'},
       body: JSON.stringify({url})
     });
+
     const data = await res.json().catch(()=>null);
+
     if (!res.ok || !data || !data.ok) {
-      const msg = (data && data.error) ? data.error : `HTTP ${res.status}`;
-      throw new Error(msg);
+      const where = data?.where || 'create_job';
+      const http  = data?.worker_http ? `worker HTTP ${data.worker_http}` : `HTTP ${res.status}`;
+      const detail = data?.detail || data?.error || '不明なエラー';
+      const raw = data?.raw ? `\n---\n${data.raw}` : '';
+      throw new Error(`[${where}] ${http}\n${detail}${raw}`);
     }
     return data;
   }
@@ -619,57 +772,107 @@ if ($action === 'pdf') {
       method: 'GET',
       headers: {'Accept':'application/json'}
     });
+
     const data = await res.json().catch(()=>null);
+
     if (!res.ok || !data || !data.ok) {
-      const msg = (data && data.error) ? data.error : `HTTP ${res.status}`;
-      throw new Error(msg);
+      const where = data?.where || 'status';
+      const http  = data?.worker_http ? `worker HTTP ${data.worker_http}` : `HTTP ${res.status}`;
+      const detail = data?.detail || data?.error || '不明なエラー';
+      const raw = data?.raw ? `\n---\n${data.raw}` : '';
+      throw new Error(`[${where}] ${http}\n${detail}${raw}`);
     }
     return data.job;
   }
 
-  // Worker status（app.py）に合わせて固定：queued / running / done / failed
   function isDoneStatus(st){ return String(st).toLowerCase() === 'done'; }
   function isErrorStatus(st){ return String(st).toLowerCase() === 'failed'; }
 
   async function startPolling(jobId){
+    // 既存ポーリングは必ず止める
     stopPolling();
-    pollTimer = setInterval(async () => {
-      try{
+
+    let delayMs = 1500;      // 最初は1.5秒
+    const maxDelayMs = 8000; // 最大8秒まで伸ばす
+    let stopped = false;
+
+    // 「この startPolling が現役か」を判定するトークン
+    const myToken = Symbol('poll');
+    startPolling._token = myToken;
+
+    const tick = async () => {
+      // 他の startPolling が開始されたら、このループは終了
+      if (startPolling._token !== myToken) return;
+      if (stopped) return;
+
+      try {
         const job = await getStatus(jobId);
         const st = job.status || 'unknown';
+
         setStatus(st);
         log(`status: ${st}`);
 
+        // ✅ done になったら一発で終わり（エラー表示も消す）
         if (isDoneStatus(st)) {
+          stopped = true;
           stopPolling();
           hideOverlay();
+          clearError();              // ★これ重要：赤い箱を消す
           enableOpen(jobId);
           log('PDFの準備ができました。');
           return;
         }
 
         if (isErrorStatus(st)) {
+          stopped = true;
           stopPolling();
           hideOverlay();
           btnOpen.disabled = true;
+          clearError();
           log(`生成に失敗しました: ${job.error || 'unknown error'}`);
+          showError('生成に失敗しました', job.error || 'Worker側でエラーが発生しました');
           return;
         }
-        // queued / running の間は overlay 維持
-      } catch(e){
-        stopPolling();
-        hideOverlay();
-        setStatus('failed');
-        btnOpen.disabled = true;
-        log(`status取得エラー: ${e.message}`);
+
+        // 正常に取れたら delay を少しだけ戻す（混雑が解けたら軽くする）
+        delayMs = Math.max(1500, Math.floor(delayMs * 0.9));
+
+      } catch(e) {
+        const msg = String(e?.message || '');
+
+        // ✅ 429 は「混雑」なので“赤エラーにしない”
+        if (msg.includes('worker HTTP 429') || msg.includes('HTTP 429') || msg.toLowerCase().includes('rate exceeded')) {
+          log(`status混雑(429): リトライします（${Math.round(delayMs/1000)}秒後）`);
+          // 表示は赤ではなく、必要なら“控えめ”に（ここでは表示しない）
+          // showErrorしたいなら黄色系のinfoBoxを作るのが良い
+          // → 今回は「画面をエラーにしない」が目的なので何もしない
+
+          // バックオフ（少しずつ待ち時間を伸ばす）
+          delayMs = Math.min(maxDelayMs, Math.floor(delayMs * 1.5));
+        } else {
+          // 429以外は赤エラーで見せる（原因究明に必要）
+          stopPolling();
+          hideOverlay();
+          setStatus('failed');
+          btnOpen.disabled = true;
+          log(`status取得エラー: ${msg}`);
+          showError('status取得エラー', msg);
+          return;
+        }
       }
-    }, 1500);
+
+      // 次のtick（setTimeoutで実行）
+      pollTimer = setTimeout(tick, delayMs);
+    };
+
+    // 初回実行
+    pollTimer = setTimeout(tick, 0);
   }
 
-  // ==========================================================
-  // Events
-  // ==========================================================
   btnCreate.addEventListener('click', async () => {
+    stopPolling();
+    clearError();
+
     const url = elUrl.value.trim();
 
     btnCreate.disabled = true;
@@ -683,15 +886,24 @@ if ($action === 'pdf') {
 
     try{
       const r = await createJob(url);
+
+      // ✅ job_id が無ければ即エラー（今回の null 対策）
+      if (!r.job_id || String(r.job_id).trim() === '' || String(r.job_id).toLowerCase() === 'null') {
+        throw new Error(`[create_job] job_id が取得できませんでした（null）\n返却値: ${JSON.stringify(r)}`);
+      }
+
       currentJobId = r.job_id;
-      elJobId.textContent = currentJobId || '-';
+      elJobId.textContent = currentJobId;
       log(`job created: ${currentJobId}`);
+
       setStatus('queued');
       await startPolling(currentJobId);
+
     } catch(e){
       hideOverlay();
       setStatus('failed');
       log(`作成エラー: ${e.message}`);
+      showError('作成エラー', e.message);
     } finally {
       setTimeout(()=>{ btnCreate.disabled = false; }, 400);
     }
