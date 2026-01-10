@@ -877,3 +877,9 @@ a[href*="details"] {
   }
 }
 
+/* ヒーローの「無料で証拠を確認する」ボタンだけ改行させない */
+.hero .cta a.cta-nowrap {
+  white-space: nowrap !important;   /* 改行させない */
+  word-break: keep-all !important;  /* 日本語の途中折りを抑える */
+}
+

@@ -593,33 +593,37 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
   <div class="title-bar">XPost AI Checker(お試し版)｜X投稿の証拠PDFを作成（無料）</div>
 
   <div class="feature-box seo-block" style="margin-top:18px;">
-    <h2>X（旧Twitter）投稿を証拠として保存したい方へ</h2>
+    <h2>削除される前に、投稿の内容を残してください</h2>
+
     <p class="muted">
-      このページでは、X（旧Twitter）の投稿URLを入力するだけで、投稿内容を証拠PDFとして保存できます。<br>
-      誹謗中傷・トラブル対応・削除前の記録保存など、「後から説明できる形で残したい」場面で利用されています。<br>
+      Xの投稿は、削除されると第三者が内容を確認できなくなります。<br>
+      まずは1件だけ、投稿URLを使って内容を保存してください。
     </p>
-    <br/>
-    <div>✅ 投稿URLを入れるだけで、証拠PDFを作成します。</div>
-    <div>✅ PDFが準備できたら「PDFを開く」が有効になります。</div>
+
+    <!-- まず行動させるためのショートCTA（フォームへジャンプ） -->
+    <a href="#evidence-form" class="btn" style="margin-top:10px;">
+      投稿URLを入力して証拠を作成する
+    </a>
+
     <div class="muted" style="margin-top:8px;">
-      ※ URLは投稿ページ（<code>/status/xxxxx</code> を含む）を入力してください。
+      ※投稿ページのURL（/status/〜 を含むもの）を入力してください
     </div>
   </div>
 
-  <label for="url">投稿URL（x.com / twitter.com）</label>
+  <label id="evidence-form" for="url">投稿URL（x.com / twitter.com）</label>
   <input id="url" type="text" placeholder="https://x.com/.../status/..." autocomplete="off">
 
   <div class="row">
-    <button id="btnCreate" class="btn">PDFを作成する</button>
-    <button id="btnOpen" class="btn btn-secondary" disabled>PDFを開く</button>
-    <span id="status" class="badge idle">idle</span>
+    <button id="btnCreate" class="btn">証拠を作成する</button>
+    <button id="btnOpen" class="btn btn-secondary" disabled>作成した証拠を開く</button>
+    <span id="status" class="badge idle">待機中</span>
   </div>
 
   <!-- ✅ ここにエラーを可視化 -->
   <div id="errorBox" class="error-box" style="display:none;"></div>
 
   <div class="feature-box">
-    <div>job_id: <code id="jobid">-</code></div>
+    <div>処理ID: <code id="jobid">-</code></div>
     <div class="muted">完了まで数十秒かかる場合があります。</div>
   </div>
 

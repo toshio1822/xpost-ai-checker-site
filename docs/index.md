@@ -1,35 +1,35 @@
 <div class="hero">
   <div class="hero__text">
-    <h1>SNSトラブルに備える</h1>
-    <p class="lead">チェック・証拠化・保存をまとめて支援するAIサービス</p>
+    <h1>
+      Xの投稿が消えると、<br>
+      あとから説明できないことがあります
+    </h1>
 
-    <p>
-      X（Twitter）での誹謗中傷・炎上・虚偽通報。<br>
-      感情ではなく、<strong>冷静な判断と再現性のある証拠</strong>で向き合うための仕組みを提供しています。
+    <p class="lead">
+      通報・炎上・削除の前に、<br>
+      「何が残るか」だけは一度確認してください。<br>
+      <span style="font-size:0.9em; opacity:0.8;">
+        ※消えてからでは、確認できないことがあります
+      </span>
     </p>
 
-    <div class="badges">
-      <span class="badge">PDF/A</span>
-      <span class="badge">改ざん検知ハッシュ</span>
-      <span class="badge">分類・懸念度</span>
-    </div>
+    <p>
+      X（Twitter）の投稿は、削除されると<br>
+      第三者が内容を確認できなくなります。<br>
+      スクリーンショットだけでは、<br>
+      状況を正確に伝えきれないケースもあります。
+    </p>
 
     <div class="cta">
-      <a href="https://xpostaichecker.jp/ai-check/"
-         class="btn-cta-secondary">
-         投稿前チェック
-      </a>
-
       <a href="https://xpostaichecker.jp/evidence/"
-         class="btn-cta-secondary">
-         証拠PDFを1件作成
+         class="btn-cta-primary cta-nowrap">
+         無料で証拠を確認する
       </a>
+    </div>
 
-      <a href="https://xpostaichecker.jp/service/"
-         class="btn-cta-primary">
-         証拠PDFを一括作成
-      </a>
-</div>
+    <p style="margin-top:12px; font-size:0.9em; opacity:0.8;">
+      ※投稿URLを貼るだけで、まず1件だけ確認できます
+    </p>
   </div>
 
   <img class="hero__logo" src="logo-256x256.webp" alt="XPost AI Checker ロゴ">
@@ -37,7 +37,10 @@
 
 ---
 
-## XPost AI Checker ができること
+## このページで分かること
+
+Xの投稿が削除されたときに、
+「何が残り、何が残らないのか」を整理しています。
 
 XPost AI Checker は、  
 **「投稿前の不安」から「トラブル発生後の証拠化」まで**をカバーする、SNSトラブル対策の総合サービスです。
