@@ -583,6 +583,15 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
   <script async
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523"
     crossorigin="anonymous"></script>
+    
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDWT0LDTZT"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-BDWT0LDTZT');
+  </script>
 </head>
 
 <body>
@@ -682,6 +691,13 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
 </div>
 
 <script>
+  // GA4イベント送信（gtag未ロードでも落ちない安全版）
+  function gaEvent(name, params = {}) {
+    if (typeof gtag === 'function') {
+      gtag('event', name, params);
+    }
+  }
+
   const elUrl = document.getElementById('url');
   const btnCreate = document.getElementById('btnCreate');
   const btnOpen = document.getElementById('btnOpen');
@@ -748,6 +764,11 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
   function enableOpen(jobId){
     btnOpen.disabled = false;
     btnOpen.onclick = () => {
+      // GA: PDFを開く
+      gaEvent('evidence_pdf_open', {
+        service: 'evidence',
+        page_path: location.pathname
+      });
       window.open(`?action=pdf&job_id=${encodeURIComponent(jobId)}`, '_blank', 'noopener');
     };
   }
@@ -879,6 +900,13 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
 
     const url = elUrl.value.trim();
 
+    // GA: 作成開始
+    gaEvent('evidence_create_click', {
+      service: 'evidence',
+      page_path: location.pathname,
+      url_length: url.length
+    });
+
     btnCreate.disabled = true;
     btnOpen.disabled = true;
     currentJobId = null;
@@ -899,6 +927,12 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
       currentJobId = r.job_id;
       elJobId.textContent = currentJobId;
       log(`job created: ${currentJobId}`);
+      
+      // GA: job作成成功
+      gaEvent('evidence_job_created', {
+        service: 'evidence',
+        page_path: location.pathname
+      });
 
       setStatus('queued');
       await startPolling(currentJobId);
@@ -906,6 +940,11 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
     } catch(e){
       hideOverlay();
       setStatus('failed');
+      // GA: 作成失敗
+      gaEvent('evidence_create_error', {
+        service: 'evidence',
+        page_path: location.pathname
+      });
       log(`作成エラー: ${e.message}`);
       showError('作成エラー', e.message);
     } finally {

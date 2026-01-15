@@ -126,6 +126,16 @@ button:hover {
     border: 2px solid #1d9bf0;
 }
 </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDWT0LDTZT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BDWT0LDTZT');
+</script>
+  
 </head>
 
 <body>
@@ -166,7 +176,11 @@ button:hover {
         </p>
     </div>
 
-    <form id="checkForm" action="ai_check.php" method="POST">
+    <form action="ai_check.php" method="post"
+          onsubmit="gtag('event', 'ai_check_execute', {
+            page_location: location.pathname,
+            service: 'ai-check'
+          });">
         <label for="postText"><b>チェックしたい文章を入力してください（最大140文字）</b></label><br>
         <textarea
             name="text"

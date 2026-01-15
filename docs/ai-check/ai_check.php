@@ -309,10 +309,26 @@ body {
     background:#fff9e5;
 }
 </style>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BDWT0LDTZT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BDWT0LDTZT');
+</script>
+
 </head>
 
 <body>
-
+<script>
+if (typeof gtag === 'function') {
+  gtag('event', 'ai_check_result_view', {
+    service: 'ai-check'
+  });
+}
+</script>
 
 <!-- 🧡 まず最初に：安心の前置き -->
 <div class="card" style="background:#f3f8ff;">
