@@ -16,6 +16,8 @@ theme:
     accent: blue grey
 nav:
 - ホーム: index.md
+- 削除前に証拠を残す: x-evidence.md
+- X誹謗中傷の整理/証拠化(業務向け): x-evidence-pro.md
 - 無料サービス:
   - X投稿あんしんチェッカー: https://xpostaichecker.jp/ai-check/
   - XPost AI Checker(お試し版): https://xpostaichecker.jp/evidence/
@@ -84,9 +86,9 @@ extra:
     link: https://x.com/xpostaichecker
   social_image: assets/og.webp
 extra_css:
-- assets/extra.css?v=202601151945
+- assets/extra.css?v=202602102330
 extra_javascript:
-- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202601151945
+- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202602102330
 markdown_extensions:
 - attr_list
 - md_in_html

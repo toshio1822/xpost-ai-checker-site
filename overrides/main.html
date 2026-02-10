@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block extrahead %}
+  {{ super() }}
+
+  {# 404などで page が無い場合があるのでガードする #}
+  {% set meta = (page.meta if page and page.meta else {}) %}
+
+  {% set desc = meta.description if meta.description else config.site_description %}
+  {% set ogp_path = meta.og_image if meta.og_image else "/assets/ogp/default.webp" %}
+  {% set ogp_url = config.site_url.rstrip("/") ~ ogp_path %}
+
+  {% set page_title = page.title if page else config.site_name %}
+  {% set page_url = page.canonical_url if page and page.canonical_url else config.site_url %}
+
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="{{ config.site_name }}" />
+  <meta property="og:title" content="{{ page_title }} - {{ config.site_name }}" />
+  <meta property="og:description" content="{{ desc }}" />
+  <meta property="og:url" content="{{ page_url }}" />
+  <meta property="og:image" content="{{ ogp_url }}" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page_title }} - {{ config.site_name }}" />
+  <meta name="twitter:description" content="{{ desc }}" />
+  <meta name="twitter:image" content="{{ ogp_url }}" />
+{% endblock %}

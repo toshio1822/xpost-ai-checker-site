@@ -8,8 +8,8 @@ description: Xの誹謗中傷・名誉毀損・虚偽通報をAIが自動分析�
     <h1>Xの誹謗中傷を、AIが「証拠PDF」に自動保存します。</h1>
     <p class="lead">SNSで傷つくあなたへ。<br>感情ではなく、証拠で守るという選択を。</p>
     <div class="cta">
-      <a href="plans/" class="btn-cta-primary">プランを見る</a>
-      <a href="contact/" class="btn-cta-secondary">無料で相談する</a>
+      <a href="/plans/" class="btn-cta-primary">プランを見る</a>
+      <a href="/contact/" class="btn-cta-secondary">無料で相談する</a>
     </div>
   </div>
   <img src="/logo-256x256.webp" alt="心を守るAI証拠生成サービス">
@@ -118,17 +118,17 @@ SNSで傷ついた人が、冷静に、そして確実に前へ進めるよう�
 <div class="teasers">
   <div class="teaser">
     <div class="caption">まとめレポート</div>
-    <a href="samples/teaser-summary.webp" target="_blank">
-      <img src="samples/teaser-summary.webp" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDFA）">
+    <a href="/samples/teaser-summary.webp" target="_blank">
+      <img src="/samples/teaser-summary.webp" alt="X(Twitter)誹謗中傷AI分析のまとめレポートサンプル（PDFA）">
     </a>
-    <a href="samples/summary_report.pdf" class="mini" target="_blank">PDFを開く</a>
+    <a href="/samples/summary_report.pdf" class="mini" target="_blank">PDFを開く</a>
   </div>
   <div class="teaser">
     <div class="caption">個別エビデンス</div>
-    <a href="samples/teaser-kobetsu-2.webp" target="_blank">
-      <img src="samples/teaser-kobetsu-2.webp" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス">
+    <a href="/samples/teaser-kobetsu-2.webp" target="_blank">
+      <img src="/samples/teaser-kobetsu-2.webp" alt="X(Twitter)誹謗中傷AI分析の個別エビデンス">
     </a>
-    <a href="samples/kobetsu.pdf" class="mini" target="_blank">PDFを開く</a>
+    <a href="/samples/kobetsu.pdf" class="mini" target="_blank">PDFを開く</a>
   </div>
 </div>
 
@@ -169,7 +169,7 @@ SNSで傷ついた人が、冷静に、そして確実に前へ進めるよう�
 1. **URLリストの作成**  
    [テンプレート](samples/input_urls.csv)をダウンロードして、チェックを行いたいX(Twitter)の投稿URLを入力してください。  
     <div class="step-images">
-      <a href="images/url_list.webp" target="_blank">
+      <a href="/images/url_list.webp" target="_blank">
         <img src="images/url_list.webp" alt="URLリスト">
       </a>
     </div>
@@ -178,10 +178,10 @@ SNSで傷ついた人が、冷静に、そして確実に前へ進めるよう�
 2. **Stripeでお支払い（カード・GooglePay対応）**  
    ご希望のプランの「購入する」ボタンからお支払いください。  
     <div class="step-images">
-      <a href="images/purchase1.webp" target="_blank">
+      <a href="/images/purchase1.webp" target="_blank">
         <img src="images/purchase1.webp" alt="購入する1">
       </a>
-      <a href="images/purchase2.webp" target="_blank">
+      <a href="/images/purchase2.webp" target="_blank">
         <img src="images/purchase2.webp" alt="購入する2">
       </a>
     </div>
@@ -194,10 +194,10 @@ SNSで傷ついた人が、冷静に、そして確実に前へ進めるよう�
 ※ファイルの提出には、Googleアカウントが必要です。<br/>
 　Googleアカウントをお持ちでない場合は、[お問い合わせ]からご連絡ください。  
     <div class="step-images">
-      <a href="images/submit_url_list1.webp" target="_blank">
+      <a href="/images/submit_url_list1.webp" target="_blank">
         <img src="images/submit_url_list1.webp" alt="URLリストの提出1">
       </a>
-      <a href="images/submit_url_list2.webp" target="_blank">
+      <a href="/images/submit_url_list2.webp" target="_blank">
         <img src="images/submit_url_list2.webp" alt="URLリストの提出2">
       </a>
     </div>
