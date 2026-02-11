@@ -102,6 +102,22 @@ function validate_x_url(string $url): void {
   }
 }
 
+function sanitize_pdf_filename(string $name): string {
+  $name = trim($name);
+  if ($name === '') return 'evidence.pdf';
+
+  // Windows / macOS で使えない文字を除去
+  $name = preg_replace('/[\\\\\/:*?"<>|]/u', '_', $name) ?? 'evidence';
+  $name = preg_replace('/\s+/u', ' ', $name) ?? $name;
+  $name = trim($name, " .\t\n\r\0\x0B");
+
+  if ($name === '') return 'evidence.pdf';
+  if (!preg_match('/\.pdf$/i', $name)) {
+    $name .= '.pdf';
+  }
+  return $name;
+}
+
 /**
  * Worker API呼び出し（JSON想定）
  * - json: 配列なら入る
@@ -307,16 +323,19 @@ if ($action === 'status') {
     ], 502);
   }
 
+  $job = $json;
+  if (!is_array($job)) $job = [];
+
+  $job['job_id'] = $job['job_id'] ?? $job_id;
+  $job['url'] = $job['url'] ?? null;
+  $job['status'] = $job['status'] ?? null;
+  $job['created_at'] = $job['created_at'] ?? null;
+  $job['updated_at'] = $job['updated_at'] ?? null;
+  $job['error'] = $job['error'] ?? null;
+
   json_response([
     'ok' => true,
-    'job' => [
-      'job_id' => $json['job_id'] ?? $job_id,
-      'url' => $json['url'] ?? null,
-      'status' => $json['status'] ?? null,
-      'created_at' => $json['created_at'] ?? null,
-      'updated_at' => $json['updated_at'] ?? null,
-      'error' => $json['error'] ?? null,
-    ],
+    'job' => $job,
     'worker_http' => $r['_http'] ?? null,
     'ts' => now_iso(),
   ]);
@@ -333,12 +352,26 @@ if ($action === 'pdf') {
 
   $endpoint = $WORKER_URL . '/jobs/' . rawurlencode($job_id) . '/pdf';
   $headers = ['X-API-Key: ' . $API_KEY];
+  $filename = sanitize_pdf_filename((string)($_GET['filename'] ?? 'evidence.pdf'));
 
   $r = curl_fetch_with_headers($endpoint, $headers, 120);
 
+  // Workerが署名付きURLへ302を返す場合は、ここで追って本文を取得する
+  // （ブラウザへ302を返すと、最終的な保存名が署名先のヘッダに上書きされるため）
   if (($r['http'] ?? 0) === 302 && !empty($r['location'])) {
-    header('Location: ' . $r['location'], true, 302);
-    exit;
+    $redirect_url = (string)$r['location'];
+    $redirect_count = 0;
+
+    while ($redirect_count < 3) {
+      $redirect_count++;
+      $r = curl_fetch_with_headers($redirect_url, ['Accept: application/pdf'], 120);
+
+      if (($r['http'] ?? 0) === 302 && !empty($r['location'])) {
+        $redirect_url = (string)$r['location'];
+        continue;
+      }
+      break;
+    }
   }
 
   if (($r['http'] ?? 0) >= 400) {
@@ -348,10 +381,12 @@ if ($action === 'pdf') {
     exit;
   }
 
+  $filename_ascii = preg_replace('/[^A-Za-z0-9._-]/', '_', $filename) ?: 'evidence.pdf';
   header('Content-Type: application/pdf');
-  header('Content-Disposition: inline; filename="evidence.pdf"');
+  header("Content-Disposition: attachment; filename=\"{$filename_ascii}\"; filename*=UTF-8''" . rawurlencode($filename));
   echo $r['body'] ?? '';
   exit;
+
 }
 
 // ============================================================
@@ -624,7 +659,6 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
 
   <div class="row">
     <button id="btnCreate" class="btn">証拠を作成する</button>
-    <button id="btnOpen" class="btn btn-secondary" disabled>作成した証拠を開く</button>
     <span id="status" class="badge idle">待機中</span>
   </div>
 
@@ -700,7 +734,6 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
 
   const elUrl = document.getElementById('url');
   const btnCreate = document.getElementById('btnCreate');
-  const btnOpen = document.getElementById('btnOpen');
   const elStatus = document.getElementById('status');
   const elJobId = document.getElementById('jobid');
   const elLog = document.getElementById('log');
@@ -761,16 +794,61 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
     }
   }
 
-  function enableOpen(jobId){
-    btnOpen.disabled = false;
-    btnOpen.onclick = () => {
-      // GA: PDFを開く
-      gaEvent('evidence_pdf_open', {
-        service: 'evidence',
-        page_path: location.pathname
-      });
-      window.open(`?action=pdf&job_id=${encodeURIComponent(jobId)}`, '_blank', 'noopener');
-    };
+  function pickFirstNonEmpty(obj, candidates){
+    if (!obj || typeof obj !== 'object') return '';
+    for (const key of candidates) {
+      const v = obj[key];
+      if (v !== undefined && v !== null && String(v).trim() !== '') {
+        return String(v).trim();
+      }
+    }
+    return '';
+  }
+
+  function compactTimestampText(raw){
+    const s = String(raw || '').trim();
+    if (!s) return '';
+
+    const d = new Date(s);
+    if (!Number.isNaN(d.getTime())) {
+      const p = (n) => String(n).padStart(2, '0');
+      return `${d.getFullYear()}${p(d.getMonth()+1)}${p(d.getDate())}${p(d.getHours())}${p(d.getMinutes())}${p(d.getSeconds())}`;
+    }
+
+    const digits = s.replace(/\D/g, '');
+    return digits.length >= 14 ? digits.slice(0, 14) : '';
+  }
+
+  function normalizeFilenameSegment(s, fallback){
+    const cleaned = String(s || '')
+      .replace(/[\\/:*?"<>|]/g, '_')
+      .replace(/\s+/g, '')
+      .trim();
+    return cleaned || fallback;
+  }
+
+  function buildPdfFilename(job){
+    const tsRaw = pickFirstNonEmpty(job, [
+      'post_created_at', 'post_datetime', 'post_date_time',
+      'posted_at', 'tweet_created_at', 'captured_at', 'created_at'
+    ]);
+    const catRaw = pickFirstNonEmpty(job, [
+      'category', 'kbn', 'kubun', 'classification', 'label', 'type'
+    ]);
+
+    const ts = normalizeFilenameSegment(compactTimestampText(tsRaw), 'unknown_datetime');
+    const cat = normalizeFilenameSegment(catRaw, '証拠');
+    return `${ts}_${cat}.pdf`;
+  }
+
+  function triggerPdfDownload(jobId, filename){
+    const a = document.createElement('a');
+    a.href = `?action=pdf&job_id=${encodeURIComponent(jobId)}&filename=${encodeURIComponent(filename)}`;
+    a.download = filename;
+    a.style.display = 'none';
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
   }
 
   async function createJob(url){
@@ -843,8 +921,16 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
           stopPolling();
           hideOverlay();
           clearError();              // ★これ重要：赤い箱を消す
-          enableOpen(jobId);
-          log('PDFの準備ができました。');
+          const filename = buildPdfFilename(job);
+          log(`PDFの準備ができました。ダウンロードを開始します（${filename}）。`);
+
+          // GA: PDF自動ダウンロード
+          gaEvent('evidence_pdf_download_auto', {
+            service: 'evidence',
+            page_path: location.pathname
+          });
+
+          triggerPdfDownload(jobId, filename);
           return;
         }
 
@@ -852,7 +938,6 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
           stopped = true;
           stopPolling();
           hideOverlay();
-          btnOpen.disabled = true;
           clearError();
           log(`生成に失敗しました: ${job.error || 'unknown error'}`);
           showError('生成に失敗しました', job.error || 'Worker側でエラーが発生しました');
@@ -879,7 +964,6 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
           stopPolling();
           hideOverlay();
           setStatus('failed');
-          btnOpen.disabled = true;
           log(`status取得エラー: ${msg}`);
           showError('status取得エラー', msg);
           return;
@@ -908,7 +992,6 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
     });
 
     btnCreate.disabled = true;
-    btnOpen.disabled = true;
     currentJobId = null;
     elJobId.textContent = '-';
     setStatus('queued');
@@ -955,4 +1038,3 @@ $PAGE_DESC  = 'X（旧Twitter）の投稿URLを入力するだけで、証拠PDF
 
 </body>
 </html>
-
