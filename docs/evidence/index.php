@@ -356,9 +356,22 @@ if ($action === 'pdf') {
 
   $r = curl_fetch_with_headers($endpoint, $headers, 120);
 
+  // Workerが署名付きURLへ302を返す場合は、ここで追って本文を取得する
+  // （ブラウザへ302を返すと、最終的な保存名が署名先のヘッダに上書きされるため）
   if (($r['http'] ?? 0) === 302 && !empty($r['location'])) {
-    header('Location: ' . $r['location'], true, 302);
-    exit;
+    $redirect_url = (string)$r['location'];
+    $redirect_count = 0;
+
+    while ($redirect_count < 3) {
+      $redirect_count++;
+      $r = curl_fetch_with_headers($redirect_url, ['Accept: application/pdf'], 120);
+
+      if (($r['http'] ?? 0) === 302 && !empty($r['location'])) {
+        $redirect_url = (string)$r['location'];
+        continue;
+      }
+      break;
+    }
   }
 
   if (($r['http'] ?? 0) >= 400) {
@@ -368,10 +381,12 @@ if ($action === 'pdf') {
     exit;
   }
 
+  $filename_ascii = preg_replace('/[^A-Za-z0-9._-]/', '_', $filename) ?: 'evidence.pdf';
   header('Content-Type: application/pdf');
-  header('Content-Disposition: attachment; filename="' . addslashes($filename) . '"; filename*=UTF-8\'\'' . rawurlencode($filename));
+  header("Content-Disposition: attachment; filename=\"{$filename_ascii}\"; filename*=UTF-8''" . rawurlencode($filename));
   echo $r['body'] ?? '';
   exit;
+
 }
 
 // ============================================================
