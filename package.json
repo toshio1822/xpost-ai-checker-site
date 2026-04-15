@@ -1,0 +1,14 @@
+{
+  "name": "xpost-ai-checker-site",
+  "private": true,
+  "scripts": {
+    "shot": "node scripts/screenshot.js",
+    "shot:baseline": "node scripts/screenshot.js --baseline",
+    "shot:diff": "node scripts/compare-screenshots.js"
+  },
+  "devDependencies": {
+    "pixelmatch": "^6.0.0",
+    "playwright": "^1.52.0",
+    "pngjs": "^7.0.0"
+  }
+}

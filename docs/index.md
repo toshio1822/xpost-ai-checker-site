@@ -89,6 +89,11 @@ XPost AI Checker は、次の3つに対応しています。
     </ul>
     <p>まずは無料で、1件だけ証拠を保存できます。</p>
     <p>👉 <strong><a href="https://xpostaichecker.jp/evidence/">1件だけ証拠を保存する</a></strong></p>
+    <hr>
+    <p><strong>複数件をまとめて整理したい方へ</strong></p>
+    <p>1件だけでなく、複数の投稿をまとめて証拠化したい場合は有料版をご利用ください。</p>
+    <p>通報、削除依頼、弁護士相談に向けた整理にも対応しています。</p>
+    <p>→ <strong><a href="https://xpostaichecker.jp/service/">有料サービスの詳細を見る</a></strong></p>
   </div>
   
   <div class="card">
