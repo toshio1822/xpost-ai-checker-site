@@ -4,7 +4,7 @@
 
   <p style="margin: 10px 0 0 0;">
     「投稿前の不安」から「トラブル発生後の証拠化」まで。<br>
-    状況に合わせて <strong>(無料)投稿前チェック / (無料)証拠PDFを1件作成（1件）/ (有料)証拠PDFを一括作成</strong> から選べます。
+    状況に合わせて <strong>(無料)投稿前チェック / (無料)1件だけ証拠を保存 / (有料)証拠PDFを一括作成</strong> から選べます。
   </p>
 
   <!-- 3ボタンCTA -->
@@ -18,7 +18,7 @@
     <!-- 無料：証拠PDF 1件 -->
     <a href="https://xpostaichecker.jp/evidence/"
        class="btn-cta-secondary">
-      証拠PDFを1件作成
+      1件だけ証拠を保存
     </a>
 
     <!-- 有料：証拠PDF 一括 -->

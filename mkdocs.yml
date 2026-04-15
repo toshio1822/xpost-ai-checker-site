@@ -1,6 +1,6 @@
 site_name: XPost AI Checker
 site_url: https://xpostaichecker.jp/
-site_description: X投稿をAIでチェック。証拠PDFを最短3日で。名誉毀損対策に最適。
+site_description: X投稿の投稿前チェックから削除前の証拠保存、証拠PDF作成まで対応するSNSトラブル対策サービス。
 theme:
   name: material
   custom_dir: overrides
@@ -16,14 +16,15 @@ theme:
     accent: blue grey
 nav:
 - ホーム: index.md
-- 削除前に証拠を残す: x-evidence.md
-- X誹謗中傷の整理/証拠化(業務向け): x-evidence-pro.md
+- 投稿前に確認したい: https://xpostaichecker.jp/ai-check/
+- 削除前に証拠を残したい: x-evidence.md
+- 誹謗中傷の証拠を整理したい: x-evidence-pro.md
 - 無料サービス:
   - X投稿あんしんチェッカー: https://xpostaichecker.jp/ai-check/
   - XPost AI Checker(お試し版): https://xpostaichecker.jp/evidence/
 - 有料サービス:
   - XPost AI Checker: service.md
-- 開発者ブログ:
+- 解説ブログ:
   - AI証拠化・サービス紹介:
     - シリーズトップ: blog/ai-evidence-series/_index.md
     - リリース: blog/ai-evidence-series/001_xpost-ai-checker-release.md
@@ -86,9 +87,9 @@ extra:
     link: https://x.com/xpostaichecker
   social_image: assets/og.webp
 extra_css:
-- assets/extra.css?v=202602102330
+- assets/extra.css?v=202604151944
 extra_javascript:
-- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202602102330
+- https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8182034043692523?v=202604151944
 markdown_extensions:
 - attr_list
 - md_in_html
